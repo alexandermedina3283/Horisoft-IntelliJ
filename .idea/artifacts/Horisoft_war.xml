@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Horisoft:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Horisoft</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Horisoft-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Horisoft:war exploded" />
+    </root>
+  </artifact>
+</component>
