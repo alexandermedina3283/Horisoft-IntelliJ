@@ -1,16 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: RYZEN5
-  Date: 19/04/2021
-  Time: 8:16 p. m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
     <h1>Formulario de registro</h1>
     <form action="http://localhost:8080/Horisoft_war_exploded/ResidenteController" method="post">
@@ -21,31 +11,31 @@
 
             <label for="nombreResidente">Nombre</label> <input
                 name="nombreResidente" id="nombreResidente" type="text"
-                placeholder="Escriba nombre residente" /> <br />
+                placeholder="ej. Juan " autofocus required pattern="[A-Za-z A-Za-z]{2,40}"/> <br />
 
             <label for="apellidoResidente">Apellido</label> <input
                 name="apellidoResidente" id="apellidoResidente" type="text"
-                placeholder="apellido residente" /> <br />
+                placeholder="ej. Rodriguez" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br />
 
             <label for="identificacionResidente">Identificación</label> <input
                 name="identificacionResidente" id="identificacionResidente" type="text"
-                placeholder="numero identificacion CC########" /> <br />
+                placeholder="ej. CC########" required pattern="[A-Z0-9]{2,20}"/> <br />
 
             <label for="fechaNacimiento">Fecha nacimiento</label> <input
                 name="fechaNacimiento" id="fechaNacimiento" type="date"
-                placeholder="fecha de nacimiento" /> <br />
+                placeholder="fecha de nacimiento" required/> <br />
 
             <label for="telefonoResidente">Telefono</label> <input
                 name="telefonoResidente" id="telefonoResidente" type="text"
-                placeholder="telefono residente" /> <br />
+                placeholder="ej. 32054212##" pattern="[0-9]{7,20}"/> <br />
 
             <label for="emailResidente">Correo electronico</label> <input
                 name="emailResidente" id="emailResidente" type="text"
-                placeholder="correo electronico residente" /> <br />
+                placeholder="ej.nombre&#64micorreo.com" /> <br />
 
             <label for="estadoResidente">Estado residente</label>
             <input list="estado" name="estadoResidente" id="estadoResidente"
-                   placeholder="Seleccione estado" >
+                   placeholder="Seleccione estado" required>
 
             <datalist id= "estado">
                 <option value = "Activo"></option>
@@ -54,15 +44,16 @@
 
             <label for="numApartamento">Apartamento</label> <input
                 name="numApartamento" id="numApartamento" type="text"
-                placeholder="Número apartamento" /> <br />
+                placeholder="Número apartamento" required/> <br />
 
             <label for="numTorre">Torre</label> <input
                 name="numTorre" id="numTorre" type="text"
-                placeholder="Número torre" /> <br />
+                placeholder="Número torre" required/> <br />
 
 
             <label for="categoriaResidente">Categoria residente</label>
-            <select name="categoriaResidente" id="categoriaResidente">
+            <select name="categoriaResidente" id="categoriaResidente" >
+                <option hidden selected>Seleccione una opción</option>
                 <option value="1">Propietario</option>
                 <option value="2">Arrendatario</option>
                 <option value="3">Nucleo propietario</option>
@@ -75,5 +66,4 @@
 
     </form>
 </section>
-</body>
-</html>
+<jsp:include page="/templates/parteInferior.jsp"/>

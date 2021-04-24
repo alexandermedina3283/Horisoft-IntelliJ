@@ -1,16 +1,6 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: RYZEN5
-  Date: 19/04/2021
-  Time: 6:08 p. m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
     <h1>Formulario de registro</h1>
     <form action="http://localhost:8080/Horisoft_war_exploded/MascotaController" method="post">
@@ -36,6 +26,4 @@
 
     </form>
 </section>
-
-</body>
-</html>
+<jsp:include page="/templates/parteInferior.jsp"/>

@@ -1,15 +1,7 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>JSP - Hello World</title>
-</head>
-<body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="hello-servlet">Hello Servlet</a>
 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<jsp:include page="/templates/parteSuperior.jsp"/>
 <nav>
     <h1>Menu principal</h1>
     <table>
@@ -47,5 +39,4 @@
     </table><br>
 </nav>
 
-</body>
-</html>
+<jsp:include page="/templates/parteInferior.jsp"/>

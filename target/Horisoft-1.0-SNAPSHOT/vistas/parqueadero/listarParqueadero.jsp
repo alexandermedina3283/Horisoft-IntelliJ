@@ -1,17 +1,7 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: RYZEN5
-  Date: 19/04/2021
-  Time: 6:59 p. m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<jsp:include page="/templates/parteSuperior.jsp"/>
 
 <table border= "1">
     <tr>
@@ -47,5 +37,4 @@
     </c:forEach>
 
 </table>
-</body>
-</html>
+<jsp:include page="/templates/parteInferior.jsp"/>

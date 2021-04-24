@@ -74,6 +74,7 @@
     background: #FCFCFC;
     width: 95%;
     height: 600px;
+    max-height: none;
 
 }/*termina estilo main*/
 

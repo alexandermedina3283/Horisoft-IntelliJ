@@ -1,17 +1,8 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: RYZEN5
-  Date: 19/04/2021
-  Time: 8:47 p. m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
+<jsp:include page="/templates/parteSuperior.jsp"/>
+
 <section class="registrouser">
     <div class="contenedor">
         <h2 class="formulario">Diligencie el formulario en su totalidad</h2>
@@ -20,7 +11,7 @@
             <input type="hidden" name="opcion" value="editar">
             <input type="hidden" name="idUsuario" value="${usuario.idUsuario}">
             <fieldset>
-                <legend>Formulario registro</legend>
+                <legend>Formulario actualización</legend>
                 <label for="nombreUsuario">Nombre usuario :</label>
                 <input type="text" name="nombreUsuario" id="nombreUsuario" value="${usuario.nombreUsuario}"
                        placeholder="nombre usuario" autofocus="" > <br>
@@ -46,6 +37,6 @@
         </form>
     </div>
 </section>
+<jsp:include page="/templates/parteInferior.jsp"/>
 
-</body>
-</html>
+
