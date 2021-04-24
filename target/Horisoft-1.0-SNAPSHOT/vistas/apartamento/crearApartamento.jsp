@@ -1,3 +1,5 @@
+<!--
+
 <%--
   Created by IntelliJ IDEA.
   User: RYZEN5
@@ -11,6 +13,10 @@
     <title>Title</title>
 </head>
 <body>
+-->
+
+<jsp:include page="/templates/parteSuperior.jsp"/>
+
 
 <section>
     <h1>Formulario de registro residentes</h1>
@@ -43,6 +49,7 @@
 
     </form>
 </section>
-
+<!--
 </body>
-</html>
+</html>-->
+<jsp:include page="/templates/parteInferior.jsp"/>

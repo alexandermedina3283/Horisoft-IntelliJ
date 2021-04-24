@@ -25,7 +25,6 @@
                 <input type="password" name="contraUsuario" id="contraUsuario" placeholder="ingrese contraseña" > <br>
                 <input type="submit" name= "botonIngresar" value="INGRESAR"/>
             </fieldset>
-
         </form>
     </div>
 </section>
