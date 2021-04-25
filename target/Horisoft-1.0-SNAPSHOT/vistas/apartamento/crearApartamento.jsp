@@ -14,14 +14,14 @@
 
             <legend>Datos del apartamento</legend>
             <label for="apartamento">Apartamento</label>
-            <input name="apartamento" id="apartamento" type="text" placeholder="Digite numero apartamento" required
-                   autofocus/> <br/>
+            <input name="apartamento" id="apartamento" type="text" placeholder="número apartamento" required
+                   autofocus pattern="[0-9]{3,5}"/> <br/>
 
             <label for="torre">Torre</label>
-            <input name="torre" id="torre" type="text" placeholder="Digite numero torre" required/> <br/>
+            <input name="torre" id="torre" type="text" placeholder="número torre" required pattern="[A-Z0-9]{1}"/> <br/>
 
             <label for="Estadocartera">Estado cartera</label>
-            <input list="estadocartera" name="cartera">
+            <input list="estadocartera" name="cartera" required placeholder="seleccione una opción ">
 
             <datalist id="estadocartera">
                 <option value="Al dia">
@@ -31,6 +31,7 @@
 
         </fieldset>
         <br/> <input type="submit" value="Guardar"/>
+
 
     </form>
 </section>

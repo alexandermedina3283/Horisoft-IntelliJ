@@ -6,13 +6,13 @@
 
 <table border= "1">
     <tr>
-        <td>Numero mascota</td>
+        <td>Número mascota</td>
         <td>Nombre</td>
         <td>Clase</td>
         <td>Apartamento</td>
         <td>Torre</td>
-        <td>Accion1</td>
-        <td>Accion2</td>
+        <td></td>
+        <td></td>
     </tr>
 
     <c:forEach var="mascota" items="${lista}">

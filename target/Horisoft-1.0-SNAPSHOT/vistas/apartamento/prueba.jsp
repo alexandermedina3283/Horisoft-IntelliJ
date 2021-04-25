@@ -1,5 +1,5 @@
-
 <jsp:include page="/templates/parteSuperior.jsp"/>
+
 
 <h1>HOLA PRUEBA </h1>
 

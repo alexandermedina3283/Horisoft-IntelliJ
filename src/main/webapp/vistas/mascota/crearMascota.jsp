@@ -10,16 +10,16 @@
             <legend>Datos de la mascota</legend>
 
             <label for="nombreMascota">Nombre</label>
-            <input name="nombreMascota" id="nombreMascota" type="text" placeholder="Digite nombre mascota"/> <br/>
+            <input name="nombreMascota" id="nombreMascota" type="text" placeholder="Digite nombre mascota" autofocus pattern="[A-Za-z]{2,40}" required/> <br/>
 
             <label for="claseMascota">Clase</label>
-            <input name="claseMascota" id="claseMascota" type="text" placeholder="Digite clase de mascota"/> <br/>
+            <input name="claseMascota" id="claseMascota" type="text" placeholder="ej. Perro/Gato" pattern="[A-Za-z]{2,40}" required/> <br/>
 
             <label for="numApartamento">Numero apartamento</label>
-            <input name="numApartamento" id="numApartamento" type="text" placeholder="Digite numero apartamento"/> <br/>
+            <input name="numApartamento" id="numApartamento" type="text" placeholder="número apartamento" required pattern="[0-9]{3,5}"/> <br/>
 
             <label for="numTorre">Numero torre</label>
-            <input name="numTorre" id="numTorre" type="text" placeholder="Digite numero torre"/> <br/>
+            <input name="numTorre" id="numTorre" type="text" placeholder="número torre" required pattern="[A-Z0-9]{1}"/> <br/>
 
         </fieldset>
         <br/> <input type="submit" value="Guardar"/>

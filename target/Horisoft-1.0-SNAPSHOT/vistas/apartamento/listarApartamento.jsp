@@ -6,11 +6,11 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <table border="1">
     <tr>
-        <td>Numero apartamento</td>
-        <td>Numero torre</td>
+        <td>Número apartamento</td>
+        <td>Número torre</td>
         <td>Estado cartera</td>
-        <td>Accion1</td>
-        <td>Accion2</td>
+        <td></td>
+        <td></td>
     </tr>
 
     <c:forEach var="apartamento" items="${lista}">
