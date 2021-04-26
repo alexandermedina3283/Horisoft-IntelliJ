@@ -13,9 +13,9 @@
         <td>Marca</td>
         <td>Apartamento</td>
         <td>Torre</td>
-        <td>Clase vehiculo</td>
-        <td>Accion1</td>
-        <td>Accion2</td>
+        <td>Clase vehículo</td>
+        <td></td>
+        <td></td>
     </tr>
 
     <c:forEach var="parqueadero" items="${lista}">

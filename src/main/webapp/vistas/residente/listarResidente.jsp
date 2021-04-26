@@ -10,14 +10,14 @@
         <td>Apellido</td>
         <td>Identificación</td>
         <td>Fecha nacimiento</td>
-        <td>Telefono</td>
-        <td>Correo electronico</td>
+        <td>Teléfono</td>
+        <td>Correo electrónico</td>
         <td>Estado residente</td>
         <td>Número apartamento</td>
         <td>Número torre</td>
         <td>Categoria</td>
-        <td>Accion1</td>
-        <td>Accion2</td>
+        <td></td>
+        <td></td>
     </tr>
 
     <c:forEach var="residente" items="${lista}">

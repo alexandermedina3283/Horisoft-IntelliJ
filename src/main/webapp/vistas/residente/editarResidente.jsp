@@ -15,31 +15,31 @@
 
             <label for="nombreResidente">Nombre</label> <input
                 name="nombreResidente" id="nombreResidente" value="${residente.nombre}" type="text"
-                placeholder="Escriba nombre residente" /> <br />
+                placeholder="ej. Juan " autofocus required pattern="[A-Za-z A-Za-z]{2,40}" /> <br />
 
             <label for="apellidoResidente">Apellido</label> <input
                 name="apellidoResidente" id="apellidoResidente" value="${residente.apellido}" type="text"
-                placeholder="apellido residente" /> <br />
+                placeholder="ej. Rodriguez" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br />
 
             <label for="identificacionResidente">Identificación</label> <input
                 name="identificacionResidente" id="identificacionResidente" value="${residente.identificacion}"type="text"
-                placeholder="numero identificacion CC########" /> <br />
+                placeholder="ej. CC########" required pattern="[A-Z0-9]{2,20}"/> <br />
 
             <label for="fechaNacimiento">Fecha nacimiento</label> <input
                 name="fechaNacimiento" id="fechaNacimiento" value="${residente.fechaNacimiento}" type="date"
-                placeholder="fecha de nacimiento" /> <br />
+                placeholder="fecha de nacimiento" required/> <br />
 
             <label for="telefonoResidente">Telefono</label> <input
                 name="telefonoResidente" id="telefonoResidente" value="${residente.telefono}" type="text"
-                placeholder="telefono residente" /> <br />
+                placeholder="ej. 32054212##" pattern="[0-9]{7,20}"/> <br />
 
             <label for="emailResidente">Correo electronico</label> <input
                 name="emailResidente" id="emailResidente" value="${residente.email}" type="text"
-                placeholder="correo electronico residente" /> <br />
+                placeholder="ej.nombre&#64micorreo.com" /> <br />
 
             <label for="estadoResidente">Estado residente</label>
             <input list="estado" name="estadoResidente" id="estadoResidente" value="${residente.estado}"
-                   placeholder="Seleccione estado" >
+                   placeholder="Seleccione estado" required >
 
             <datalist id= "estado">
                 <option value = "Activo"></option>
@@ -48,16 +48,16 @@
 
             <label for="numApartamento">Apartamento</label> <input
                 name="numApartamento" id="numApartamento" value="${residente.apartamento}" type="text"
-                placeholder="Número apartamento" /> <br />
+                placeholder="Número apartamento" pattern="[0-9]{3,5}" required/> <br />
 
             <label for="numTorre">Torre</label> <input
                 name="numTorre" id="numTorre" value="${residente.torre}" type="text"
-                placeholder="Número torre" /> <br />
+                placeholder="Número torre" required pattern="[A-Z0-9]{1}" /> <br />
 
 
             <label for="categoriaResidente">Categoria residente</label> <input
                 name="categoriaResidente" id="categoriaResidente" value="${residente.categoria}" type="text"
-                placeholder="Categoria residente" /> <br />
+                placeholder="Categoria residente" required/> <br />
 
 
         </fieldset>

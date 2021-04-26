@@ -10,8 +10,8 @@
         <td>Nombre</td>
         <td>Estado usuario</td>
         <td>Rol usuario</td>
-        <td>Accion1</td>
-        <td>Accion2</td>
+        <td></td>
+        <td></td>
     </tr>
 
     <c:forEach var="usuario" items="${lista}">

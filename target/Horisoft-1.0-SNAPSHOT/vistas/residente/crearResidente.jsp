@@ -44,15 +44,15 @@
 
             <label for="numApartamento">Apartamento</label> <input
                 name="numApartamento" id="numApartamento" type="text"
-                placeholder="Número apartamento" required/> <br />
+                placeholder="Número apartamento" pattern="[0-9]{3,5}" required/> <br />
 
             <label for="numTorre">Torre</label> <input
                 name="numTorre" id="numTorre" type="text"
-                placeholder="Número torre" required/> <br />
+                placeholder="Número torre" required pattern="[A-Z0-9]{1}"/> <br />
 
 
             <label for="categoriaResidente">Categoria residente</label>
-            <select name="categoriaResidente" id="categoriaResidente" >
+            <select name="categoriaResidente" id="categoriaResidente" required>
                 <option hidden selected>Seleccione una opción</option>
                 <option value="1">Propietario</option>
                 <option value="2">Arrendatario</option>

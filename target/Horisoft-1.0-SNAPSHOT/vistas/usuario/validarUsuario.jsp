@@ -11,9 +11,9 @@
             <fieldset>
                 <legend>Formulario Ingreso</legend>
                 <label for="nombreUsuario">Nombre usuario :</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="nombre usuario" autofocus="" > <br>
+                <input type="text" name="nombreUsuario" id="nombreUsuario" placeholder="Digite nombre usuario" autofocus required pattern=[a-zA-Z0-9]{2,40}> <br>
                 <label for="contraUsuario">Contraseña :</label>
-                <input type="password" name="contraUsuario" id="contraUsuario" placeholder="ingrese contraseña" > <br>
+                <input type="password" name="contraUsuario" id="contraUsuario" placeholder="Ingrese su contraseña" required pattern="*{8,15}" > <br>
                 <input type="submit" name= "botonIngresar" value="INGRESAR"/>
             </fieldset>
         </form>
