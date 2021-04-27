@@ -79,10 +79,16 @@
     height: auto;
     max-height: none;
     padding-bottom: 45px;
-    
+
 
 }/*termina estilo main*/
 
+
+/*empieza formulario*/
+fieldset{
+    width: 30%;
+}
+/*termina formulario*/
 
 /*empieza estilo footer*/
 .estilofooter{

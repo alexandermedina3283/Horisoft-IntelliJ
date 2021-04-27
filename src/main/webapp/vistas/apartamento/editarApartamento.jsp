@@ -4,8 +4,7 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
-    <h1>Formulario de actualización residentes</h1>
-    <h3>Sección uno</h3>
+
     <form action="http://localhost:8080/Horisoft_war_exploded/ApartamentoController" method="post">
         <c:set var="apartamento" value="${apartamento}"></c:set>
         <input type="hidden" name="opcion" value="editar">
@@ -14,25 +13,32 @@
 
         <fieldset>
 
-            <legend>Datos del apartamento</legend>
+            <legend>Actualización datos del apartamento</legend>
+
+            <div class="form-group">
             <label for="apartamento">Apartamento</label>
-            <input name="apartamento" id="apartamento" value="${apartamento.apartamento}"
+            <input class="form-control" name="apartamento" id="apartamento" value="${apartamento.apartamento}"
                    type="number" placeholder="número apartamento" required autofocus pattern="[0-9]{3,5}"/> <br/>
+            </div>
 
+            <div class="form-group">
             <label for="torre">Torre</label>
-            <input name="torre" id="torre" value="${apartamento.torre}" type="text" placeholder="número torre"
+            <input class="form-control" name="torre" id="torre" value="${apartamento.torre}" type="text" placeholder="número torre"
                    required pattern="[A-Z0-9]{1}"/> <br/>
+            </div>
 
+            <div class="form-group">
             <label for="Estadocartera">Estado cartera</label>
-            <input list="estadocartera" name="cartera" required placeholder="seleccione una opción" value="${apartamento.estadoCartera}">
+            <input class="form-control" list="estadocartera" name="cartera" required placeholder="seleccione una opción" value="${apartamento.estadoCartera}">
 
             <datalist id="estadocartera">
                 <option value="Al dia">
                 <option value="En mora">
             </datalist>
+            </div>
 
         </fieldset>
-        <br/> <input type="submit" value="Guardar"/>
+        <br/> <button type="submit" class="btn btn-secondary">Guardar</button>
 
     </form>
 </section>
