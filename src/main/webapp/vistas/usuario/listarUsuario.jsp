@@ -4,7 +4,7 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<table border= "1">
+<table class="table">
     <tr>
         <td>Id</td>
         <td>Nombre</td>

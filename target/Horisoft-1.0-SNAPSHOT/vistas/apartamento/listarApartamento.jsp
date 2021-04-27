@@ -4,11 +4,11 @@
 
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
-<table border="1">
+<table class="table">
     <tr>
-        <td>Número apartamento</td>
-        <td>Número torre</td>
-        <td>Estado cartera</td>
+        <td>Número Apartamento</td>
+        <td>Número Torre</td>
+        <td>Estado Cartera</td>
         <td></td>
         <td></td>
     </tr>

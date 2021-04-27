@@ -24,13 +24,11 @@
             <img class="logohorisoft" src="<%=request.getContextPath()%>/_img/Edificios.png">
         </div>
         <div class="elementonavheader">
-            <ul class="listanav">
-                <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Link1</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Link2</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Link3</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Salir</a></li>
-            </ul>
+            <nav class="listanav">
+                <a href="http://localhost:8080/Horisoft_war_exploded/index.jsp">Inicio</a>
+                <a href="#">Quienes somos</a>
+                <a href="http://localhost:8080/Horisoft_war_exploded/vistas/usuario/validarUsuario.jsp">Salir</a>
+            </nav>
         </div>
     </section>
     <!--finaliza mi header-->

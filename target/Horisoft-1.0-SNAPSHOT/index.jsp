@@ -3,7 +3,7 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <nav>
-    <h1>Menu principal</h1>
+    <h3>Menu principal</h3>
     <table>
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioController?opcion=crearUsuario">Crear usuario</td>
