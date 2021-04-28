@@ -133,15 +133,38 @@ public class UsuarioController extends HttpServlet {
 
 
             try {
-                if(usuarioDAO.validarUsuario(NombreUsuario, Clave)) {
+                //iniciamos usuario con el usuario que traiga el metodo de validación
+                Usuario usuario = usuarioDAO.validarUsuario(NombreUsuario, Clave);
+                String rolUsu = usuario.getRolUsuario();
+                System.out.println(rolUsu);
+                System.out.println("crea objeto usuario" );
 
-                    RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoPermitido.jsp");
-                    requestDispacher.forward(request, response);
 
-                }else {
+                    if(rolUsu.equals("Residente")){
+
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Residente.jsp");
+                        requestDispacher.forward(request, response);
+                        System.out.println("Rol residente" );
+                    }
+
+                    else if (rolUsu.equals("Gestionador Zona")){
+
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Gestionador.jsp");
+                        requestDispacher.forward(request, response);
+                        System.out.println("Rol Gestionador" );
+                    }
+
+                    else if(rolUsu.equals("Administrador Conjunto")){
+
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Administrador.jsp");
+                        requestDispacher.forward(request, response);
+                        System.out.println("Rol Administrador" );
+
+                    }else{
 
                     RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoDenegado.jsp");
                     requestDispacher.forward(request, response);
+                    System.out.println("entra al else" );
                 }
             } catch (SQLException e) {
                 // TODO Auto-generated catch block

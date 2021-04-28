@@ -18,6 +18,8 @@ public class UsuarioDAO {
     private PreparedStatement statement;
     private boolean estadoOperacion;
 
+
+
     public boolean guardar(Usuario usuario) throws SQLException {
         String sql=null; /*variable que almacena la sentencia*/
         estadoOperacion=false;
@@ -187,9 +189,9 @@ public class UsuarioDAO {
 
     /*Metodo validar usuario*/
 
-    public boolean validarUsuario(String nombreUsuario, String contrasena) throws SQLException {
+    public Usuario validarUsuario(String nombreUsuario, String contrasena) throws SQLException {
 
-
+        Usuario usuario =null;
         ResultSet resultSet = null;
         estadoOperacion = false;
         String sql = null;
@@ -204,13 +206,21 @@ public class UsuarioDAO {
             resultSet = statement.executeQuery();
 
             if (resultSet.next()) {
+                //instanciamos la clase usuario si la consulta devuelve datos sino el usuario queda null
+                usuario = new Usuario(
+                        resultSet.getInt("id_usuario"),
+                        resultSet.getString("nombre_usuario"),
+                        resultSet.getString("contrasena"),
+                        resultSet.getString("estado_usuario"),
+                        resultSet.getString("rol_usuario")
+                );
+               // estadoOperacion = true;
 
-                estadoOperacion = true;
-
-            } else {
+            }
+            /*else {
 
                 estadoOperacion = false;
-            }
+            }*/
 
             statement.close();
             connection.close();
@@ -218,8 +228,8 @@ public class UsuarioDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        return estadoOperacion;
+    //devuelve el usuario
+        return usuario;
 
     }
 

@@ -15,7 +15,6 @@
     flex-direction: column;
     align-items: center;
     font-family: 'Lato', sans-serif;
-
 }
 
 /*termina estilo body*/
@@ -23,25 +22,21 @@
 
 /* empieza estilo header*/
 
+
 .estiloheader{
     background: #FCFCFC;
     width: 95%;
     height: 250px;
     margin-top: 5px;
-
-
 }
 
 .seccionheader{
     display: flex;
     flex-direction: column;
-
-
 }
 
 .logohorisoft{
     width: 100%;
-
 }
 
 .elementoimgheader{
