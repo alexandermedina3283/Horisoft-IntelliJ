@@ -11,7 +11,7 @@
                 <legend>Formulario Ingreso</legend>
                 <div class="form-group">
                     <label for="nombreUsuario">Nombre usuario :</label>
-                    <input class="form-control" type="text" name="nombreUsuario" id="nombreUsuario"
+                    <input class="form-control" type="text" name="nombreUsuario"  id="nombreUsuario"
                            placeholder="Digite nombre usuario" autofocus required pattern=[a-zA-Z0-9]{2,40}> <br>
                 </div>
                 <div class="form-group">

@@ -135,12 +135,10 @@ public class UsuarioController extends HttpServlet {
             try {
                 //iniciamos usuario con el usuario que traiga el metodo de validación
                 Usuario usuario = usuarioDAO.validarUsuario(NombreUsuario, Clave);
-                String rolUsu = usuario.getRolUsuario();
-                System.out.println(rolUsu);
-                System.out.println("crea objeto usuario" );
 
-
-                    if(rolUsu.equals("Residente")){
+                if (usuario!=null){
+                    String rolUsu = usuario.getRolUsuario();
+                     if (rolUsu.equals("Residente")){
 
                         RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Residente.jsp");
                         requestDispacher.forward(request, response);
@@ -158,13 +156,12 @@ public class UsuarioController extends HttpServlet {
 
                         RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Administrador.jsp");
                         requestDispacher.forward(request, response);
-                        System.out.println("Rol Administrador" );
-
-                    }else{
+                    }
+                }else{
 
                     RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoDenegado.jsp");
                     requestDispacher.forward(request, response);
-                    System.out.println("entra al else" );
+
                 }
             } catch (SQLException e) {
                 // TODO Auto-generated catch block

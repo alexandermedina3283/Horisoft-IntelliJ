@@ -191,7 +191,7 @@ public class UsuarioDAO {
 
     public Usuario validarUsuario(String nombreUsuario, String contrasena) throws SQLException {
 
-        Usuario usuario =null;
+        Usuario usuario = null;
         ResultSet resultSet = null;
         estadoOperacion = false;
         String sql = null;
@@ -212,15 +212,9 @@ public class UsuarioDAO {
                         resultSet.getString("nombre_usuario"),
                         resultSet.getString("contrasena"),
                         resultSet.getString("estado_usuario"),
-                        resultSet.getString("rol_usuario")
-                );
-               // estadoOperacion = true;
+                        resultSet.getString("rol_usuario"));
 
             }
-            /*else {
-
-                estadoOperacion = false;
-            }*/
 
             statement.close();
             connection.close();
@@ -228,7 +222,7 @@ public class UsuarioDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    //devuelve el usuario
+        //devuelve el usuario
         return usuario;
 
     }
