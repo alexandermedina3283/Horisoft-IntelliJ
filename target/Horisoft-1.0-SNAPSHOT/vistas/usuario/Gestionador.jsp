@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Bienvenido gestionador</h1>
+<h3>Bienvenido gestionador</h3>
 </body>
 </html>

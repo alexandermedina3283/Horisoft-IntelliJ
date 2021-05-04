@@ -15,6 +15,7 @@ public class Residente extends Apartamento {
     private int categoria;
 
 
+
     public Residente(int apartamento, String torre, String estadoCartera, int idResidente, String nombre, String apellido, String identificacion, Date fechaNacimiento, String telefono, String email, String estado, int categoria) {
         super(apartamento, torre, estadoCartera);
 
@@ -27,6 +28,7 @@ public class Residente extends Apartamento {
         this.email=email;
         this.estado=estado;
         this.categoria=categoria;
+
     }
 
 
@@ -123,6 +125,7 @@ public class Residente extends Apartamento {
     public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
+
 
 
     @Override

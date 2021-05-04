@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<h1>bienvenido Residente</h1>
+<h3>bienvenido Residente</h3>
 
 </body>
 </html>

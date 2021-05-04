@@ -35,6 +35,14 @@
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=listarResidente">Listar residente</td>
         </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=crearComentario">Crear comentario</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=listarComentario">Listar comentario</td>
+        </tr>
+
+
 
     </table><br>
 </nav>

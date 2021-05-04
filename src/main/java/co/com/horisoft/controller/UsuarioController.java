@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 @WebServlet(name = "UsuarioController", value = "/UsuarioController")
 public class UsuarioController extends HttpServlet {
     @Override
@@ -79,19 +81,27 @@ public class UsuarioController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+
         String opcion=request.getParameter("opcion");
         if (opcion.equals("guardar")) {
 
+
+
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             Usuario usuario = new Usuario();
+            String sha256clave = org.apache.commons.codec.digest.DigestUtils.sha256Hex(request.getParameter("contraUsuario"));
             usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
-            usuario.setContrasena(request.getParameter("contraUsuario"));
+            usuario.setContrasena (sha256clave);
             usuario.setEstadoUsuario(request.getParameter("estadoUsuario"));
             usuario.setRolUsuario(request.getParameter("rolUsuario"));
+
 
             try {
                 usuarioDAO.guardar(usuario);
                 System.out.println("Registro guardado");
+                System.out.println(sha256clave);
+
+
 
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
                 requestDispacher.forward(request, response);
@@ -127,10 +137,10 @@ public class UsuarioController extends HttpServlet {
         }else if(opcion.equals("validar")) {
 
             System.out.println("seleccionó Validar usuario");
+            String Clave = org.apache.commons.codec.digest.DigestUtils.sha256Hex(request.getParameter("contraUsuario"));
             String NombreUsuario = request.getParameter("nombreUsuario");
-            String Clave = request.getParameter("contraUsuario");
-            UsuarioDAO usuarioDAO = new UsuarioDAO();
 
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
 
             try {
                 //iniciamos usuario con el usuario que traiga el metodo de validación
