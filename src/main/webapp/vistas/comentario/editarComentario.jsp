@@ -14,27 +14,23 @@
 
 
             <div class="form-group">
-                <label for="fechaComentario">Fecha</label> <input class="form-control"
-                                                                  name="fechaComentario" id="fechaComentario" value="${comentario.fechaComentario}"
-                                                                  type="date" max="2099-12-31T12:00:00" min="2021-01-01T12:00:00"
-                                                                  placeholder="fecha comentario"
-                                                                  required/> <br/>
-            </div>
-
-            <div class="form-group">
                 <label for="descripcionComentario">Descripción</label>
-                <input class="form-control" name="descripcionComentario" id="descripcionComentario"  value="${comentario.descripcionComentario}" type="text" placeholder="comentario" required/> <br/>
+                <input class="form-control" name="descripcionComentario" id="descripcionComentario"
+                       value="${comentario.descripcionComentario}" type="text" placeholder="comentario" required/> <br/>
             </div>
 
 
             <div class="form-group">
                 <label for="autorComentario">Nombre</label>
-                <input class="form-control" name="autorComentario" id="autorComentario" value="${comentario.autorComentario}" type="text" placeholder="responsable del comentario" required/> <br/>
+                <input class="form-control" name="autorComentario" id="autorComentario"
+                       value="${comentario.autorComentario}" type="text" placeholder="responsable del comentario"
+                       required/> <br/>
             </div>
 
             <div class="form-group">
                 <label for="idInscripcion">Numero inscripción</label>
-                <input class="form-control" name="idInscripcion" id="idInscripcion" value="${comentario.idInscripcion}" type="text" placeholder="número de inscripcion" required/> <br/>
+                <input class="form-control" name="idInscripcion" id="idInscripcion" value="${comentario.idInscripcion}"
+                       type="text" placeholder="número de inscripcion" required/> <br/>
             </div>
 
         </fieldset>

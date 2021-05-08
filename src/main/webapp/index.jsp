@@ -41,6 +41,9 @@
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=listarComentario">Listar comentario</td>
         </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionController?opcion=crearInscripcion">Crear inscripcion</td>
+        </tr>
 
 
 

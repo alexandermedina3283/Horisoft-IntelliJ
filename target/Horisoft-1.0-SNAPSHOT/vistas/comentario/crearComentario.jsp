@@ -11,14 +11,6 @@
 
 
             <div class="form-group">
-                <label for="fechaComentario">Fecha</label> <input class="form-control"
-                 name="fechaComentario" id="fechaComentario"
-                 type="date" max="2099-12-31T12:00:00" min="2021-01-01T12:00:00"
-                 placeholder="fecha comentario"
-                 required/> <br/>
-            </div>
-
-            <div class="form-group">
                 <label for="descripcionComentario">Descripción</label>
                 <input class="form-control" name="descripcionComentario" id="descripcionComentario" type="text" placeholder="comentario" required/> <br/>
             </div>

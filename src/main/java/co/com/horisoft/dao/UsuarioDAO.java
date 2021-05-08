@@ -205,7 +205,7 @@ public class UsuarioDAO {
             statement.setString(2, contrasena);
             resultSet = statement.executeQuery();
 
-            if (resultSet.next()) {
+          if   (resultSet.next()) {
                 //instanciamos la clase usuario si la consulta devuelve datos sino el usuario queda null
                 usuario = new Usuario(
                         resultSet.getInt("id_usuario"),

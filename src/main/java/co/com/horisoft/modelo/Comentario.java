@@ -7,12 +7,12 @@ import java.sql.Date;
 public class Comentario{
 
     private int idComentario;
-    private Date fechaComentario;
+    private String fechaComentario;
     private String descripcionComentario;
     private String autorComentario;
     private int idInscripcion;
 
-    public Comentario(int idComentario, Date fechaComentario, String descripcionComentario, String autorComentario, int idInscripcion) {
+    public Comentario(int idComentario, String fechaComentario, String descripcionComentario, String autorComentario, int idInscripcion) {
         this.idComentario = idComentario;
         this.fechaComentario = fechaComentario;
         this.descripcionComentario = descripcionComentario;
@@ -31,11 +31,11 @@ public class Comentario{
         this.idComentario = idComentario;
     }
 
-    public Date getFechaComentario() {
-        return (Date) fechaComentario;
+    public String getFechaComentario() {
+        return fechaComentario;
     }
 
-    public void setFechaComentario(Date fechaComentario) {
+    public void setFechaComentario(String fechaComentario) {
         this.fechaComentario = fechaComentario;
     }
 

@@ -8,7 +8,7 @@
             <p class="textofooter">Consultar manual del usuario</p>
             <a class="manual-link" href="#">&nbsp;Click aqui</a>
         </div>
-        <p class="textofooter">Linea de soporte tecnico 3202115906</p>
+        <p class="textofooter">Linea de soporte tecnico 057-15087758</p>
     </div>
     <!--finaliza footer-->
 </footer>

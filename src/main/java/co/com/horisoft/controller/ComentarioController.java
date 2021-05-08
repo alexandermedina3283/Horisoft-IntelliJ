@@ -1,25 +1,13 @@
 package co.com.horisoft.controller;
 
 import co.com.horisoft.dao.ComentarioDAO;
-import co.com.horisoft.dao.MascotaDAO;
 import co.com.horisoft.modelo.Comentario;
-import co.com.horisoft.modelo.Mascota;
-
-
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
-import java.sql.Date;
 import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.List;
 
 @WebServlet(name = "ComentarioController", value = "/ComentarioController")
@@ -98,7 +86,6 @@ public class ComentarioController extends HttpServlet {
             ComentarioDAO comentarioDAO = new ComentarioDAO();
             Comentario comentario = new Comentario();
 
-            comentario.setFechaComentario(Date.valueOf(request.getParameter("fechaComentario")));
             comentario.setDescripcionComentario (request.getParameter("descripcionComentario"));
             comentario.setAutorComentario(request.getParameter("autorComentario"));
             comentario.setIdInscripcion(Integer.parseInt(request.getParameter("idInscripcion")));
@@ -120,7 +107,6 @@ public class ComentarioController extends HttpServlet {
             Comentario comentario = new Comentario();
             ComentarioDAO comentarioDAO = new ComentarioDAO();
             comentario.setIdComentario(Integer.parseInt(request.getParameter("idComentario")));
-            comentario.setFechaComentario(Date.valueOf(request.getParameter("fechaComentario")));
             comentario.setDescripcionComentario(request.getParameter("descripcionComentario"));
             comentario.setAutorComentario(request.getParameter("autorComentario"));
             comentario.setIdInscripcion(Integer.parseInt(request.getParameter("idInscripcion")));

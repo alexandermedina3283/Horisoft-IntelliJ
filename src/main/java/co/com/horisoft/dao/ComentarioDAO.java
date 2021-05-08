@@ -2,13 +2,10 @@ package co.com.horisoft.dao;
 
 import co.com.horisoft.conexion.Conexion;
 import co.com.horisoft.modelo.Comentario;
-import co.com.horisoft.modelo.Mascota;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,14 +25,13 @@ public class ComentarioDAO {
         try {
             connection.setAutoCommit(false);
 
-            sql="insert into comentario (id_comentario,fecha_comentario,descripcion,autor_comentario,id_inscripcion) values (?,?,?,?,?)";
+            sql="insert into comentario (id_comentario,descripcion,autor_comentario,id_inscripcion) values (?,?,?,?)";
             statement=connection.prepareStatement(sql);
 
             statement.setString(1, null);
-            statement.setDate(2, comentario.getFechaComentario());
-            statement.setString(3, comentario.getDescripcionComentario());
-            statement.setString(4, comentario.getAutorComentario());
-            statement.setInt(5, comentario.getIdInscripcion());
+            statement.setString(2, comentario.getDescripcionComentario());
+            statement.setString(3, comentario.getAutorComentario());
+            statement.setInt(4, comentario.getIdInscripcion());
 
             estadoOperacion=statement.executeUpdate()>0;
 
@@ -53,10 +49,6 @@ public class ComentarioDAO {
 
     }
 
-    private Connection obtenerConexion() throws SQLException {
-
-        return Conexion.getConnection();
-    }
 
     public List<Comentario> obtenerComentarios() throws SQLException {
 
@@ -76,7 +68,7 @@ public class ComentarioDAO {
             while (resultSet.next()) {
                 Comentario comentario=new Comentario();
                 comentario.setIdComentario(resultSet.getInt(1));
-                comentario.setFechaComentario(resultSet.getDate(2));
+                comentario.setFechaComentario(resultSet.getString(2));
                 comentario.setDescripcionComentario(resultSet.getString(3));
                 comentario.setAutorComentario(resultSet.getString(4));
                 comentario.setIdInscripcion(Integer.parseInt(resultSet.getString(5)));
@@ -111,7 +103,7 @@ public class ComentarioDAO {
             if (resultSet.next()) {
 
                 comentario.setIdComentario(resultSet.getInt(1));
-                comentario.setFechaComentario(resultSet.getDate(2));
+                comentario.setFechaComentario(resultSet.getString(2));
                 comentario.setDescripcionComentario(resultSet.getString(3));
                 comentario.setAutorComentario(resultSet.getString(4));
                 comentario.setIdInscripcion(resultSet.getInt(5));
@@ -133,12 +125,11 @@ public class ComentarioDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="update comentario set fecha_comentario=?, descripcion=?, autor_comentario=? where id_comentario=?";
+            sql="update comentario set descripcion=?, autor_comentario=? where id_comentario=?";
             statement=connection.prepareStatement(sql);
-            statement.setDate(1, comentario.getFechaComentario());
-            statement.setString(2, comentario.getDescripcionComentario());
-            statement.setString(3, comentario.getAutorComentario());
-            statement.setInt(4, comentario.getIdComentario());
+            statement.setString(1, comentario.getDescripcionComentario());
+            statement.setString(2, comentario.getAutorComentario());
+            statement.setInt(3, comentario.getIdComentario());
 
 
             estadoOperacion=statement.executeUpdate()>0;
@@ -182,6 +173,10 @@ public class ComentarioDAO {
 
         return estadoOperacion;
 
+    }
+    private Connection obtenerConexion() throws SQLException {
+
+        return Conexion.getConnection();
     }
 
 }
