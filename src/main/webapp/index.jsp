@@ -44,6 +44,12 @@
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionController?opcion=crearInscripcion">Crear inscripcion</td>
         </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=crearReservaSalon">Crear evento salon social</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=listarReservaSalon">Listar evento salon social</td>
+        </tr>
 
 
 
