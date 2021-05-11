@@ -6,16 +6,16 @@ import java.sql.Time;
 public class Inscripcion {
 
     private int idInscripcion;
-    private Date fechaInscripcion;
+    private String fechaInscripcion;
     private Date fechaEntrada;
-    private Time horaEntrada;
+    private String horaEntrada;
     private Date fechaSalida;
-    private Time horaSalida;
+    private String horaSalida;
     private String estadoInscripcion;
     private int idResidente;
     private int idActividad;
 
-    public Inscripcion(int idInscripcion, Date fechaInscripcion, Date fechaEntrada, Time horaEntrada, Date fechaSalida, Time horaSalida, String estadoInscripcion, int idResidente, int idActividad) {
+    public Inscripcion(int idInscripcion, String fechaInscripcion, Date fechaEntrada, String horaEntrada, Date fechaSalida, String horaSalida, String estadoInscripcion, int idResidente, int idActividad) {
         this.idInscripcion = idInscripcion;
         this.fechaInscripcion = fechaInscripcion;
         this.fechaEntrada = fechaEntrada;
@@ -38,11 +38,11 @@ public class Inscripcion {
         this.idInscripcion = idInscripcion;
     }
 
-    public Date getFechaInscripcion() {
+    public String getFechaInscripcion() {
         return fechaInscripcion;
     }
 
-    public void setFechaInscripcion(Date fechaInscripcion) {
+    public void setFechaInscripcion(String fechaInscripcion) {
         this.fechaInscripcion = fechaInscripcion;
     }
 
@@ -54,11 +54,11 @@ public class Inscripcion {
         this.fechaEntrada = fechaEntrada;
     }
 
-    public Time getHoraEntrada() {
+    public String getHoraEntrada() {
         return horaEntrada;
     }
 
-    public void setHoraEntrada(Time horaEntrada) {
+    public void setHoraEntrada(String horaEntrada) {
         this.horaEntrada = horaEntrada;
     }
 
@@ -70,11 +70,11 @@ public class Inscripcion {
         this.fechaSalida = fechaSalida;
     }
 
-    public Time getHoraSalida() {
+    public String getHoraSalida() {
         return horaSalida;
     }
 
-    public void setHoraSalida(Time horaSalida) {
+    public void setHoraSalida(String horaSalida) {
         this.horaSalida = horaSalida;
     }
 
@@ -106,11 +106,11 @@ public class Inscripcion {
     public String toString() {
         return "Inscripcion{" +
                 "idInscripcion=" + idInscripcion +
-                ", fechaInscripcion=" + fechaInscripcion +
+                ", fechaInscripcion='" + fechaInscripcion + '\'' +
                 ", fechaEntrada=" + fechaEntrada +
-                ", horaEntrada=" + horaEntrada +
+                ", horaEntrada='" + horaEntrada + '\'' +
                 ", fechaSalida=" + fechaSalida +
-                ", horaSalida=" + horaSalida +
+                ", horaSalida='" + horaSalida + '\'' +
                 ", estadoInscripcion='" + estadoInscripcion + '\'' +
                 ", idResidente=" + idResidente +
                 ", idActividad=" + idActividad +

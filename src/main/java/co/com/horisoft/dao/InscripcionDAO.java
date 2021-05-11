@@ -29,9 +29,9 @@ public class InscripcionDAO {
 
             statement.setString(1, null);
             statement.setDate(2, inscripcion.getFechaEntrada());
-            statement.setTime(3, inscripcion.getHoraEntrada());
+            statement.setString(3, inscripcion.getHoraEntrada());
             statement.setDate(4, inscripcion.getFechaSalida());
-            statement.setTime(5, inscripcion.getHoraSalida());
+            statement.setString(5, inscripcion.getHoraSalida());
             statement.setString(6,inscripcion.getEstadoInscripcion());
             statement.setInt(7,inscripcion.getIdResidente());
             statement.setInt(8,inscripcion.getIdActividad());

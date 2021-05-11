@@ -38,9 +38,9 @@ public class InscripcionController extends HttpServlet {
             InscripcionDAO inscripcionDAO = new InscripcionDAO();
             Inscripcion inscripcion = new Inscripcion();
             inscripcion.setFechaEntrada(Date.valueOf(request.getParameter("fechaEntrada")));
-            inscripcion.setHoraEntrada(Time.valueOf(request.getParameter("horaEntrada")));
+            inscripcion.setHoraEntrada(request.getParameter("horaEntrada"));
             inscripcion.setFechaSalida(Date.valueOf(request.getParameter("fechaSalida")));
-            inscripcion.setHoraSalida(Time.valueOf(request.getParameter("horaSalida")));
+            inscripcion.setHoraSalida(request.getParameter("horaSalida"));
             inscripcion.setEstadoInscripcion(request.getParameter("estadoInscripcion"));
             inscripcion.setIdResidente(Integer.parseInt(request.getParameter("idResidente")));
             inscripcion.setIdActividad(Integer.parseInt(request.getParameter("nombreActividad")));
