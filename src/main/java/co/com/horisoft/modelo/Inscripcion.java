@@ -15,6 +15,7 @@ public class Inscripcion {
     private int idResidente;
     private int idActividad;
 
+
     public Inscripcion(int idInscripcion, String fechaInscripcion, Date fechaEntrada, String horaEntrada, Date fechaSalida, String horaSalida, String estadoInscripcion, int idResidente, int idActividad) {
         this.idInscripcion = idInscripcion;
         this.fechaInscripcion = fechaInscripcion;
@@ -25,6 +26,7 @@ public class Inscripcion {
         this.estadoInscripcion = estadoInscripcion;
         this.idResidente = idResidente;
         this.idActividad = idActividad;
+
     }
 
     public Inscripcion() {
@@ -101,6 +103,7 @@ public class Inscripcion {
     public void setIdActividad(int idActividad) {
         this.idActividad = idActividad;
     }
+
 
     @Override
     public String toString() {

@@ -150,21 +150,21 @@ public class UsuarioController extends HttpServlet {
                     String rolUsu = usuario.getRolUsuario();
                      if (rolUsu.equals("Residente")){
 
-                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Residente.jsp");
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/crearInscripcion.jsp");
                         requestDispacher.forward(request, response);
                         System.out.println("Rol residente" );
                     }
 
                     else if (rolUsu.equals("Gestionador Zona")){
 
-                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Gestionador.jsp");
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/crearInscripcion.jsp");
                         requestDispacher.forward(request, response);
                         System.out.println("Rol Gestionador" );
                     }
 
                     else if(rolUsu.equals("Administrador Conjunto")){
 
-                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Administrador.jsp");
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
                         requestDispacher.forward(request, response);
                     }
                 }else{
