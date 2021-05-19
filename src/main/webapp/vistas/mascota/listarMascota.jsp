@@ -23,8 +23,8 @@
             <td><c:out value="${mascota.clase}"></c:out></td>
             <td><c:out value="${mascota.apartamento}"></c:out></td>
             <td><c:out value="${mascota.torre}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/MascotaController?opcion=eliminar&idMascota=<c:out value="${mascota.idMascota}"></c:out>">Eliminar</a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/MascotaController?opcion=editar&idMascota=<c:out value="${mascota.idMascota}"></c:out>">Editar</a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/MascotaController?opcion=eliminar&idMascota=<c:out value="${mascota.idMascota}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/MascotaController?opcion=editar&idMascota=<c:out value="${mascota.idMascota}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 

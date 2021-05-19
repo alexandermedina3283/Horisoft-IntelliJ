@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="<%=request.getContextPath()%>/_css/estiloHorisoftemplate.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap" rel="stylesheet">
 </head>
 <body class="estilobody">
@@ -26,7 +27,6 @@
         <div class="elementonavheader">
             <nav class="listanav">
                 <a href="http://localhost:8080/Horisoft_war_exploded/index.jsp">Inicio</a>
-                <a href="#">Quienes somos</a>
                 <a href="http://localhost:8080/Horisoft_war_exploded/vistas/usuario/validarUsuario.jsp">Salir</a>
             </nav>
         </div>

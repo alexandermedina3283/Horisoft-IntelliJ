@@ -22,8 +22,8 @@
             <td><c:out value="${salonSocial.numeroComprobante}"></c:out></td>
             <td><c:out value="${salonSocial.valorDeposito}"></c:out></td>
             <td><c:out value="${salonSocial.idInscripcion}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=eliminar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>">Eliminar</a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=editar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>">Editar</a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=eliminar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=editar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 

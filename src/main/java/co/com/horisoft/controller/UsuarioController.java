@@ -157,7 +157,7 @@ public class UsuarioController extends HttpServlet {
 
                     else if (rolUsu.equals("Gestionador Zona")){
 
-                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/crearInscripcion.jsp");
+                        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/MenuGestionador.jsp");
                         requestDispacher.forward(request, response);
                         System.out.println("Rol Gestionador" );
                     }

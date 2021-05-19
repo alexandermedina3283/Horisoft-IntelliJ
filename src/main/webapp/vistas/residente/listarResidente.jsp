@@ -35,8 +35,8 @@
             <td><c:out value="${residente.torre}"></c:out></td>
             <td><c:out value="${residente.categoria}"></c:out></td>
 
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=eliminar&idResidente=<c:out value="${residente.idResidente}"></c:out>">Eliminar</a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=editar&idResidente=<c:out value="${residente.idResidente}"></c:out>">Editar</a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=eliminar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=editar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 
