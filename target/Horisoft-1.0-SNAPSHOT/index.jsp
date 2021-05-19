@@ -6,58 +6,58 @@
     <h3>Menu Principal</h3>
     <table>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioController?opcion=crearUsuario">Crear usuario</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=crearUsuario">Crear usuario</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioController?opcion=listarUsuario">Listar usuarios</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=listarUsuario">Listar usuarios</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoController?opcion=crearApartamento">Crear apartamento</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=crearApartamento">Crear apartamento</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoController?opcion=listarApartamento">Listar apartamentos</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=listarApartamento">Listar apartamentos</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaController?opcion=crearMascota">Crear mascota</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaServlet?opcion=crearMascota">Crear mascota</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaController?opcion=listarMascota">Listar mascotas</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaServlet?opcion=listarMascota">Listar mascotas</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoController?opcion=crearParqueadero">Crear parqueadero</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=crearParqueadero">Crear parqueadero</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoController?opcion=listarParqueadero">Listar parqueaderos</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=listarParqueadero">Listar parqueaderos</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=crearResidente">Crear residente</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=crearResidente">Crear residente</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=listarResidente">Listar residente</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=listarResidente">Listar residente</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=crearComentario">Crear comentario</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=crearComentario">Crear comentario</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=listarComentario">Listar comentario</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=listarComentario">Listar comentario</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionController?opcion=crearInscripcion">Crear inscripcion</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=crearInscripcion">Crear inscripcion</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionController?opcion=listarInscripcion">Listar inscripcion</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=listarInscripcion">Listar inscripcion</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=crearReservaSalon">Crear evento salon social</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=crearReservaSalon">Crear evento salon social</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=listarReservaSalon">Listar evento salon social</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar evento salon social</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoController?opcion=crearInvitado">Crear invitado</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado">Crear invitado</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoController?opcion=listarInvitado">Listar invitado</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=listarInvitado">Listar invitado</td>
         </tr>
 
 

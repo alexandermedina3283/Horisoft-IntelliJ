@@ -5,7 +5,7 @@
 <section>
 
     <form
-            action="http://localhost:8080/Horisoft_war_exploded/ApartamentoController"
+            action="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet"
             method="post">
         <input type="hidden" name="opcion" value="guardar">
         <fieldset>

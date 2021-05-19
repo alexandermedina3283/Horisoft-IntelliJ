@@ -20,10 +20,10 @@
             <td><c:out value="${apartamento.torre}"></c:out></td>
             <td><c:out value="${apartamento.estadoCartera}"></c:out></td>
             <td>
-                <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoController?opcion=eliminar&apartamento=<c:out value="${apartamento.apartamento}"></c:out>&torre=<c:out value="${apartamento.torre}"></c:out>"><i class="far fa-trash-alt"></i></a>
+                <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=eliminar&apartamento=<c:out value="${apartamento.apartamento}"></c:out>&torre=<c:out value="${apartamento.torre}"></c:out>"><i class="far fa-trash-alt"></i></a>
             </td>
             <td>
-                <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoController?opcion=editar&apartamento=<c:out value="${apartamento.apartamento}"></c:out>&torre=<c:out value="${apartamento.torre}"></c:out>"><i class="far fa-edit"></i></a>
+                <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=editar&apartamento=<c:out value="${apartamento.apartamento}"></c:out>&torre=<c:out value="${apartamento.torre}"></c:out>"><i class="far fa-edit"></i></a>
             </td>
         </tr>
     </c:forEach>

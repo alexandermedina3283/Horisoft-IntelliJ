@@ -23,8 +23,8 @@
             <td><c:out value="${invitado.apellidoInvitado}"></c:out></td>
             <td><c:out value="${invitado.identificacionInvitado}"></c:out></td>
             <td><c:out value="${invitado.idInscripcion}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoController?opcion=eliminar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoController?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=eliminar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 

@@ -5,7 +5,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/ApartamentoController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet" method="post">
         <c:set var="apartamento" value="${apartamento}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="apartamento" value="${apartamento.apartamento}">

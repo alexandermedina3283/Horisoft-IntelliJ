@@ -23,8 +23,8 @@
             <td><c:out value="${comentario.descripcionComentario}"></c:out></td>
             <td><c:out value="${comentario.autorComentario}"></c:out></td>
             <td><c:out value="${comentario.idInscripcion}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=eliminar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=eliminar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 

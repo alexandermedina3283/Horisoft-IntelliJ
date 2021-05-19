@@ -21,8 +21,8 @@
             <td><c:out value="${usuario.nombreUsuario}"></c:out></td>
             <td><c:out value="${usuario.estadoUsuario}"></c:out></td>
             <td><c:out value="${usuario.rolUsuario}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/UsuarioController?opcion=eliminar&idUsuario=<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/UsuarioController?opcion=editar&idUsuario=<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=eliminar&idUsuario=<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=editar&idUsuario=<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 

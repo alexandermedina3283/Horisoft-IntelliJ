@@ -18,7 +18,7 @@
     <title>Document</title>
 </head>
 <body>
-<form action="http://localhost:8080/Horisoft_war_exploded/UsuarioController" method="post">
+<form action="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet" method="post">
     <input type="hidden" name="opcion" value="validar">
 
 <div class="body"></div>

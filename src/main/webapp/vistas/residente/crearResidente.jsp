@@ -2,7 +2,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/ResidenteController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet" method="post">
         <input type="hidden" name="opcion" value="guardar">
         <fieldset>
 

@@ -3,7 +3,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/ParqueaderoController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet" method="post">
         <c:set var="parqueadero" value="${parqueadero}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="idMascota" value="${parqueadero.idParqueadero}">

@@ -3,7 +3,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/MascotaController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/MascotaServlet" method="post">
         <input type="hidden" name="opcion" value="guardar">
         <fieldset>
 

@@ -5,7 +5,7 @@
 
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/ResidenteController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet" method="post">
         <c:set var="residente" value="${residente}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="idResidente" value="${residente.idResidente}">

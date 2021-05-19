@@ -1,6 +1,6 @@
 package co.com.horisoft.dao;
 
-import co.com.horisoft.conexion.Conexion;
+import co.com.horisoft.util.Conexion;
 import co.com.horisoft.modelo.Comentario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;

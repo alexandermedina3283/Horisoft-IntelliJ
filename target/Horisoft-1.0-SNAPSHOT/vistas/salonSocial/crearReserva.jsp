@@ -2,7 +2,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/SalonSocialController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet" method="post">
         <input type="hidden" name="opcion" value="guardar">
         <fieldset>
 

@@ -5,7 +5,7 @@
 <section class="registrouser">
     <div class="contenedor">
 
-        <form action="http://localhost:8080/Horisoft_war_exploded/UsuarioController" method="post">
+        <form action="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet" method="post">
             <c:set var="usuario" value="${usuario}"></c:set>
             <input type="hidden" name="opcion" value="editar">
             <input type="hidden" name="idUsuario" value="${usuario.idUsuario}">

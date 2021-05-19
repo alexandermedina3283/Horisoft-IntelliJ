@@ -2,7 +2,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/SalonSocialController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet" method="post">
         <c:set var="salonSocial" value="${salonSocial}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="idInscripcion" value="${salonSocial.idInscripcion}">

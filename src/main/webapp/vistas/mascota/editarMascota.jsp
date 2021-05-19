@@ -5,7 +5,7 @@
 
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/MascotaController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/MascotaServlet" method="post">
         <c:set var="mascota" value="${mascota}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="idMascota" value="${mascota.idMascota}">

@@ -4,7 +4,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
 <section>
 
-    <form action="http://localhost:8080/Horisoft_war_exploded/InvitadoController" method="post">
+    <form action="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet" method="post">
         <c:set var="invitado" value="${invitado}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="idInvitado" value="${invitado.idInvitado}">
