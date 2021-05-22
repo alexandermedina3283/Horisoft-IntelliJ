@@ -14,7 +14,7 @@
 
             <div class="form-group">
                 <label for="nombreActividad">Actividad a desarrollar</label>
-                <select class="form-control" name="nombreActividad" id="nombreActividad" required>
+                <select class="form-control" name="nombreActividad" id="nombreActividad" required autofocus>
                     <option hidden selected>Seleccione una opción</option>
                     <option value="1">Acondicionamiento fisico</option>
                     <option value="2">Zumba</option>
@@ -45,9 +45,9 @@
                 <label for="horaEntrada">Hora de inicio</label>
                 <input class="form-control"
                        name="horaEntrada" id="horaEntrada"
-                       type="text" value="00:00:00" min="10:00:00" max="22:00:00"
+                       type="text" value="00:00:00"
                        placeholder="Hora inicio actividad"
-                       required/> <br/>
+                       required pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$"/> <br/>
             </div>
 
             <div class="form-group">
@@ -63,9 +63,9 @@
                 <label for="horaSalida">Hora de finalización</label>
                 <input class="form-control"
                        name="horaSalida" id="horaSalida"
-                       type="text" value="00:00:00" min="11:00:00" max="22:00:00"
+                       type="text" value="00:00:00"
                        placeholder="Hora finalización actividad"
-                       required/> <br/>
+                       required pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$"/> <br/>
             </div>
 
             <div class="form-group">
@@ -89,7 +89,7 @@
                        name="idResidente" id="idResidente"
                        type="text"
                        placeholder="Número residente"
-                       required/> <br/>
+                       required pattern="[0-9]{1,4}"/> <br/>
             </div>
 
         </fieldset>

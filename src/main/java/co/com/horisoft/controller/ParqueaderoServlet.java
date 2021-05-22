@@ -1,7 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.ParqueaderoDAO;
-import co.com.horisoft.modelo.Parqueadero;
+import co.com.horisoft.modelo.dao.ParqueaderoDAO;
+import co.com.horisoft.modelo.beans.Parqueadero;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

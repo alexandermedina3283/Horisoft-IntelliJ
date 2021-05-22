@@ -19,7 +19,7 @@
                 <div class="form-group">
                 <label for="contraUsuario">Contraseña :</label>
                 <input class="form-control" type="password" name="contraUsuario" id="contraUsuario"
-                       placeholder="Ingrese su contraseña" required pattern="*{8,15}"> <br>
+                       placeholder="Ingrese su contraseña" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"> <br>
                 </div>
 
                 <div class="form-group">

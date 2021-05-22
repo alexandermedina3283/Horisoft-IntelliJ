@@ -1,7 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.ApartamentoDAO;
-import co.com.horisoft.modelo.Apartamento;
+import co.com.horisoft.modelo.dao.ApartamentoDAO;
+import co.com.horisoft.modelo.beans.Apartamento;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

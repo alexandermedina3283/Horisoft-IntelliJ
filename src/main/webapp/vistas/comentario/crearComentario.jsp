@@ -12,18 +12,21 @@
 
             <div class="form-group">
                 <label for="descripcionComentario">Descripción</label>
-                <input class="form-control" name="descripcionComentario" id="descripcionComentario" type="text" placeholder="comentario" required/> <br/>
+                <input class="form-control" name="descripcionComentario" id="descripcionComentario" type="text"
+                       placeholder="comentario" required autofocus/> <br/>
             </div>
 
 
             <div class="form-group">
                 <label for="autorComentario">Nombre</label>
-                <input class="form-control" name="autorComentario" id="autorComentario" type="text" placeholder="responsable del comentario" required/> <br/>
+                <input class="form-control" name="autorComentario" id="autorComentario" type="text"
+                       placeholder="responsable del comentario" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
             </div>
 
             <div class="form-group">
                 <label for="idInscripcion">Numero inscripción</label>
-                <input class="form-control" name="idInscripcion" id="idInscripcion" type="text" placeholder="número de inscripcion" required/> <br/>
+                <input class="form-control" name="idInscripcion" id="idInscripcion" type="text"
+                       placeholder="número de inscripcion" required pattern="[0-9]{1,4}"/> <br/>
             </div>
 
         </fieldset>

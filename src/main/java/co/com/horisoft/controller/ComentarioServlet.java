@@ -1,7 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.ComentarioDAO;
-import co.com.horisoft.modelo.Comentario;
+import co.com.horisoft.modelo.dao.ComentarioDAO;
+import co.com.horisoft.modelo.beans.Comentario;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

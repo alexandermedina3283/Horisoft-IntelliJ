@@ -12,22 +12,22 @@
 
             <div class="form-group">
                 <label for="nombreInvitado">Nombre</label>
-                <input class="form-control" name="nombreInvitado" id="nombreInvitado" type="text" placeholder="nombre del invitado" required/> <br/>
+                <input class="form-control" name="nombreInvitado" id="nombreInvitado" type="text" placeholder="nombre del invitado" required autofocus pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
             </div>
 
             <div class="form-group">
                 <label for="apellidoInvitado">Apellido</label>
-                <input class="form-control" name="apellidoInvitado" id="apellidoInvitado" type="text" placeholder="apellido del invitado" required/> <br/>
+                <input class="form-control" name="apellidoInvitado" id="apellidoInvitado" type="text" placeholder="apellido del invitado" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
             </div>
 
             <div class="form-group">
                 <label for="identificacionInvitado">Identificación</label>
-                <input class="form-control" name="identificacionInvitado" id="identificacionInvitado" type="text" placeholder="identificación del invitado" required/> <br/>
+                <input class="form-control" name="identificacionInvitado" id="identificacionInvitado" type="text" placeholder="identificación del invitado" required pattern="[A-Z0-9]{2,20}"/> <br/>
             </div>
 
             <div class="form-group">
                 <label for="idInscripcionInvitado">Numero inscripción</label>
-                <input class="form-control" name="idInscripcionInvitado" id="idInscripcionInvitado" type="text" placeholder="ID inscripcion" required/> <br/>
+                <input class="form-control" name="idInscripcionInvitado" id="idInscripcionInvitado" type="text" placeholder="ID inscripcion" required pattern="[0-9]{1,4}"/> <br/>
             </div>
 
         </fieldset>

@@ -1,7 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.MascotaDAO;
-import co.com.horisoft.modelo.Mascota;
+import co.com.horisoft.modelo.dao.MascotaDAO;
+import co.com.horisoft.modelo.beans.Mascota;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

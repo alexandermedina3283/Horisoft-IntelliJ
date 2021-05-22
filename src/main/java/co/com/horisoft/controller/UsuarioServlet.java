@@ -1,6 +1,6 @@
 package co.com.horisoft.controller;
-import co.com.horisoft.dao.UsuarioDAO;
-import co.com.horisoft.modelo.Usuario;
+import co.com.horisoft.modelo.dao.UsuarioDAO;
+import co.com.horisoft.modelo.beans.Usuario;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

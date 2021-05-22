@@ -22,12 +22,12 @@
     <!--inicia mi header-->
     <section class="seccionheader">
         <div class="elementoimgheader">
-            <img class="logohorisoft" src="<%=request.getContextPath()%>/_img/Edificios.png">
+            <img class="logohorisoft" src="<%=request.getContextPath()%>/_img/Edificio2.png">
         </div>
         <div class="elementonavheader">
             <nav class="listanav">
                 <a href="http://localhost:8080/Horisoft_war_exploded/index.jsp">Inicio</a>
-                <a href="http://localhost:8080/Horisoft_war_exploded/vistas/usuario/validarUsuario.jsp">Salir</a>
+                <a href="#">Salir</a>
             </nav>
         </div>
     </section>

@@ -1,6 +1,6 @@
 package co.com.horisoft.controller;
-import co.com.horisoft.dao.SalonSocialDAO;
-import co.com.horisoft.modelo.SalonSocial;
+import co.com.horisoft.modelo.dao.SalonSocialDAO;
+import co.com.horisoft.modelo.beans.SalonSocial;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;

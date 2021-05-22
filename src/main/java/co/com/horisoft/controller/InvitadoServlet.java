@@ -1,9 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.InvitadoDAO;
-import co.com.horisoft.dao.MascotaDAO;
-import co.com.horisoft.modelo.Invitado;
-import co.com.horisoft.modelo.Mascota;
+import co.com.horisoft.modelo.dao.InvitadoDAO;
+import co.com.horisoft.modelo.beans.Invitado;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

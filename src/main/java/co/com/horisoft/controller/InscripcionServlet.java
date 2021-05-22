@@ -1,8 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.InscripcionDAO;
-import co.com.horisoft.dao.MascotaDAO;
-import co.com.horisoft.modelo.Inscripcion;
+import co.com.horisoft.modelo.dao.InscripcionDAO;
+import co.com.horisoft.modelo.beans.Inscripcion;
 
 
 import javax.servlet.*;

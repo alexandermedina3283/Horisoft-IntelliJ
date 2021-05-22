@@ -1,7 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.dao.ResidenteDAO;
-import co.com.horisoft.modelo.Residente;
+import co.com.horisoft.modelo.dao.ResidenteDAO;
+import co.com.horisoft.modelo.beans.Residente;
 
 import javax.servlet.*;
 import javax.servlet.http.*;

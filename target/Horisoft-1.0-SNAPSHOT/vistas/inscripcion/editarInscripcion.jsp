@@ -12,7 +12,7 @@
         <fieldset>
 
 
-            <legend>Datos de la inscripción</legend>
+            <legend>Actualizar estado de la inscripción</legend>
 
 
             <div class="form-group">
@@ -62,7 +62,7 @@
             <div class="form-group">
                 <label for="estadoInscripcion">Estado de la inscripción</label>
                 <input class="form-control"  list="estado" name="estadoInscripcion" id="estadoInscripcion" value="${inscripcion.estadoInscripcion}"
-                       placeholder="Seleccione estado" required>
+                       placeholder="Seleccione estado" required autofocus>
 
                 <datalist id="estado">
                     <option value="Programado"></option>

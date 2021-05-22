@@ -33,15 +33,20 @@
 .seccionheader{
     display: flex;
     flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
 }
 
 .logohorisoft{
-    width: 100%;
+    width: 95%;
 }
 
 .elementoimgheader{
     display: flex;
     flex-direction: row;
+
 }
 
 .listanav{

@@ -48,10 +48,10 @@
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=listarInscripcion">Listar inscripcion</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=crearReservaSalon">Crear evento salon social</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=crearReservaSalon">Crear reserva salon social</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar evento salon social</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar reservas salon social</td>
         </tr>
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado">Crear invitado</td>
