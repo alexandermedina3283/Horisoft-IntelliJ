@@ -17,7 +17,7 @@ public class Conexion {
             dataSource = new BasicDataSource();
             dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
             dataSource.setUsername("root");
-            dataSource.setPassword("12345");
+            dataSource.setPassword("");
             dataSource.setUrl("jdbc:mysql://localhost:3306/horisoft?useTimezone=true&serverTimezone=UTC");
             dataSource.setMaxIdle(10);
             dataSource.setMaxTotal(10);
