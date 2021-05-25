@@ -3,7 +3,7 @@
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
-<section>
+
 
     <form action="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet" method="post">
         <c:set var="inscripcion" value="${inscripcion}"></c:set>
@@ -88,5 +88,5 @@
         <button type="submit" class="btn btn-secondary">Guardar</button>
 
     </form>
-</section>
+
 <jsp:include page="/templates/parteInferior.jsp"/>

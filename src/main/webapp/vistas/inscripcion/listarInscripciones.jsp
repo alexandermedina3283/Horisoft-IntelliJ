@@ -13,8 +13,8 @@
         <td>Fecha finalización</td>
         <td>Hora finalización</td>
         <td>Estado inscripción</td>
-        <td>ID residente</td>
-        <td>ID actividad</td>
+        <td>Código residente</td>
+        <td>Código actividad</td>
         <td></td>
         <td></td>
     </tr>

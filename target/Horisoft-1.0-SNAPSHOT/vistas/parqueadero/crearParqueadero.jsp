@@ -3,7 +3,7 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<section>
+
 
     <form action="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet" method="post">
         <input type="hidden" name="opcion" value="guardar">
@@ -74,5 +74,5 @@
         <br /> <button type="submit" class="btn btn-secondary">Guardar</button>
 
     </form>
-</section>
+
 <jsp:include page="/templates/parteInferior.jsp"/>

@@ -3,7 +3,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
-<section>
 
     <form action="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet" method="post">
         <c:set var="apartamento" value="${apartamento}"></c:set>
@@ -41,6 +40,5 @@
         <br/> <button type="submit" class="btn btn-secondary">Guardar</button>
 
     </form>
-</section>
 
 <jsp:include page="/templates/parteInferior.jsp"/>

@@ -2,37 +2,36 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
-
 <nav>
     <h3>Menu Gestionador Zona</h3>
     <table>
 
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteController?opcion=listarResidente">Listar residente</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=listarResidente">Consultar residentes</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=crearComentario">Crear comentario</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=crearInscripcion">Crear inscripcion</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioController?opcion=listarComentario">Listar comentario</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=listarInscripcion">Listar inscripcion</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionController?opcion=crearInscripcion">Crear inscripcion</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado">Crear invitado</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionController?opcion=listarInscripcion">Listar inscripcion</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=listarInvitado">Listar invitados</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=crearReservaSalon">Crear evento salon social</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=crearComentario">Crear comentario</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialController?opcion=listarReservaSalon">Listar evento salon social</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=listarComentario">Consultar comentarios</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoController?opcion=crearInvitado">Crear invitado</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=crearReservaSalon">Crear reserva salon social</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoController?opcion=listarInvitado">Listar invitado</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar reservas salon social</td>
         </tr>
 
     </table><br>

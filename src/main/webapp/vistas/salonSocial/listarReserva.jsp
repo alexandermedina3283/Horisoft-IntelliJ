@@ -9,7 +9,7 @@
         <td>Fecha pago reserva</td>
         <td>Número comprobante</td>
         <td>Valor deposito</td>
-        <td>Id Inscripción</td>
+        <td>Número Inscripción</td>
         <td></td>
         <td></td>
     </tr>

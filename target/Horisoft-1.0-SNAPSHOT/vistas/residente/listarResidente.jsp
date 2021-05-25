@@ -5,7 +5,7 @@
 
 <table class="table">
     <tr>
-        <td>ID residente</td>
+        <td>Código residente</td>
         <td>Nombre</td>
         <td>Apellido</td>
         <td>Identificación</td>

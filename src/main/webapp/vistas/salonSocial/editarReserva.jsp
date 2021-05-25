@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
-<section>
+
 
     <form action="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet" method="post">
         <c:set var="salonSocial" value="${salonSocial}"></c:set>
@@ -42,5 +42,5 @@
         <br/> <button type="submit" class="btn btn-secondary">Guardar</button>
 
     </form>
-</section>
+
 <jsp:include page="/templates/parteInferior.jsp"/>

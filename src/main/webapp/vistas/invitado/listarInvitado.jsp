@@ -6,11 +6,11 @@
 
 <table class="table">
     <tr>
-        <td>ID Invitado</td>
+        <td>Invitado número</td>
         <td>Nombre</td>
         <td>Apellidos</td>
         <td>Identificación</td>
-        <td>ID Inscripción</td>
+        <td>Número Inscripción</td>
         <td></td>
         <td></td>
     </tr>

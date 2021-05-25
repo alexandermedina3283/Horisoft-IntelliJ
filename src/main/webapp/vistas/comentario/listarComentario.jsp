@@ -10,7 +10,7 @@
         <td>Fecha</td>
         <td>Descripción</td>
         <td>Autor</td>
-        <td>ID inscripción</td>
+        <td>Número inscripción</td>
         <td></td>
         <td></td>
     </tr>

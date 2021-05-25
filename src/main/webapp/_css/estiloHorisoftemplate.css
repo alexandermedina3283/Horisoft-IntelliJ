@@ -33,14 +33,11 @@
 .seccionheader{
     display: flex;
     flex-direction: column;
-    position: fixed;
-    left: 0;
-    top: 0;
-    right: 0;
 }
 
 .logohorisoft{
-    width: 95%;
+    width: 100%;
+
 }
 
 .elementoimgheader{

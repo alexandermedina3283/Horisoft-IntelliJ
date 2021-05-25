@@ -3,7 +3,8 @@
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
-<section>
+
+<%java.text.DateFormat fecha = new SimpleDateFormat("yyyy-MM-dd");%>
 
     <form action="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet" method="post">
         <input type="hidden" name="opcion" value="guardar">
@@ -16,7 +17,7 @@
                 <label for="nombreActividad">Actividad a desarrollar</label>
                 <select class="form-control" name="nombreActividad" id="nombreActividad" required autofocus>
                     <option hidden selected>Seleccione una opción</option>
-                    <option value="1">Acondicionamiento fisico</option>
+                    <option value="1">Gym</option>
                     <option value="2">Zumba</option>
                     <option value="3">Ajedrez</option>
                     <option value="4">Domino</option>
@@ -25,9 +26,9 @@
                     <option value="7">Parques</option>
                     <option value="8">Poker</option>
                     <option value="9">Rana</option>
-                    <option value="10">Evento</option>
                     <option value="11">Sauna</option>
                     <option value="12">Natacion</option>
+                    <option value="10">Reserva salon social</option>
 
                 </select>
             </div> <br>
@@ -36,7 +37,7 @@
                 <label for="fechaEntrada">Fecha de inicio</label>
                 <input class="form-control"
                        name="fechaEntrada" id="fechaEntrada"
-                       type="date"
+                       type="date" value="<%= fecha.format(new java.util.Date())%>"
                        placeholder="Fecha inicio actividad"
                        required/> <br/>
             </div>
@@ -44,28 +45,52 @@
             <div class="form-group">
                 <label for="horaEntrada">Hora de inicio</label>
                 <input class="form-control"
-                       name="horaEntrada" id="horaEntrada"
-                       type="text" value="00:00:00"
-                       placeholder="Hora inicio actividad"
-                       required pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$"/> <br/>
+                       list="horaE" name="horaEntrada" id="horaEntrada" required
+                       type="text" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$"
+                       placeholder="seleccione una opción">
+
+                <datalist id= "horaE">
+                    <option value = "10:00:00"></option>
+                    <option value = "11:00:00"></option>
+                    <option value = "12:00:00"></option>
+                    <option value = "14:00:00"></option>
+                    <option value = "15:00:00"></option>
+                    <option value = "16:00:00"></option>
+                    <option value = "17:00:00"></option>
+                    <option value = "18:00:00"></option>
+                    <option value = "19:00:00"></option>
+                    <option value = "20:00:00"></option>
+                </datalist> <br>
             </div>
 
             <div class="form-group">
             <label for="fechaSalida">Fecha de finalización</label>
             <input class="form-control"
                    name="fechaSalida" id="fechaSalida"
-                   type="date"
+                   type="date" required value="<%= fecha.format(new java.util.Date())%>"
                    placeholder="Fecha finalización actividad"
-                   required/> <br/>
+                   /> <br>
             </div>
 
             <div class="form-group">
                 <label for="horaSalida">Hora de finalización</label>
                 <input class="form-control"
-                       name="horaSalida" id="horaSalida"
-                       type="text" value="00:00:00"
-                       placeholder="Hora finalización actividad"
-                       required pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$"/> <br/>
+                       list="hora" name="horaSalida" id="horaSalida" required
+                       type="text" pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9](:[0-5][0-9])?$"
+                       placeholder="seleccione una opción">
+
+                <datalist id= "hora">
+                    <option value = "11:00:00"></option>
+                    <option value = "12:00:00"></option>
+                    <option value = "14:00:00"></option>
+                    <option value = "15:00:00"></option>
+                    <option value = "16:00:00"></option>
+                    <option value = "17:00:00"></option>
+                    <option value = "18:00:00"></option>
+                    <option value = "19:00:00"></option>
+                    <option value = "20:00:00"></option>
+                    <option value = "21:00:00"></option>
+                </datalist> <br>
             </div>
 
             <div class="form-group">
@@ -97,5 +122,7 @@
         <button type="submit" class="btn btn-secondary">Guardar</button>
 
     </form>
-</section>
+
+
+
 <jsp:include page="/templates/parteInferior.jsp"/>

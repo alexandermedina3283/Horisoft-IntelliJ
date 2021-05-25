@@ -18,6 +18,12 @@
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=listarApartamento">Listar apartamentos</td>
         </tr>
         <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=crearResidente">Crear residente</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=listarResidente">Listar residente</td>
+        </tr>
+        <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaServlet?opcion=crearMascota">Crear mascota</td>
         </tr>
         <tr>
@@ -30,10 +36,16 @@
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=listarParqueadero">Listar parqueaderos</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=crearResidente">Crear residente</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=crearInscripcion">Crear inscripcion</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=listarResidente">Listar residente</td>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=listarInscripcion">Listar inscripcion</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado">Crear invitado</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=listarInvitado">Listar invitado</td>
         </tr>
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=crearComentario">Crear comentario</td>
@@ -42,25 +54,11 @@
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=listarComentario">Listar comentario</td>
         </tr>
         <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=crearInscripcion">Crear inscripcion</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=listarInscripcion">Listar inscripcion</td>
-        </tr>
-        <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=crearReservaSalon">Crear reserva salon social</td>
         </tr>
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar reservas salon social</td>
         </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado">Crear invitado</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=listarInvitado">Listar invitado</td>
-        </tr>
-
-
 
     </table><br>
 </nav>
