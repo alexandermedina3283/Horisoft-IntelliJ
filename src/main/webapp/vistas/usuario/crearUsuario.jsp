@@ -1,9 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<section class="registrouser">
-    <div class="contenedor">
-
         <form action="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet" method="post">
             <input type="hidden" name="opcion" value="guardar">
             <fieldset>
@@ -46,9 +43,7 @@
 
                 <button type="submit" class="btn btn-secondary">Guardar</button>
             </fieldset>
-
         </form>
-    </div>
-</section>
+
 <jsp:include page="/templates/parteInferior.jsp"/>
 

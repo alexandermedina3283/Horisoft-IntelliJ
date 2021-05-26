@@ -2,10 +2,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<section class="registrouser">
-    <div class="contenedor">
-
         <form action="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet" method="post">
+
             <c:set var="usuario" value="${usuario}"></c:set>
             <input type="hidden" name="opcion" value="editar">
             <input type="hidden" name="idUsuario" value="${usuario.idUsuario}">
@@ -54,8 +52,7 @@
             </fieldset>
 
         </form>
-    </div>
-</section>
+
 <jsp:include page="/templates/parteInferior.jsp"/>
 
 

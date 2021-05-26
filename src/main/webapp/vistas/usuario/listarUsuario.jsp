@@ -6,7 +6,7 @@
 
 <table class="table">
     <tr>
-        <td>Id</td>
+        <td>Usuario número</td>
         <td>Nombre</td>
         <td>Estado usuario</td>
         <td>Rol usuario</td>

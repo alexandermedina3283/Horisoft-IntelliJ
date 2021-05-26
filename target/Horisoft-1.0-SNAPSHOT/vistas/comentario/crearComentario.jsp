@@ -12,14 +12,14 @@
             <div class="form-group">
                 <label for="descripcionComentario">Descripción</label>
                 <input class="form-control" name="descripcionComentario" id="descripcionComentario" type="text"
-                       placeholder="comentario" required autofocus/> <br/>
+                       placeholder="Ingrese comentario, sugerencia o recomendación" required autofocus/> <br/>
             </div>
 
 
             <div class="form-group">
                 <label for="autorComentario">Nombre</label>
                 <input class="form-control" name="autorComentario" id="autorComentario" type="text"
-                       placeholder="responsable del comentario" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
+                       placeholder="Nombre de quien realiza el comentario" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
             </div>
 
             <div class="form-group">

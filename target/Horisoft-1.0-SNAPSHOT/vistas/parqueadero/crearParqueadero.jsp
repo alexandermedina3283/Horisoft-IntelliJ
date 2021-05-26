@@ -50,12 +50,12 @@
 
             <div class="form-group">
             <label for="numApartamento">Apartamento</label>
-            <input class="form-control" name="numApartamento" id="numApartamento" type="text" placeholder="Número apartamento" pattern="[0-9]{3,5}" required/><br>
+            <input class="form-control" name="numApartamento" id="numApartamento" type="text" placeholder="Ingrese número del apartamento" pattern="[0-9]{3,5}" required/><br>
             </div>
 
             <div class="form-group">
             <label for="numTorre">Torre</label>
-            <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Número torre" required pattern="[A-Z0-9]{1}"/><br>
+            <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Ingrese número de torre" required pattern="[A-Z0-9]{1}"/><br>
             </div>
 
             <div class="form-group">
