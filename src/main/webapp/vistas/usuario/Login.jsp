@@ -29,7 +29,7 @@
 <br>
 <div class="login">
     <input type="text" placeholder="Nombre usuario" name="nombreUsuario" autofocus required pattern=[a-zA-Z0-9]{2,40}><br>
-    <input type="password" placeholder="Ingrese su contraseña" name="contraUsuario" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"><br>
+    <input type="password" placeholder="Ingrese su contraseña" name="contraUsuario" required ><br>
     <input type="submit" value="Iniciar sesión">
 </div>
 
