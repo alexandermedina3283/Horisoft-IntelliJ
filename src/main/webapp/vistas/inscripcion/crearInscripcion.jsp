@@ -109,7 +109,7 @@
 
 
             <div class="form-group">
-                <label for="idResidente">ID residente</label>
+                <label for="idResidente">Código residente</label>
                 <input class="form-control"
                        name="idResidente" id="idResidente"
                        type="text"

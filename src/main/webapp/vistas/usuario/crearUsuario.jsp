@@ -16,7 +16,7 @@
                 <div class="form-group">
                 <label for="contraUsuario">Contraseña :</label>
                 <input class="form-control" type="password" name="contraUsuario" id="contraUsuario"
-                       placeholder="Ingrese su contraseña" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"> <br>
+                       placeholder="Ingrese una contraseña" required pattern="^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,16}$"> <br>
                 </div>
                 <p>La contraseña debe tener entre 8 y 16 caracteres, al menos un dígito, una minúscula y una mayúscula.</p>
 

@@ -20,12 +20,12 @@
             </div>
 
             <div class="form-group">
-            <label for="numApartamento">Numero apartamento</label>
+            <label for="numApartamento">Número apartamento</label>
             <input class="form-control" name="numApartamento" id="numApartamento" type="text" placeholder="Ingrese número del apartamento" required pattern="[0-9]{3,5}"/> <br/>
             </div>
 
             <div class="form-group">
-            <label for="numTorre">Numero torre</label>
+            <label for="numTorre">Número torre</label>
             <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Ingrese número de torre" required pattern="[A-Z0-9]{1}"/> <br/>
             </div>
 

@@ -59,7 +59,7 @@
             </div>
 
             <div class="form-group">
-            <label for="claseVehiculo">Clase vehiculo</label>
+            <label for="claseVehiculo">Clase vehículo</label>
             <select class="form-control" name="claseVehiculo" id="claseVehiculo">
                 <option hidden selected>Seleccione una opción</option>
                 <option value="1">Automovil</option>

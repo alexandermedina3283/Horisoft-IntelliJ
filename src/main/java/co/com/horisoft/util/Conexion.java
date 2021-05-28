@@ -9,15 +9,14 @@ public class Conexion {
 
     private static BasicDataSource dataSource=null;
 
-
     private static DataSource getDataSource() {
 
 
         if (dataSource == null) {
             dataSource = new BasicDataSource();
             dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
-            dataSource.setUsername("root");
-            dataSource.setPassword("");
+            dataSource.setUsername("usuarioHorisoft1");
+            dataSource.setPassword("UsuarioH1");
             dataSource.setUrl("jdbc:mysql://localhost:3306/horisoft?useTimezone=true&serverTimezone=UTC");
             dataSource.setMaxIdle(10);
             dataSource.setMaxTotal(10);

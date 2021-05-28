@@ -22,7 +22,7 @@
 
             <div class="form-group">
             <label for="Estadocartera">Estado cartera</label>
-            <input class="form-control" list="estadocartera" name="cartera" required placeholder="seleccione una opción ">
+            <input class="form-control" list="estadocartera" name="cartera" required placeholder="Seleccione una opción ">
 
             <datalist id="estadocartera">
                 <option value="Al dia">
