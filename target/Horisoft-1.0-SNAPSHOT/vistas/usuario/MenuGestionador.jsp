@@ -1,7 +1,7 @@
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
-<jsp:include page="/templates/parteSuperior.jsp"/>
+<jsp:include page="/templates/superiorMenuGestionador.jsp"/>
 <nav>
     <h3>Menu Gestionador Zona</h3>
     <table>
@@ -37,4 +37,4 @@
     </table><br>
 </nav>
 
-<jsp:include page="/templates/parteInferior.jsp"/>
+<jsp:include page="/templates/inferiorMenuGestionador.jsp"/>
