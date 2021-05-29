@@ -64,6 +64,15 @@ body{
     width: 350px;
     padding: 10px;
     z-index: 2;
+
+
+}
+
+.login label{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
 }
 
 .login input[type=text]{
@@ -108,11 +117,11 @@ body{
     margin-top: 10px;
 }
 
-.login input[type=button]:hover{
+.login input[type=submit]:hover{
     opacity: 0.8;
 }
 
-.login input[type=button]:active{
+.login input[type=submit]:active{
     opacity: 0.6;
 }
 
