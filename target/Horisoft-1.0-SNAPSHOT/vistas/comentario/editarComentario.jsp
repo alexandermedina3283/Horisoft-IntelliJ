@@ -24,7 +24,7 @@
                 <label for="autorComentario">Nombre</label>
                 <input class="form-control" name="autorComentario" id="autorComentario"
                        value="${comentario.autorComentario}" type="text" placeholder="responsable del comentario"
-                       required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
+                       required /> <br/>
             </div>
 
             <div class="form-group">

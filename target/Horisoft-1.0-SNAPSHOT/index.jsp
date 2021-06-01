@@ -59,6 +59,12 @@
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar reservas salón social</td>
         </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=crearCategoriaResidente">Crear Categoria Residente</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=listarCategoriaResidente">Listar Categoria Residente</td>
+        </tr>
 
     </table><br>
 </nav>
