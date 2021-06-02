@@ -1,7 +1,7 @@
 package co.com.horisoft.modelo.dao;
 
+import co.com.horisoft.modelo.beans.ServiciosZona;
 import co.com.horisoft.util.Conexion;
-import co.com.horisoft.modelo.beans.CategoriaResidente;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,27 +10,26 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
-
-public class CategoriaResidenteDAO {
+public class ServiciosZonaDAO {
 
     private Connection connection;
     private PreparedStatement statement;
     private boolean estadoOperacion;
 
-    public boolean guardar(CategoriaResidente categoriaResidente) throws SQLException {
+
+    public boolean guardar(ServiciosZona serviciosZona) throws SQLException {
         String sql=null;
         estadoOperacion=false;
         connection=obtenerConexion();
 
         try {
             connection.setAutoCommit(false);
-            sql="insert into categoria_residente (id_categoria,nombre_categoria) values (?,?)";
+            sql="insert into actividad (id_actividad,nombre_actividad,id_zona) values (?,?,?)";
             statement=connection.prepareStatement(sql);
 
             statement.setString(1, null);
-            statement.setString(2, categoriaResidente.getNombreCategoria());
+            statement.setString(2, serviciosZona.getNombreActividad());
+            statement.setInt(3, serviciosZona.getIdZona());
 
             estadoOperacion=statement.executeUpdate()>0;
 
@@ -43,15 +42,14 @@ public class CategoriaResidenteDAO {
             e.printStackTrace();
         }
 
-
         return estadoOperacion;
 
     }
 
-    public List<CategoriaResidente> obtenerCategorias() throws SQLException {
+    public List<ServiciosZona> obtenerServicios() throws SQLException {
 
         ResultSet resultSet=null;
-        List<CategoriaResidente> listaCategorias = new ArrayList<>();
+        List<ServiciosZona> listaServicios = new ArrayList<>();
 
 
         String sql=null;
@@ -60,14 +58,15 @@ public class CategoriaResidenteDAO {
 
         try {
 
-            sql="select * from categoria_residente";
+            sql="select * from actividad";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {
-                CategoriaResidente categoriaResidente=new CategoriaResidente();
-                categoriaResidente.setIdCategoria(resultSet.getInt(1));
-                categoriaResidente.setNombreCategoria(resultSet.getString(2));
-                listaCategorias.add(categoriaResidente);
+                ServiciosZona serviciosZona=new ServiciosZona();
+                serviciosZona.setIdActividad(resultSet.getInt(1));
+                serviciosZona.setNombreActividad(resultSet.getString(2));
+                serviciosZona.setIdZona(resultSet.getInt(3));
+                listaServicios.add(serviciosZona);
             }
 
         } catch (SQLException e) {
@@ -75,14 +74,14 @@ public class CategoriaResidenteDAO {
         }
 
 
-        return listaCategorias;
+        return listaServicios;
 
     }
 
-    public CategoriaResidente obtenerCategorias(int idCategoria) throws SQLException {
+    public ServiciosZona obtenerServicios(int idActividad) throws SQLException {
 
         ResultSet resultSet=null;
-        CategoriaResidente categoriaResidente=new CategoriaResidente();
+        ServiciosZona serviciosZona=new ServiciosZona();
 
         String sql=null;
         estadoOperacion=false;
@@ -90,26 +89,27 @@ public class CategoriaResidenteDAO {
 
         try {
 
-            sql="select * from categoria_residente where id_categoria=?";
+            sql="select * from actividad where id_actividad=?";
             statement=connection.prepareStatement(sql);
-            statement.setInt(1, idCategoria);
+            statement.setInt(1, idActividad);
 
             resultSet=statement.executeQuery();
             if (resultSet.next()) {
 
-                categoriaResidente.setIdCategoria(resultSet.getInt(1));
-                categoriaResidente.setNombreCategoria(resultSet.getString(2));
+                serviciosZona.setIdActividad(resultSet.getInt(1));
+                serviciosZona.setNombreActividad(resultSet.getString(2));
+                serviciosZona.setIdZona(resultSet.getInt(3));
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return categoriaResidente;
+        return serviciosZona;
 
     }
 
-    public boolean editar(CategoriaResidente categoriaResidente) throws SQLException {
+    public boolean editar(ServiciosZona serviciosZona) throws SQLException {
 
         String sql=null;
         estadoOperacion=false;
@@ -117,10 +117,11 @@ public class CategoriaResidenteDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="update categoria_residente set nombre_categoria=? where id_categoria=?";
+            sql="update actividad set nombre_actividad=?,id_zona=? where id_actividad=?";
             statement=connection.prepareStatement(sql);
-            statement.setString(1, categoriaResidente.getNombreCategoria());
-            statement.setInt(2, categoriaResidente.getIdCategoria());
+            statement.setString(1, serviciosZona.getNombreActividad());
+            statement.setInt(2, serviciosZona.getIdZona());
+            statement.setInt(3, serviciosZona.getIdActividad());
 
 
             estadoOperacion=statement.executeUpdate()>0;
@@ -139,7 +140,7 @@ public class CategoriaResidenteDAO {
 
     }
 
-    public boolean eliminar(int idCategoria) throws SQLException {
+    public boolean eliminar(int idActividad) throws SQLException {
 
         String sql=null;
         estadoOperacion=false;
@@ -147,9 +148,9 @@ public class CategoriaResidenteDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="delete from categoria_residente where id_categoria=?";
+            sql="delete from actividad where id_actividad=?";
             statement=connection.prepareStatement(sql);
-            statement.setInt(1, idCategoria);
+            statement.setInt(1, idActividad);
 
             estadoOperacion=statement.executeUpdate()>0;
             connection.commit();
@@ -166,12 +167,12 @@ public class CategoriaResidenteDAO {
         return estadoOperacion;
 
     }
-
-
-
 
     private Connection obtenerConexion() throws SQLException {
 
         return Conexion.getConnection();
     }
+
+
+
 }

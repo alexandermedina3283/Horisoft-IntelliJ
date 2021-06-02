@@ -65,6 +65,12 @@
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=listarCategoriaResidente">Listar Categoria Residente</td>
         </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=crearActividad">Incluir un servicio en zona social</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=listarServicios">Listar Servicios Zona</td>
+        </tr>
 
     </table><br>
 </nav>

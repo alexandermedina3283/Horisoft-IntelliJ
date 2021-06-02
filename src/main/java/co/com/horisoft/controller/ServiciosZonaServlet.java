@@ -1,8 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.modelo.dao.CategoriaResidenteDAO;
-import co.com.horisoft.modelo.beans.CategoriaResidente;
-
+import co.com.horisoft.modelo.dao.ServiciosZonaDAO;
+import co.com.horisoft.modelo.beans.ServiciosZona;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -12,29 +11,29 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "CategoriaResidenteServlet", value = "/CategoriaResidenteServlet")
-public class CategoriaResidenteServlet extends HttpServlet {
+@WebServlet(name = "ServiciosZonaServlet", value = "/ServiciosZonaServlet")
+public class ServiciosZonaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String opcion=request.getParameter("opcion");
-        if (opcion.equals("crearCategoriaResidente")) {
+        if (opcion.equals("crearActividad")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/categoriaResidente/crearCategoria.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/crearActividad.jsp");
             requestDispacher.forward(request, response);
 
-        }else if(opcion.equals("listarCategoriaResidente")) {
+        }else if(opcion.equals("listarServicios")) {
 
-            CategoriaResidenteDAO categoriaResidenteDAO = new CategoriaResidenteDAO();
-            List<CategoriaResidente> lista=new ArrayList<>();
+            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
+            List<ServiciosZona> lista=new ArrayList<>();
             try {
-                lista=categoriaResidenteDAO.obtenerCategorias();
-                for (CategoriaResidente categoriaResidente : lista) {
+                lista=serviciosZonaDAO.obtenerServicios();
+                for (ServiciosZona serviciosZona : lista) {
 
-                    System.out.println(categoriaResidente);
+                    System.out.println(serviciosZona);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/categoriaResidente/listarCategoria.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/listarActividad.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -45,15 +44,15 @@ public class CategoriaResidenteServlet extends HttpServlet {
             System.out.println("seleccionó listar");
 
         }else if (opcion.equals("editar")) {
-            int id=Integer.parseInt(request.getParameter("idCategoria"));
+            int id=Integer.parseInt(request.getParameter("idActividad"));
             System.out.println("Editar id: "+id);
-            CategoriaResidenteDAO categoriaResidenteDAO = new CategoriaResidenteDAO();
-            CategoriaResidente categoriaResidente = new CategoriaResidente();
+            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
+            ServiciosZona serviciosZona = new ServiciosZona();
             try {
-                categoriaResidente=categoriaResidenteDAO.obtenerCategorias(id);
-                System.out.println(categoriaResidente);
-                request.setAttribute("categoriaResidente", categoriaResidente);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/categoriaResidente/editarCategoria.jsp");
+                serviciosZona=serviciosZonaDAO.obtenerServicios(id);
+                System.out.println(serviciosZona);
+                request.setAttribute("serviciosZona", serviciosZona);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/editarActividad.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -62,10 +61,10 @@ public class CategoriaResidenteServlet extends HttpServlet {
             }
 
         }else if(opcion.equals("eliminar")) {
-            CategoriaResidenteDAO categoriaResidenteDAO = new CategoriaResidenteDAO();
-            int id=Integer.parseInt(request.getParameter("idCategoria"));
+            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
+            int id=Integer.parseInt(request.getParameter("idActividad"));
             try {
-                categoriaResidenteDAO.eliminar(id);
+                serviciosZonaDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
                 requestDispacher.forward(request, response);
@@ -84,12 +83,13 @@ public class CategoriaResidenteServlet extends HttpServlet {
         String opcion=request.getParameter("opcion");
         if (opcion.equals("guardar")) {
 
-            CategoriaResidenteDAO categoriaResidenteDAO = new CategoriaResidenteDAO();
-            CategoriaResidente categoriaResidente = new CategoriaResidente();
-            categoriaResidente.setNombreCategoria(request.getParameter("nombreCategoria"));
+            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
+            ServiciosZona serviciosZona = new ServiciosZona();
+            serviciosZona.setNombreActividad(request.getParameter("nombreActividad"));
+            serviciosZona.setIdZona(Integer.parseInt(request.getParameter("idZona")));
 
             try {
-                categoriaResidenteDAO.guardar(categoriaResidente);
+                serviciosZonaDAO.guardar(serviciosZona);
                 System.out.println("Registro guardado");
 
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
@@ -103,13 +103,14 @@ public class CategoriaResidenteServlet extends HttpServlet {
 
 
         }else if (opcion.equals("editar")) {
-            CategoriaResidente categoriaResidente = new CategoriaResidente();
-            CategoriaResidenteDAO categoriaResidenteDAO = new CategoriaResidenteDAO();
-            categoriaResidente.setIdCategoria(Integer.parseInt(request.getParameter("idCategoria")));
-            categoriaResidente.setNombreCategoria(request.getParameter("nombreCategoria"));
+            ServiciosZona serviciosZona = new ServiciosZona();
+            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
+            serviciosZona.setIdActividad(Integer.parseInt(request.getParameter("idActividad")));
+            serviciosZona.setNombreActividad(request.getParameter("nombreActividad"));
+            serviciosZona.setIdZona(Integer.parseInt(request.getParameter("idZona")));
 
             try {
-                categoriaResidenteDAO.editar(categoriaResidente);
+                serviciosZonaDAO.editar(serviciosZona);
                 System.out.println("Registro actualizado");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
                 requestDispacher.forward(request, response);

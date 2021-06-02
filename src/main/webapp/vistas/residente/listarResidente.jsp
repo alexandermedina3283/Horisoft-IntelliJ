@@ -33,7 +33,7 @@
             <td><c:out value="${residente.estado}"></c:out></td>
             <td><c:out value="${residente.apartamento}"></c:out></td>
             <td><c:out value="${residente.torre}"></c:out></td>
-            <td><c:out value="${residente.categoria}"></c:out></td>
+            <td><c:out value="${categoriaDAO.obtenerCategorias(residente.categoria).getNombreCategoria()}"></c:out></td>
 
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=eliminar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=editar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-edit"></i></a></td>

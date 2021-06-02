@@ -1,5 +1,7 @@
 package co.com.horisoft.controller;
 
+import co.com.horisoft.modelo.beans.CategoriaResidente;
+import co.com.horisoft.modelo.dao.CategoriaResidenteDAO;
 import co.com.horisoft.modelo.dao.ResidenteDAO;
 import co.com.horisoft.modelo.beans.Residente;
 
@@ -34,6 +36,7 @@ public class ResidenteServlet extends HttpServlet {
                     System.out.println(residente);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);
 
