@@ -12,7 +12,7 @@
         <td>Fecha nacimiento</td>
         <td>Teléfono</td>
         <td>Correo electrónico</td>
-        <td>Estado residente</td>
+        <td>Estado</td>
         <td>N° Apartamento</td>
         <td>N° Torre</td>
         <td>Categoria</td>

@@ -17,7 +17,7 @@
             <td><c:out value="${claseVehiculo.idClaseVehiculo}"></c:out></td>
             <td><c:out value="${claseVehiculo.nombreClaseVehiculo}"></c:out></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=eliminar&idClaseVehiculo=<c:out value="${claseVehiculo.idClaseVehiculo}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=editar&idClaseVehiculo=<c:out value="${claseVehiculo.nombreClaseVehiculo}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=editar&idClaseVehiculo=<c:out value="${claseVehiculo.idClaseVehiculo}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>
     </c:forEach>
 

@@ -1,6 +1,6 @@
 package co.com.horisoft.modelo.dao;
 
-import co.com.horisoft.modelo.beans.CategoriaResidente;
+
 import co.com.horisoft.util.Conexion;
 import co.com.horisoft.modelo.beans.ClaseVehiculo;
 

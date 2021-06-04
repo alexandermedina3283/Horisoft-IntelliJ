@@ -14,7 +14,7 @@
         <td>Hora finalización</td>
         <td>Estado inscripción</td>
         <td>Código residente</td>
-        <td>Código actividad</td>
+        <td>Actividad</td>
         <td></td>
         <td></td>
     </tr>
