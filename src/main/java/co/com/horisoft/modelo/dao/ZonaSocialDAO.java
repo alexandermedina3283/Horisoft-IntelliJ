@@ -1,7 +1,8 @@
 package co.com.horisoft.modelo.dao;
 
-import co.com.horisoft.modelo.beans.ServiciosZona;
+import co.com.horisoft.modelo.beans.CategoriaResidente;
 import co.com.horisoft.util.Conexion;
+import co.com.horisoft.modelo.beans.ZonaSocial;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,26 +11,25 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiciosZonaDAO {
+
+public class ZonaSocialDAO {
 
     private Connection connection;
     private PreparedStatement statement;
     private boolean estadoOperacion;
 
-
-    public boolean guardar(ServiciosZona serviciosZona) throws SQLException {
+    public boolean guardar(ZonaSocial zonaSocial) throws SQLException {
         String sql=null;
         estadoOperacion=false;
         connection=obtenerConexion();
 
         try {
             connection.setAutoCommit(false);
-            sql="insert into actividad (id_actividad,nombre_actividad,id_zona) values (?,?,?)";
+            sql="insert into zona_social (id_zona,nombre_zona) values (?,?)";
             statement=connection.prepareStatement(sql);
 
             statement.setString(1, null);
-            statement.setString(2, serviciosZona.getNombreActividad());
-            statement.setInt(3, serviciosZona.getIdZona());
+            statement.setString(2, zonaSocial.getNombreZona());
 
             estadoOperacion=statement.executeUpdate()>0;
 
@@ -42,14 +42,15 @@ public class ServiciosZonaDAO {
             e.printStackTrace();
         }
 
+
         return estadoOperacion;
 
     }
 
-    public List<ServiciosZona> obtenerServicios() throws SQLException {
+    public List<ZonaSocial> obtenerZonas() throws SQLException {
 
         ResultSet resultSet=null;
-        List<ServiciosZona> listaServicios = new ArrayList<>();
+        List<ZonaSocial> listaZonas = new ArrayList<>();
 
 
         String sql=null;
@@ -58,15 +59,14 @@ public class ServiciosZonaDAO {
 
         try {
 
-            sql="select * from actividad";
+            sql="select * from zona_social";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {
-                ServiciosZona serviciosZona=new ServiciosZona();
-                serviciosZona.setIdActividad(resultSet.getInt(1));
-                serviciosZona.setNombreActividad(resultSet.getString(2));
-                serviciosZona.setIdZona(resultSet.getInt(3));
-                listaServicios.add(serviciosZona);
+                ZonaSocial zonaSocial=new ZonaSocial();
+                zonaSocial.setIdZona(resultSet.getInt(1));
+                zonaSocial.setNombreZona(resultSet.getString(2));
+                listaZonas.add(zonaSocial);
             }
 
         } catch (SQLException e) {
@@ -74,14 +74,14 @@ public class ServiciosZonaDAO {
         }
 
 
-        return listaServicios;
+        return listaZonas;
 
     }
 
-    public ServiciosZona obtenerServicios(int idActividad) throws SQLException {
+    public ZonaSocial obtenerZonas(int idZona) throws SQLException {
 
         ResultSet resultSet=null;
-        ServiciosZona serviciosZona=new ServiciosZona();
+        ZonaSocial zonaSocial=new ZonaSocial();
 
         String sql=null;
         estadoOperacion=false;
@@ -89,28 +89,26 @@ public class ServiciosZonaDAO {
 
         try {
 
-            sql="select * from actividad where id_actividad=?";
+            sql="select * from zona_social where id_zona=?";
             statement=connection.prepareStatement(sql);
-            statement.setInt(1, idActividad);
+            statement.setInt(1, idZona);
 
             resultSet=statement.executeQuery();
             if (resultSet.next()) {
 
-                serviciosZona.setIdActividad(resultSet.getInt(1));
-                serviciosZona.setNombreActividad(resultSet.getString(2));
-                serviciosZona.setIdZona(resultSet.getInt(3));
+                zonaSocial.setIdZona(resultSet.getInt(1));
+                zonaSocial.setNombreZona(resultSet.getString(2));
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         connection.close();
-        return serviciosZona;
+        return zonaSocial;
 
     }
 
-    public boolean editar(ServiciosZona serviciosZona) throws SQLException {
+    public boolean editar(ZonaSocial zonaSocial) throws SQLException {
 
         String sql=null;
         estadoOperacion=false;
@@ -118,11 +116,10 @@ public class ServiciosZonaDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="update actividad set nombre_actividad=?,id_zona=? where id_actividad=?";
+            sql="update zona_social set nombre_zona=? where id_zona=?";
             statement=connection.prepareStatement(sql);
-            statement.setString(1, serviciosZona.getNombreActividad());
-            statement.setInt(2, serviciosZona.getIdZona());
-            statement.setInt(3, serviciosZona.getIdActividad());
+            statement.setString(1, zonaSocial.getNombreZona());
+            statement.setInt(2, zonaSocial.getIdZona());
 
 
             estadoOperacion=statement.executeUpdate()>0;
@@ -141,7 +138,7 @@ public class ServiciosZonaDAO {
 
     }
 
-    public boolean eliminar(int idActividad) throws SQLException {
+    public boolean eliminar(int idZona) throws SQLException {
 
         String sql=null;
         estadoOperacion=false;
@@ -149,9 +146,9 @@ public class ServiciosZonaDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="delete from actividad where id_actividad=?";
+            sql="delete from zona_social where id_zona=?";
             statement=connection.prepareStatement(sql);
-            statement.setInt(1, idActividad);
+            statement.setInt(1, idZona);
 
             estadoOperacion=statement.executeUpdate()>0;
             connection.commit();
@@ -168,12 +165,14 @@ public class ServiciosZonaDAO {
         return estadoOperacion;
 
     }
+
+
+
 
     private Connection obtenerConexion() throws SQLException {
 
         return Conexion.getConnection();
     }
-
 
 
 }

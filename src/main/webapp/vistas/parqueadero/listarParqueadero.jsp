@@ -29,7 +29,7 @@
             <td><c:out value="${parqueadero.marcaVehiculo}"></c:out></td>
             <td><c:out value="${parqueadero.apartamento}"></c:out></td>
             <td><c:out value="${parqueadero.torre}"></c:out></td>
-            <td><c:out value="${parqueadero.claseVehiculo}"></c:out></td>
+            <td><c:out value="${claseVehiculoDAO.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}"></c:out></td>
 
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=eliminar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=editar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-edit"></i></a></td>

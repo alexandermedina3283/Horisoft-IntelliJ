@@ -13,8 +13,8 @@
         <td>Teléfono</td>
         <td>Correo electrónico</td>
         <td>Estado residente</td>
-        <td>Número apartamento</td>
-        <td>Número torre</td>
+        <td>N° Apartamento</td>
+        <td>N° Torre</td>
         <td>Categoria</td>
         <td></td>
         <td></td>

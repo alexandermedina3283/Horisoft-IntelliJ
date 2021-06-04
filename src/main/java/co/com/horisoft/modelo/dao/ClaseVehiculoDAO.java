@@ -1,7 +1,8 @@
 package co.com.horisoft.modelo.dao;
 
-import co.com.horisoft.modelo.beans.ServiciosZona;
+import co.com.horisoft.modelo.beans.CategoriaResidente;
 import co.com.horisoft.util.Conexion;
+import co.com.horisoft.modelo.beans.ClaseVehiculo;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,26 +11,24 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ServiciosZonaDAO {
+public class ClaseVehiculoDAO {
 
     private Connection connection;
     private PreparedStatement statement;
     private boolean estadoOperacion;
 
-
-    public boolean guardar(ServiciosZona serviciosZona) throws SQLException {
+    public boolean guardar(ClaseVehiculo claseVehiculo) throws SQLException {
         String sql=null;
         estadoOperacion=false;
         connection=obtenerConexion();
 
         try {
             connection.setAutoCommit(false);
-            sql="insert into actividad (id_actividad,nombre_actividad,id_zona) values (?,?,?)";
+            sql="insert into clase_vehiculo (id_clase_vehiculo,nombre_clase) values (?,?)";
             statement=connection.prepareStatement(sql);
 
             statement.setString(1, null);
-            statement.setString(2, serviciosZona.getNombreActividad());
-            statement.setInt(3, serviciosZona.getIdZona());
+            statement.setString(2, claseVehiculo.getNombreClaseVehiculo());
 
             estadoOperacion=statement.executeUpdate()>0;
 
@@ -42,14 +41,15 @@ public class ServiciosZonaDAO {
             e.printStackTrace();
         }
 
+
         return estadoOperacion;
 
     }
 
-    public List<ServiciosZona> obtenerServicios() throws SQLException {
+    public List<ClaseVehiculo> obtenerClaseVehiculo() throws SQLException {
 
         ResultSet resultSet=null;
-        List<ServiciosZona> listaServicios = new ArrayList<>();
+        List<ClaseVehiculo> listaClaseVehiculo = new ArrayList<>();
 
 
         String sql=null;
@@ -58,15 +58,14 @@ public class ServiciosZonaDAO {
 
         try {
 
-            sql="select * from actividad";
+            sql="select * from clase_vehiculo";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {
-                ServiciosZona serviciosZona=new ServiciosZona();
-                serviciosZona.setIdActividad(resultSet.getInt(1));
-                serviciosZona.setNombreActividad(resultSet.getString(2));
-                serviciosZona.setIdZona(resultSet.getInt(3));
-                listaServicios.add(serviciosZona);
+                ClaseVehiculo claseVehiculo=new ClaseVehiculo();
+                claseVehiculo.setIdClaseVehiculo(resultSet.getInt(1));
+                claseVehiculo.setNombreClaseVehiculo(resultSet.getString(2));
+                listaClaseVehiculo.add(claseVehiculo);
             }
 
         } catch (SQLException e) {
@@ -74,14 +73,14 @@ public class ServiciosZonaDAO {
         }
 
 
-        return listaServicios;
+        return listaClaseVehiculo;
 
     }
 
-    public ServiciosZona obtenerServicios(int idActividad) throws SQLException {
+    public ClaseVehiculo obtenerClaseVehiculo(int idClaseVehiculo) throws SQLException {
 
         ResultSet resultSet=null;
-        ServiciosZona serviciosZona=new ServiciosZona();
+        ClaseVehiculo claseVehiculo=new ClaseVehiculo();
 
         String sql=null;
         estadoOperacion=false;
@@ -89,28 +88,26 @@ public class ServiciosZonaDAO {
 
         try {
 
-            sql="select * from actividad where id_actividad=?";
+            sql="select * from clase_vehiculo where id_clase_vehiculo=?";
             statement=connection.prepareStatement(sql);
-            statement.setInt(1, idActividad);
+            statement.setInt(1, idClaseVehiculo);
 
             resultSet=statement.executeQuery();
             if (resultSet.next()) {
 
-                serviciosZona.setIdActividad(resultSet.getInt(1));
-                serviciosZona.setNombreActividad(resultSet.getString(2));
-                serviciosZona.setIdZona(resultSet.getInt(3));
+                claseVehiculo.setIdClaseVehiculo(resultSet.getInt(1));
+                claseVehiculo.setNombreClaseVehiculo(resultSet.getString(2));
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         connection.close();
-        return serviciosZona;
+        return claseVehiculo;
 
     }
 
-    public boolean editar(ServiciosZona serviciosZona) throws SQLException {
+    public boolean editar(ClaseVehiculo claseVehiculo) throws SQLException {
 
         String sql=null;
         estadoOperacion=false;
@@ -118,11 +115,10 @@ public class ServiciosZonaDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="update actividad set nombre_actividad=?,id_zona=? where id_actividad=?";
+            sql="update clase_vehiculo set nombre_clase=? where id_clase_vehiculo=?";
             statement=connection.prepareStatement(sql);
-            statement.setString(1, serviciosZona.getNombreActividad());
-            statement.setInt(2, serviciosZona.getIdZona());
-            statement.setInt(3, serviciosZona.getIdActividad());
+            statement.setString(1, claseVehiculo.getNombreClaseVehiculo());
+            statement.setInt(2, claseVehiculo.getIdClaseVehiculo());
 
 
             estadoOperacion=statement.executeUpdate()>0;
@@ -141,7 +137,7 @@ public class ServiciosZonaDAO {
 
     }
 
-    public boolean eliminar(int idActividad) throws SQLException {
+    public boolean eliminar(int idClaseVehiculo) throws SQLException {
 
         String sql=null;
         estadoOperacion=false;
@@ -149,9 +145,9 @@ public class ServiciosZonaDAO {
 
         try {
             connection.setAutoCommit(false);
-            sql="delete from actividad where id_actividad=?";
+            sql="delete from clase_vehiculo where id_clase_vehiculo=?";
             statement=connection.prepareStatement(sql);
-            statement.setInt(1, idActividad);
+            statement.setInt(1, idClaseVehiculo);
 
             estadoOperacion=statement.executeUpdate()>0;
             connection.commit();
@@ -168,11 +164,15 @@ public class ServiciosZonaDAO {
         return estadoOperacion;
 
     }
+
+
+
 
     private Connection obtenerConexion() throws SQLException {
 
         return Conexion.getConnection();
     }
+
 
 
 

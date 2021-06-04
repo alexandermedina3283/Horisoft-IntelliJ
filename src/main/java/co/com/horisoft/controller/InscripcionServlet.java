@@ -2,6 +2,7 @@ package co.com.horisoft.controller;
 
 import co.com.horisoft.modelo.dao.InscripcionDAO;
 import co.com.horisoft.modelo.beans.Inscripcion;
+import co.com.horisoft.modelo.dao.ServiciosZonaDAO;
 
 
 import javax.servlet.*;
@@ -35,6 +36,7 @@ public class InscripcionServlet extends HttpServlet {
                     System.out.println(inscripcion);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
                 requestDispacher.forward(request, response);
 

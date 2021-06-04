@@ -71,6 +71,19 @@
         <tr>
             <td> <a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=listarServicios">Listar Servicios Zona</td>
         </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=crearZonaSocial">Crear zona social</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=listarZonas">Listar zonas sociales</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=crearClaseVehiculo">Incluir clase vehículo</td>
+        </tr>
+        <tr>
+            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=listarClaseVehiculo">Listar clase vehículo</td>
+        </tr>
+
 
     </table><br>
 </nav>

@@ -104,7 +104,7 @@ public class CategoriaResidenteDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
+        connection.close();
         return categoriaResidente;
 
     }

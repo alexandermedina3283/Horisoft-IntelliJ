@@ -30,7 +30,7 @@
             <td><c:out value="${inscripcion.horaSalida}"></c:out></td>
             <td><c:out value="${inscripcion.estadoInscripcion}"></c:out></td>
             <td><c:out value="${inscripcion.idResidente}"></c:out></td>
-            <td><c:out value="${inscripcion.idActividad}"></c:out></td>
+            <td><c:out value="${ActividadDAO.obtenerServicios(inscripcion.idActividad).getNombreActividad()}"></c:out></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=eliminar&idInscripcion=<c:out value="${inscripcion.idInscripcion}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=editar&idInscripcion=<c:out value="${inscripcion.idInscripcion}"></c:out>"><i class="far fa-edit"></i></a></td>
         </tr>

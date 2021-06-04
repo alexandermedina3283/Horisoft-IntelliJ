@@ -1,8 +1,7 @@
 package co.com.horisoft.controller;
 
-import co.com.horisoft.modelo.dao.ServiciosZonaDAO;
-import co.com.horisoft.modelo.beans.ServiciosZona;
-import co.com.horisoft.modelo.dao.ZonaSocialDAO;
+import co.com.horisoft.modelo.dao.ClaseVehiculoDAO;
+import co.com.horisoft.modelo.beans.ClaseVehiculo;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -12,30 +11,29 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "ServiciosZonaServlet", value = "/ServiciosZonaServlet")
-public class ServiciosZonaServlet extends HttpServlet {
+@WebServlet(name = "ClaseVehiculoServlet", value = "/ClaseVehiculoServlet")
+public class ClaseVehiculoServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         String opcion=request.getParameter("opcion");
-        if (opcion.equals("crearActividad")) {
+        if (opcion.equals("crearClaseVehiculo")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/crearActividad.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/claseVehiculo/crearClaseVehiculo.jsp");
             requestDispacher.forward(request, response);
 
-        }else if(opcion.equals("listarServicios")) {
+        }else if(opcion.equals("listarClaseVehiculo")) {
 
-            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
-            List<ServiciosZona> lista=new ArrayList<>();
+            ClaseVehiculoDAO claseVehiculoDAO = new ClaseVehiculoDAO();
+            List<ClaseVehiculo> lista=new ArrayList<>();
             try {
-                lista=serviciosZonaDAO.obtenerServicios();
-                for (ServiciosZona serviciosZona : lista) {
+                lista=claseVehiculoDAO.obtenerClaseVehiculo();
+                for (ClaseVehiculo claseVehiculo : lista) {
 
-                    System.out.println(serviciosZona);
+                    System.out.println(claseVehiculo);
                 }
                 request.setAttribute("lista", lista);
-                request.setAttribute("zonasDAO",new ZonaSocialDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/listarActividad.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/claseVehiculo/listarClaseVehiculo.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -46,15 +44,15 @@ public class ServiciosZonaServlet extends HttpServlet {
             System.out.println("seleccionó listar");
 
         }else if (opcion.equals("editar")) {
-            int id=Integer.parseInt(request.getParameter("idActividad"));
+            int id=Integer.parseInt(request.getParameter("idClaseVehiculo"));
             System.out.println("Editar id: "+id);
-            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
-            ServiciosZona serviciosZona = new ServiciosZona();
+            ClaseVehiculoDAO claseVehiculoDAO = new ClaseVehiculoDAO();
+            ClaseVehiculo claseVehiculo = new ClaseVehiculo();
             try {
-                serviciosZona=serviciosZonaDAO.obtenerServicios(id);
-                System.out.println(serviciosZona);
-                request.setAttribute("serviciosZona", serviciosZona);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/editarActividad.jsp");
+                claseVehiculo=claseVehiculoDAO.obtenerClaseVehiculo(id);
+                System.out.println(claseVehiculo);
+                request.setAttribute("claseVehiculo", claseVehiculo);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/claseVehiculo/editarClaseVehiculo.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -63,10 +61,10 @@ public class ServiciosZonaServlet extends HttpServlet {
             }
 
         }else if(opcion.equals("eliminar")) {
-            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
-            int id=Integer.parseInt(request.getParameter("idActividad"));
+            ClaseVehiculoDAO claseVehiculoDAO = new ClaseVehiculoDAO();
+            int id=Integer.parseInt(request.getParameter("idClaseVehiculo"));
             try {
-                serviciosZonaDAO.eliminar(id);
+                claseVehiculoDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
                 requestDispacher.forward(request, response);
@@ -77,6 +75,7 @@ public class ServiciosZonaServlet extends HttpServlet {
 
         }
 
+
     }
 
     @Override
@@ -85,13 +84,12 @@ public class ServiciosZonaServlet extends HttpServlet {
         String opcion=request.getParameter("opcion");
         if (opcion.equals("guardar")) {
 
-            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
-            ServiciosZona serviciosZona = new ServiciosZona();
-            serviciosZona.setNombreActividad(request.getParameter("nombreActividad"));
-            serviciosZona.setIdZona(Integer.parseInt(request.getParameter("idZona")));
+            ClaseVehiculoDAO claseVehiculoDAO = new ClaseVehiculoDAO();
+            ClaseVehiculo claseVehiculo = new ClaseVehiculo();
+            claseVehiculo.setNombreClaseVehiculo(request.getParameter("nombreClaseVehiculo"));
 
             try {
-                serviciosZonaDAO.guardar(serviciosZona);
+                claseVehiculoDAO.guardar(claseVehiculo);
                 System.out.println("Registro guardado");
 
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
@@ -105,14 +103,13 @@ public class ServiciosZonaServlet extends HttpServlet {
 
 
         }else if (opcion.equals("editar")) {
-            ServiciosZona serviciosZona = new ServiciosZona();
-            ServiciosZonaDAO serviciosZonaDAO = new ServiciosZonaDAO();
-            serviciosZona.setIdActividad(Integer.parseInt(request.getParameter("idActividad")));
-            serviciosZona.setNombreActividad(request.getParameter("nombreActividad"));
-            serviciosZona.setIdZona(Integer.parseInt(request.getParameter("idZona")));
+            ClaseVehiculo claseVehiculo = new ClaseVehiculo();
+            ClaseVehiculoDAO claseVehiculoDAO = new ClaseVehiculoDAO();
+            claseVehiculo.setIdClaseVehiculo(Integer.parseInt(request.getParameter("idClaseVehiculo")));
+            claseVehiculo.setNombreClaseVehiculo(request.getParameter("nombreClaseVehiculo"));
 
             try {
-                serviciosZonaDAO.editar(serviciosZona);
+                claseVehiculoDAO.editar(claseVehiculo);
                 System.out.println("Registro actualizado");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
                 requestDispacher.forward(request, response);

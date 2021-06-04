@@ -1,5 +1,6 @@
 package co.com.horisoft.controller;
 
+import co.com.horisoft.modelo.dao.ClaseVehiculoDAO;
 import co.com.horisoft.modelo.dao.ParqueaderoDAO;
 import co.com.horisoft.modelo.beans.Parqueadero;
 
@@ -33,6 +34,7 @@ public class ParqueaderoServlet extends HttpServlet {
                     System.out.println(parqueadero);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
                 requestDispacher.forward(request, response);
 
