@@ -56,6 +56,7 @@ public class InscripcionServlet extends HttpServlet {
                 inscripcion=inscripcionDAO.obtenerInscripciones(id);
                 System.out.println(inscripcion);
                 request.setAttribute("inscripcion", inscripcion);
+                request.setAttribute("servicioZona", new ServiciosZonaDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/editarInscripcion.jsp");
                 requestDispacher.forward(request, response);
 

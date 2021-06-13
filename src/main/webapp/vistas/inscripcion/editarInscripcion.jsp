@@ -18,7 +18,7 @@
             <div class="form-group">
                 <label for="nombreActividad">Actividad a desarrollar</label>
                 <input class="form-control"
-                       name="nombreActividad" id="nombreActividad" value="${inscripcion.idActividad}" type="text"
+                       name="nombreActividad" id="nombreActividad" value="${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}" type="text"
                        placeholder="codigo actividad" required/> <br/>
             </div>
 

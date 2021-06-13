@@ -54,6 +54,7 @@ public class ServiciosZonaServlet extends HttpServlet {
                 serviciosZona=serviciosZonaDAO.obtenerServicios(id);
                 System.out.println(serviciosZona);
                 request.setAttribute("serviciosZona", serviciosZona);
+                request.setAttribute("nomZona", new ZonaSocialDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/editarActividad.jsp");
                 requestDispacher.forward(request, response);
 

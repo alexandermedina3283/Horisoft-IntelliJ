@@ -4,6 +4,8 @@
 
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
+
+
 <table class="table">
     <tr>
         <td>Número Apartamento</td>
@@ -15,7 +17,6 @@
 
     <c:forEach var="apartamento" items="${lista}">
         <tr>
-
             <td><c:out value="${apartamento.apartamento}"></c:out></td>
             <td><c:out value="${apartamento.torre}"></c:out></td>
             <td><c:out value="${apartamento.estadoCartera}"></c:out></td>
@@ -29,5 +30,6 @@
     </c:forEach>
 
 </table>
+
 
 <jsp:include page="/templates/parteInferior.jsp"/>

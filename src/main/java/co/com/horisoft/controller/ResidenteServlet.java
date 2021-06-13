@@ -56,6 +56,7 @@ public class ResidenteServlet extends HttpServlet {
                 residente=residenteDAO.obtenerResidentes(id);
                 System.out.println(residente);
                 request.setAttribute("residente", residente);
+                request.setAttribute("categoriaRes", new CategoriaResidenteDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/editarResidente.jsp");
                 requestDispacher.forward(request, response);
 

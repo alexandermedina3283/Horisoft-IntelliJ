@@ -69,7 +69,7 @@
 
             <div class="form-group">
                 <label for="claseVehiculo">Clase vehículo</label>
-                <input class="form-control" name="claseVehiculo" id="claseVehiculo" value="${parqueadero.claseVehiculo}"
+                <input class="form-control" name="claseVehiculo" id="claseVehiculo" value="${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}"
                        type="text" placeholder="clase vehiculo" required/> <br>
             </div>
 

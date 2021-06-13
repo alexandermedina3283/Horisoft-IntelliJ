@@ -1,4 +1,4 @@
-
+<%@ page import="co.com.horisoft.modelo.dao.CategoriaResidenteDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="/templates/parteSuperior.jsp"/>
@@ -73,7 +73,7 @@
 
             <div class="form-group">
             <label for="categoriaResidente">Categoria residente</label> <input class="form-control"
-                name="categoriaResidente" id="categoriaResidente" value="${residente.categoria}" type="text"
+                name="categoriaResidente" id="categoriaResidente" value="${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}" type="text"
                 placeholder="Categoria residente" required/> <br />
             </div>
 

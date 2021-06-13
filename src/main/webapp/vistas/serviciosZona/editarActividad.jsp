@@ -19,7 +19,7 @@
         <div class="form-group">
             <label for="idZona">Código zona</label>
             <input class="form-control" name="idZona" id="idZona" type="text" placeholder="Ingrese número de la zona"
-                   value="${serviciosZona.idZona}" required /> <br/>
+                   value="${nomZona.obtenerZonas(serviciosZona.idZona).getNombreZona()}" required /> <br/>
         </div>
 
     </fieldset>

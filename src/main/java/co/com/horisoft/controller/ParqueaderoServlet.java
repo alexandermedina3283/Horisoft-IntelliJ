@@ -54,6 +54,7 @@ public class ParqueaderoServlet extends HttpServlet {
                 parqueadero=parqueaderoDAO.obtenerParqueaderos(id);
                 System.out.println(parqueadero);
                 request.setAttribute("parqueadero", parqueadero);
+                request.setAttribute("tipoVehiculo", new ClaseVehiculoDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/editarParqueadero.jsp");
                 requestDispacher.forward(request, response);
 
