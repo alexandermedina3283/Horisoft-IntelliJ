@@ -4,6 +4,8 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
+<a class="btn btn-danger float-end mx-2 mb-1" href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=crearActividad" role="button">Crear nuevo registro</a>
+
 <table class="table">
     <tr>
         <td>Código servicio</td>

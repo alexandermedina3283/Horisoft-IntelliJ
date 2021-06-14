@@ -17,19 +17,18 @@
                 <label for="nombreActividad">Actividad a desarrollar</label>
                 <select class="form-control" name="nombreActividad" id="nombreActividad" required autofocus>
                     <option hidden selected>Seleccione una opción</option>
-                    <option value="1">Gym</option>
-                    <option value="2">Zumba</option>
                     <option value="3">Ajedrez</option>
                     <option value="4">Domino</option>
                     <option value="5">Futbolin</option>
-                    <option value="6">Ping Pong</option>
+                    <option value="1">Gym</option>
+                    <option value="12">Natacion</option>
                     <option value="7">Parques</option>
+                    <option value="6">Ping Pong</option>
                     <option value="8">Poker</option>
                     <option value="9">Rana</option>
                     <option value="11">Sauna</option>
-                    <option value="12">Natacion</option>
                     <option value="10">Reserva salon social</option>
-
+                    <option value="2">Zumba</option>
                 </select>
             </div> <br>
 

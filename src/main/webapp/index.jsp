@@ -1,91 +1,42 @@
 
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-
 <jsp:include page="/templates/parteSuperior.jsp"/>
-<nav>
-    <h3>Menu Principal</h3>
-    <table>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=crearUsuario">Crear usuario</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=listarUsuario">Listar usuarios</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=crearApartamento">Crear apartamento</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=listarApartamento">Listar apartamentos</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=crearResidente">Crear residente</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=listarResidente">Listar residente</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaServlet?opcion=crearMascota">Crear mascota</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/MascotaServlet?opcion=listarMascota">Listar mascotas</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=crearParqueadero">Crear parqueadero</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=listarParqueadero">Listar parqueaderos</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=crearInscripcion">Crear inscripcion</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=listarInscripcion">Listar inscripcion</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado">Crear invitado</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=listarInvitado">Listar invitado</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=crearComentario">Crear comentario</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=listarComentario">Listar comentario</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=crearReservaSalon">Crear reserva salón social</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=listarReservaSalon">Listar reservas salón social</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=crearCategoriaResidente">Crear Categoria Residente</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=listarCategoriaResidente">Listar Categoria Residente</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=crearActividad">Incluir un servicio en zona social</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=listarServicios">Listar Servicios Zona</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=crearZonaSocial">Crear zona social</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=listarZonas">Listar zonas sociales</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=crearClaseVehiculo">Incluir clase vehículo</td>
-        </tr>
-        <tr>
-            <td> <a href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=listarClaseVehiculo">Listar clase vehículo</td>
-        </tr>
 
+<div>
+    <p class="fw-bold fs-4 p-2 mb-1 text-center" >Mis zonas sociales</p>
+</div>
 
-    </table><br>
-</nav>
+<!--Card Servicios-->
+<section class="seccionInicio">
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card">
+            <img src="<%=request.getContextPath()%>/_img/Gym.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Gimnasio</h5>
+                <p class="card-text">Área de entrenamiento con máquinas de ejercicio multifuncional con aforo máximo permitido de 15 residentes por 1 hora c/u.  </p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="<%=request.getContextPath()%>/_img/Piscina.jpeg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Piscina</h5>
+                <p class="card-text">Espacio con aforo permitido máximo de 15 residentes, para disfrute de agua climatizada o sauna por 1 hora c/u.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <img src="<%=request.getContextPath()%>/_img/salonJuegos.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Salon de Juegos</h5>
+                <p class="card-text">Zona de esparcimiento familiar para residentes con variedad de juegos, con aforo máximo permitido de 10 residentes por 1 hora c/u.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
 
 <jsp:include page="/templates/parteInferior.jsp"/>

@@ -4,6 +4,8 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
+<a class="btn btn-danger float-end mx-5 mb-2" href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=crearApartamento" role="button">Crear nuevo registro</a>
+
 <table class="table">
     <tr>
         <td>Usuario número</td>

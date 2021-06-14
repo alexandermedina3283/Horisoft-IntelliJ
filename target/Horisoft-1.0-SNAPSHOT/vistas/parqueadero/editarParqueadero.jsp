@@ -69,9 +69,18 @@
 
             <div class="form-group">
                 <label for="claseVehiculo">Clase vehículo</label>
-                <input class="form-control" name="claseVehiculo" id="claseVehiculo" value="${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}"
+                <select class="form-control" name="claseVehiculo" id="claseVehiculo" value="${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}"
                        type="text" placeholder="clase vehiculo" required/> <br>
+
+                <option hidden selected>${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}</option>
+                <option value="1">Automovil</option>
+                <option value="2">Motocicleta</option>
+                <option value="3">Camioneta</option>
+                <option value="4">Taxi</option>
+                <option value="5">Vans</option>
+            </select>
             </div>
+
 
         </fieldset>
         <br>

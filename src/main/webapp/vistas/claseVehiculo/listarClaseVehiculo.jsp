@@ -3,6 +3,8 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
+<a class="btn btn-danger float-end mx-2 mb-1" href="http://localhost:8080/Horisoft_war_exploded/ClaseVehiculoServlet?opcion=crearClaseVehiculo" role="button">Crear nuevo registro</a>
+
 <table class="table">
     <tr>
         <td>Código clase</td>

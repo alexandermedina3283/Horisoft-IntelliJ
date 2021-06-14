@@ -72,10 +72,18 @@
             </div>
 
             <div class="form-group">
-            <label for="categoriaResidente">Categoria residente</label> <input class="form-control"
-                name="categoriaResidente" id="categoriaResidente" value="${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}" type="text"
+            <label for="categoriaResidente">Categoria residente</label>
+                <select class="form-control" name="categoriaResidente" id="categoriaResidente"
+                       value="${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}" type="text"
                 placeholder="Categoria residente" required/> <br />
+                <option hidden selected>${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}</option>
+                <option value="1">Propietario</option>
+                <option value="2">Arrendatario</option>
+                <option value="3">Nucleo propietario</option>
+                <option value="4">Nucleo arrendatario</option>
+                </select>
             </div>
+
 
         </fieldset>
         <br /> <button type="submit" class="btn btn-secondary">Guardar</button>

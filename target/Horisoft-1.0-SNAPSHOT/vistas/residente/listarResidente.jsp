@@ -3,6 +3,8 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
+<a class="btn btn-danger float-end mx-2 mb-1" href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=crearResidente" role="button">Crear nuevo registro</a>
+
 <table class="table">
     <tr>
         <td>Código residente</td>
@@ -15,7 +17,7 @@
         <td>Estado</td>
         <td>N° Apartamento</td>
         <td>N° Torre</td>
-        <td>Categoria</td>
+        <td>Categoría</td>
         <td></td>
         <td></td>
     </tr>

@@ -38,7 +38,28 @@
 <main class="estilomain">
     <!--empieza main-->
 
+    <table id="table_id" class="display">
+        <thead>
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Row 1 Data 1</td>
+            <td>Row 1 Data 2</td>
+        </tr>
+        <tr>
+            <td>Row 2 Data 1</td>
+            <td>Row 2 Data 2</td>
+        </tr>
+        </tbody>
+    </table>
 
+    $(document).ready( function () {
+    $('#table_id').DataTable();
+    } );
 
     <!--finaliza main-->
 </main>
@@ -55,6 +76,8 @@
     <!--finaliza footer-->
 </footer>
 <!--link js de bootstrap 4-->
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>
