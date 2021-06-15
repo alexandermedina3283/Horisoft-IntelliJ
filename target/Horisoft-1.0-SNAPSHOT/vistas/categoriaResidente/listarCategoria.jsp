@@ -3,7 +3,7 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<a class="btn btn-danger float-end mx-2 mb-1" href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=crearCategoriaResidente" role="button">Crear nuevo registro</a>
+<a class="btn btn-danger float-end mx-2 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/CategoriaResidenteServlet?opcion=crearCategoriaResidente" role="button">Crear nuevo registro</a>
 
 <table class="table">
     <tr>

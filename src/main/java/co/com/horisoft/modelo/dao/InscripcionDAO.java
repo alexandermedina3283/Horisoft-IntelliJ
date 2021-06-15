@@ -63,7 +63,7 @@ public class InscripcionDAO {
 
         try {
 
-            sql="select * from inscripcion";
+            sql="select * from inscripcion order by fecha_inscripcion desc";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {

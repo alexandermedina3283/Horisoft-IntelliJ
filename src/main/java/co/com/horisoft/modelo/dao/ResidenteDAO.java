@@ -65,7 +65,7 @@ public class ResidenteDAO {
 
         try {
 
-            sql = "select id_residente,nombre_residente,apellido_residente, identificacion_residente,fecha_nacimiento, telefono_residente, email_residente, estado_residente, numero_apartamento, numero_torre, id_categoria from residente";
+            sql = "select id_residente,nombre_residente,apellido_residente, identificacion_residente,fecha_nacimiento, telefono_residente, email_residente, estado_residente, numero_apartamento, numero_torre, id_categoria from residente order by numero_apartamento";
             statement = connection.prepareStatement(sql);
             resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {

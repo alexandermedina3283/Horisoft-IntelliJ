@@ -33,7 +33,9 @@
     <input type="text" placeholder="Ingrese su usuario" name="nombreUsuario" id="nombreUsuario" autofocus required pattern=[a-zA-Z0-9]{2,40}><br>
     <br>
     <label for="contraUsuario">Contraseña</label><br>
+
     <input type="password" placeholder="Ingrese su contraseña" name="contraUsuario" id="contraUsuario" required ><br>
+    <br>
     <input type="submit" value="Iniciar sesión">
 </div>
 

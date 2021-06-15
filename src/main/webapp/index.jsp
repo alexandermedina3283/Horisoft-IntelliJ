@@ -7,7 +7,7 @@
 </div>
 
 <!--Card Servicios-->
-<section class="seccionInicio">
+
 <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
         <div class="card">
@@ -37,6 +37,7 @@
         </div>
     </div>
 </div>
-</section>
+
+
 
 <jsp:include page="/templates/parteInferior.jsp"/>

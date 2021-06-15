@@ -5,8 +5,8 @@
     <!--empieza footer-->
     <div class="contenedorfooter">
         <div class="manual">
-            <p class="textofooter">Consultar manual del usuario</p>
-            <a class="manual-link" href="#">&nbsp;Click aqui</a>
+            <p class="textofooter">Consultar </p>
+            <a href="#" class="link-warning">&nbsp;Manual del usuario</a>
         </div>
         <p class="textofooter">Linea de soporte tecnico 057-15087758</p>
     </div>
