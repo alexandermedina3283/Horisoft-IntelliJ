@@ -27,10 +27,11 @@
             <div class="form-group">
             <label for="numTorre">Número torre</label>
             <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Ingrese número de torre" required pattern="[A-Z0-9]{1}"/> <br/>
-            </div>
+            </div><br>
+            <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
         </fieldset>
-        <br/> <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
     </form>
 

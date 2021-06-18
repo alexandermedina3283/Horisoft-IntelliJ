@@ -74,7 +74,7 @@ nav > a:hover{
     width: 95%;
     height: auto;
     max-height: none;
-    padding-bottom: 45px;
+    padding-bottom: 45  px;
 
 
 }/*termina estilo main*/
@@ -84,7 +84,13 @@ nav > a:hover{
 
 
 fieldset{
-    width: 30%;
+    width: 40%;
+
+
+}
+legend{
+    margin-top: 15px;
+    color: #F76900;
 }
 
 
@@ -118,7 +124,16 @@ fieldset{
 
 /*termina estilo footer*/
 
+/*html {
+    min-height: 100%;
+    position: relative;
+}
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
 
 
 

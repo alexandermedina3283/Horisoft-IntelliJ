@@ -72,6 +72,9 @@ public class SalonSocialDAO {
                 salonSocial.setIdInscripcion(resultSet.getInt(4));
                 listaReservas.add(salonSocial);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -107,6 +110,9 @@ public class SalonSocialDAO {
                 salonSocial.setIdInscripcion(resultSet.getInt(4));
 
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

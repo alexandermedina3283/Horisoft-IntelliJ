@@ -73,6 +73,9 @@ public class MascotaDAO {
                 mascota.setTorre(resultSet.getString(5));
                 listaMascotas.add(mascota);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

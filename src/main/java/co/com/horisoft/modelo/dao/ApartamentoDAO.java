@@ -133,6 +133,9 @@ public class ApartamentoDAO {
                     apartamento.setEstadoCartera(resultSet.getString(3));
                     listaApartamentos.add(apartamento);
                 }
+                statement.close();
+                resultSet.close();
+                connection.close();
 
             } catch (SQLException e) {
                 e.printStackTrace();

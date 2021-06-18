@@ -14,11 +14,11 @@
             <label for="nombreZona">Nombre zona social</label>
             <input class="form-control" name="nombreZona" id="nombreZona" type="text"
                    value="${zonaSocial.nombreZona}" placeholder="Ingrese nombre de la zona" required autofocus/> <br/>
-        </div>
+        </div><br>
+        <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
     </fieldset>
-    <br/>
-    <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
 </form>
 

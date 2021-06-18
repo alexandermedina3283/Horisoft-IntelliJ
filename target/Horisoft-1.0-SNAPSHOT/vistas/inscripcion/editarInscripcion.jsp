@@ -2,6 +2,7 @@
 <%@ page import="java.text.DateFormat" %>
 <%@ page import="java.util.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
 
@@ -17,9 +18,23 @@
 
             <div class="form-group">
                 <label for="nombreActividad">Actividad a desarrollar</label>
-                <input class="form-control"
+                <select class="form-control"
                        name="nombreActividad" id="nombreActividad" value="${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}" type="text"
-                       placeholder="codigo actividad" required/> <br/>
+                       placeholder="codigo actividad" required/>
+                <option value="${inscripcion.idInscripcion}">${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}</option>
+                <option value="3">Ajedrez</option>
+                <option value="4">Domino</option>
+                <option value="5">Futbolin</option>
+                <option value="1">Gym</option>
+                <option value="12">Natacion</option>
+                <option value="7">Parques</option>
+                <option value="6">Ping Pong</option>
+                <option value="8">Poker</option>
+                <option value="9">Rana</option>
+                <option value="11">Sauna</option>
+                <option value="10">Reserva salon social</option>
+                <option value="2">Zumba</option>
+                </select><br/>
             </div>
 
 
@@ -81,11 +96,11 @@
                        value="${inscripcion.idResidente}" type="text"
                        placeholder="Número residente"
                        required/> <br/>
-            </div>
+            </div><br>
+            <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
         </fieldset>
-        <br/>
-        <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
     </form>
 

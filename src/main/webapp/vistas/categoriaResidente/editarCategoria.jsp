@@ -14,11 +14,11 @@
             <label for="nombreCategoria">Nombre Categoria</label>
             <input class="form-control" name="nombreCategoria" id="nombreCategoria" type="text"
                    value="${categoriaResidente.nombreCategoria}" placeholder="Ingrese categoria del residente" required autofocus/> <br/>
-        </div>
+        </div><br>
+        <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
     </fieldset>
-    <br/>
-    <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
 </form>
 

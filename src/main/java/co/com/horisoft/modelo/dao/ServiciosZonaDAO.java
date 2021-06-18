@@ -68,6 +68,9 @@ public class ServiciosZonaDAO {
                 serviciosZona.setIdZona(resultSet.getInt(3));
                 listaServicios.add(serviciosZona);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -100,12 +103,13 @@ public class ServiciosZonaDAO {
                 serviciosZona.setNombreActividad(resultSet.getString(2));
                 serviciosZona.setIdZona(resultSet.getInt(3));
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-        connection.close();
         return serviciosZona;
 
     }

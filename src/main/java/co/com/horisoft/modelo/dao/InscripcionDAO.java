@@ -41,6 +41,7 @@ public class InscripcionDAO {
             connection.commit();
             statement.close();
             connection.close();
+
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
@@ -80,6 +81,9 @@ public class InscripcionDAO {
 
                 listaInscripciones.add(inscripcion);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

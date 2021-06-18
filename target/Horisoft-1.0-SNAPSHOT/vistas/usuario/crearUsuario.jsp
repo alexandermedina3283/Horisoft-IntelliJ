@@ -41,7 +41,7 @@
                 </datalist>
                 </div><br>
 
-                <button type="submit" class="btn btn-secondary">Guardar</button>
+                <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
             </fieldset>
         </form>
 

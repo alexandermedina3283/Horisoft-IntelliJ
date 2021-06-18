@@ -68,6 +68,9 @@ public class ZonaSocialDAO {
                 zonaSocial.setNombreZona(resultSet.getString(2));
                 listaZonas.add(zonaSocial);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

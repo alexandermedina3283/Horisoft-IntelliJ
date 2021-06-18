@@ -75,6 +75,9 @@ public class ComentarioDAO {
                 comentario.setIdInscripcion(Integer.parseInt(resultSet.getString(5)));
                 listaComentarios.add(comentario);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

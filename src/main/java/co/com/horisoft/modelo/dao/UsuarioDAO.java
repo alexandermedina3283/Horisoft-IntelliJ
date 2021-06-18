@@ -138,6 +138,9 @@ public class UsuarioDAO {
                 usuario.setRolUsuario(resultSet.getString(5));
                 listaUsuarios.add(usuario);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

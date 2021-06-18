@@ -20,11 +20,11 @@
             <label for="idZona">Código zona</label>
             <input class="form-control" name="idZona" id="idZona" type="text" placeholder="Ingrese número de la zona"
                    value="${nomZona.obtenerZonas(serviciosZona.idZona).getNombreZona()}" required /> <br/>
-        </div>
+        </div><br>
+        <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
     </fieldset>
-    <br/>
-    <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
 </form>
 

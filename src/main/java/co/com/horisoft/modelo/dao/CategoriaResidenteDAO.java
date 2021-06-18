@@ -69,6 +69,9 @@ public class CategoriaResidenteDAO {
                 categoriaResidente.setNombreCategoria(resultSet.getString(2));
                 listaCategorias.add(categoriaResidente);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -100,11 +103,13 @@ public class CategoriaResidenteDAO {
                 categoriaResidente.setIdCategoria(resultSet.getInt(1));
                 categoriaResidente.setNombreCategoria(resultSet.getString(2));
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        connection.close();
         return categoriaResidente;
 
     }

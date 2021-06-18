@@ -14,11 +14,11 @@
             <label for="nombreClaseVehiculo">Nombre Clase</label>
             <input class="form-control" name="nombreClaseVehiculo" id="nombreClaseVehiculo" type="text"
                    value="${claseVehiculo.nombreClaseVehiculo}" placeholder="Ingrese clase de vehículo" required autofocus/> <br/>
-        </div>
+        </div><br>
+        <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
     </fieldset>
-    <br/>
-    <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
 </form>
 

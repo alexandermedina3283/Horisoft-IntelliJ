@@ -75,6 +75,9 @@ public class InvitadoDAO {
                 invitado.setIdInscripcion(Integer.parseInt(resultSet.getString(5)));
                 listaInvitados.add(invitado);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

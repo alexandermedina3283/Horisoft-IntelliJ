@@ -67,6 +67,9 @@ public class ClaseVehiculoDAO {
                 claseVehiculo.setNombreClaseVehiculo(resultSet.getString(2));
                 listaClaseVehiculo.add(claseVehiculo);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

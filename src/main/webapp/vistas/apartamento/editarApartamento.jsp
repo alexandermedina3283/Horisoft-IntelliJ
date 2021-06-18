@@ -1,14 +1,12 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
     <form action="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet" method="post">
-        <c:set var="apartamento" value="${apartamento}"></c:set>
+
         <input type="hidden" name="opcion" value="editar">
-        <input type="hidden" name="apartamento" value="${apartamento.apartamento}">
-        <input type="hidden" name="torre" value="${apartamento.torre}">
+        <input type="hidden" name="apartamento" id="apartamentoHidden" value="">
+        <input type="hidden" name="torre" id="torreHidden" value="">
 
         <fieldset>
 
@@ -16,29 +14,32 @@
 
             <div class="form-group">
             <label for="apartamento">Apartamento</label>
-            <input class="form-control" name="apartamento" id="apartamento" value="${apartamento.apartamento}"
+            <input class="form-control" name="apartamento" id="apartamento" value=""
                    type="number" placeholder="número apartamento" required autofocus pattern="[0-9]{3,5}"/> <br/>
             </div>
 
             <div class="form-group">
             <label for="torre">Torre</label>
-            <input class="form-control" name="torre" id="torre" value="${apartamento.torre}" type="text" placeholder="número torre"
+            <input class="form-control" name="torre" id="torre" value="" type="text" placeholder="número torre"
                    required pattern="[A-Z0-9]{1}"/> <br/>
             </div>
 
             <div class="form-group">
             <label for="Estadocartera">Estado cartera</label>
-            <input class="form-control" list="estadocartera" name="cartera" required placeholder="seleccione una opción" value="${apartamento.estadoCartera}">
+            <input class="form-control" list="estadocartera" name="cartera" id="cartera" required placeholder="seleccione una opción" value="">
 
             <datalist id="estadocartera">
                 <option value="Al dia">
                 <option value="En mora">
             </datalist>
-            </div>
+            </div> <br>
+
+            <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
         </fieldset>
-        <br/> <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
     </form>
-
+<script src="<%=request.getContextPath()%>/templates/datatableprueba/js/jquery-3.6.0.min.js"></script>
+<script src="<%=request.getContextPath()%>/templates/datatableprueba/js/script.js"></script>
 <jsp:include page="/templates/parteInferior.jsp"/>

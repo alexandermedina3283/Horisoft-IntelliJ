@@ -41,6 +41,7 @@ public class ParqueaderoDAO {
             connection.commit();
             statement.close();
             connection.close();
+
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
@@ -80,6 +81,9 @@ public class ParqueaderoDAO {
 
                 listaParqueaderos.add(parqueadero);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

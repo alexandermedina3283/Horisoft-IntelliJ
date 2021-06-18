@@ -71,20 +71,19 @@
                 <label for="claseVehiculo">Clase vehículo</label>
                 <select class="form-control" name="claseVehiculo" id="claseVehiculo" value="${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}"
                        type="text" placeholder="clase vehiculo" required/> <br>
-
-                <option hidden selected>${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}</option>
+                <option value="${parqueadero.claseVehiculo}">${tipoVehiculo.obtenerClaseVehiculo(parqueadero.claseVehiculo).getNombreClaseVehiculo()}</option>
                 <option value="1">Automovil</option>
                 <option value="2">Motocicleta</option>
                 <option value="3">Camioneta</option>
                 <option value="4">Taxi</option>
                 <option value="5">Vans</option>
             </select>
-            </div>
+            </div><br>
+            <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
 
         </fieldset>
-        <br>
-        <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
     </form>
 

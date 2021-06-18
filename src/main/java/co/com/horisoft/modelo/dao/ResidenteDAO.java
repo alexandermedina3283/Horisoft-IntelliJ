@@ -44,6 +44,7 @@ public class ResidenteDAO {
             connection.commit();
             statement.close();
             connection.close();
+
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
@@ -167,7 +168,6 @@ public class ResidenteDAO {
             connection.rollback();
             e.printStackTrace();
         }
-
 
         return estadoOperacion;
 

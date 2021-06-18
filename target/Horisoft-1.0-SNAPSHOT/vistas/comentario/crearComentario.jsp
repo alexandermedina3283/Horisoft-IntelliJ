@@ -26,11 +26,11 @@
                 <label for="idInscripcion">Numero inscripción</label>
                 <input class="form-control" name="idInscripcion" id="idInscripcion" type="text"
                        placeholder="número de inscripcion" required pattern="[0-9]{1,4}"/> <br/>
-            </div>
+            </div><br>
+            <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
         </fieldset>
-        <br/>
-        <button type="submit" class="btn btn-secondary">Guardar</button>
+
 
     </form>
 
