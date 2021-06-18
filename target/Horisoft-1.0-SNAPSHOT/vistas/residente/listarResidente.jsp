@@ -7,7 +7,7 @@
 
 <table class="table">
     <tr>
-        <td>Código residente</td>
+        <td>Código</td>
         <td>Nombre</td>
         <td>Apellido</td>
         <td>Identificación</td>

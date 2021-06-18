@@ -63,8 +63,8 @@
             <select class="form-control" name="claseVehiculo" id="claseVehiculo">
                 <option hidden selected>Seleccione una opción</option>
                 <option value="1">Automovil</option>
-                <option value="2">Motocicleta</option>
                 <option value="3">Camioneta</option>
+                <option value="2">Motocicleta</option>
                 <option value="4">Taxi</option>
                 <option value="5">Vans</option>
             </select>

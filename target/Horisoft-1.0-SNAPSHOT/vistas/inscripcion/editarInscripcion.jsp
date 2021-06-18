@@ -21,7 +21,7 @@
                 <select class="form-control"
                        name="nombreActividad" id="nombreActividad" value="${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}" type="text"
                        placeholder="codigo actividad" required/>
-                <option value="${inscripcion.idInscripcion}">${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}</option>
+                <option hidden value="${inscripcion.idInscripcion}">${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}</option>
                 <option value="3">Ajedrez</option>
                 <option value="4">Domino</option>
                 <option value="5">Futbolin</option>

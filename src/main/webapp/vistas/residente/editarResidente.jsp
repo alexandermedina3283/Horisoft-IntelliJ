@@ -76,7 +76,7 @@
                 <select class="form-control" name="categoriaResidente" id="categoriaResidente"
                        value="${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}" type="text"
                 placeholder="Categoria residente" required/> <br />
-                <option value="${residente.categoria}">${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}</option>
+                <option hidden value="${residente.categoria}">${categoriaRes.obtenerCategorias(residente.categoria).getNombreCategoria()}</option>
                 <option value="1">Propietario</option>
                 <option value="2">Arrendatario</option>
                 <option value="3">Nucleo propietario</option>

@@ -31,8 +31,8 @@
             <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
 
         </fieldset>
-
-
     </form>
+
+
 
 <jsp:include page="/templates/parteInferior.jsp"/>
