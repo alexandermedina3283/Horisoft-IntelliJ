@@ -27,12 +27,12 @@
             </div>
 
             <div class="form-group">
-            <label for="numApartamento">Numero apartamento</label>
+            <label for="numApartamento">Número apartamento</label>
             <input class="form-control" name="numApartamento" id="numApartamento" value="${mascota.apartamento}" type="number" placeholder="número apartamento" required pattern="[0-9]{3,5}"/> <br />
             </div>
 
             <div class="form-group">
-            <label for="numTorre">Numero torre</label>
+            <label for="numTorre">Número torre</label>
             <input class="form-control" name="numTorre" id="numTorre" value="${mascota.torre}" type="text" placeholder="número torre" required pattern="[A-Z0-9]{1}"/> <br />
             </div>
             <button type="submit" type="button" class="btn btn-outline-secondary float-end mb-2">Enviar formulario</button>

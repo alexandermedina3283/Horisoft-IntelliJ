@@ -66,8 +66,24 @@ public class MascotaServlet extends HttpServlet {
             try {
                 mascotaDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            MascotaDAO mascotaDAO = new MascotaDAO();
+            List<Mascota> lista=new ArrayList<>();
+            try {
+                lista=mascotaDAO.obtenerMascotas();
+                for (Mascota mascota : lista) {
+
+                    System.out.println(mascota);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -94,9 +110,25 @@ public class MascotaServlet extends HttpServlet {
                 mascotaDAO.guardar(mascota);
                 System.out.println("Registro guardado");
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-                requestDispacher.forward(request, response);
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            MascotaDAO mascotaDAO = new MascotaDAO();
+            List<Mascota> lista=new ArrayList<>();
+            try {
+                lista=mascotaDAO.obtenerMascotas();
+                for (Mascota mascotaG : lista) {
+
+                    System.out.println(mascota);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
+                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
@@ -114,13 +146,30 @@ public class MascotaServlet extends HttpServlet {
             try {
                 mascotaDAO.editar(mascota);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            MascotaDAO mascotaDAO = new MascotaDAO();
+            List<Mascota> lista=new ArrayList<>();
+            try {
+                lista=mascotaDAO.obtenerMascotas();
+                for (Mascota mascotal : lista) {
+
+                    System.out.println(mascota);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
         }
     }
 }

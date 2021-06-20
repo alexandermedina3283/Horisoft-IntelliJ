@@ -71,8 +71,25 @@ public class ResidenteServlet extends HttpServlet {
             try {
                 residenteDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            ResidenteDAO residenteDAO = new ResidenteDAO();
+            List<Residente> lista=new ArrayList<>();
+            try {
+                lista=residenteDAO.obtenerResidentes();
+                for (Residente residente : lista) {
+
+                    System.out.println(residente);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -106,7 +123,24 @@ public class ResidenteServlet extends HttpServlet {
                 residenteDAO.guardar(residente);
                 System.out.println("Registro guardado");
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            ResidenteDAO residenteDAO = new ResidenteDAO();
+            List<Residente> lista=new ArrayList<>();
+            try {
+                lista=residenteDAO.obtenerResidentes();
+                for (Residente residenteG : lista) {
+
+                    System.out.println(residente);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -132,7 +166,24 @@ public class ResidenteServlet extends HttpServlet {
             try {
                 residenteDAO.editar(residente);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            ResidenteDAO residenteDAO = new ResidenteDAO();
+            List<Residente> lista=new ArrayList<>();
+            try {
+                lista=residenteDAO.obtenerResidentes();
+                for (Residente residentel : lista) {
+
+                    System.out.println(residente);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

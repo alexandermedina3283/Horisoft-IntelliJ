@@ -67,8 +67,24 @@ public class UsuarioServlet extends HttpServlet {
             try {
                 usuarioDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            List<Usuario> lista=new ArrayList<>();
+            try {
+                lista=usuarioDAO.obtenerUsuarios();
+                for (Usuario usuario : lista) {
+
+                    System.out.println(usuario);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -86,7 +102,6 @@ public class UsuarioServlet extends HttpServlet {
         if (opcion.equals("guardar")) {
 
 
-
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             Usuario usuario = new Usuario();
             String sha256clave = org.apache.commons.codec.digest.DigestUtils.sha256Hex(request.getParameter("contraUsuario"));
@@ -101,11 +116,26 @@ public class UsuarioServlet extends HttpServlet {
                 System.out.println("Registro guardado");
                 System.out.println(sha256clave);
 
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            List<Usuario> lista=new ArrayList<>();
+            try {
+                lista=usuarioDAO.obtenerUsuarios();
+                for (Usuario usuarioG : lista) {
+
+                    System.out.println(usuario);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
                 requestDispacher.forward(request, response);
-
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
@@ -125,9 +155,25 @@ public class UsuarioServlet extends HttpServlet {
             try {
                 usuarioDAO.editar(usuario);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-                requestDispacher.forward(request, response);
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            UsuarioDAO usuarioDAO = new UsuarioDAO();
+            List<Usuario> lista=new ArrayList<>();
+            try {
+                lista=usuarioDAO.obtenerUsuarios();
+                for (Usuario usuariol : lista) {
+
+                    System.out.println(usuario);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
+                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block

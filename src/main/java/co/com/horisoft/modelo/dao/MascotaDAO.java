@@ -61,7 +61,7 @@ public class MascotaDAO {
 
         try {
 
-            sql="select * from mascota";
+            sql="select * from mascota order by numero_apartamento";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {

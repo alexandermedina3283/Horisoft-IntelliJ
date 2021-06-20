@@ -71,8 +71,26 @@ public class InscripcionServlet extends HttpServlet {
             try {
                 inscripcionDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            InscripcionDAO inscripcionDAO = new InscripcionDAO();
+            List<Inscripcion> lista=new ArrayList<>();
+            try {
+                lista=inscripcionDAO.obtenerInscripciones();
+                for (Inscripcion inscripcion : lista) {
+
+                    System.out.println(inscripcion);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -103,9 +121,27 @@ public class InscripcionServlet extends HttpServlet {
                 inscripcionDAO.guardar(inscripcion);
                 System.out.println("Registro guardado");
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-                requestDispacher.forward(request, response);
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            InscripcionDAO inscripcionDAO = new InscripcionDAO();
+            List<Inscripcion> lista=new ArrayList<>();
+            try {
+                lista=inscripcionDAO.obtenerInscripciones();
+                for (Inscripcion inscripcionG : lista) {
+
+                    System.out.println(inscripcion);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
+                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
@@ -127,7 +163,24 @@ public class InscripcionServlet extends HttpServlet {
             try {
                 inscripcionDAO.editar(inscripcion);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            InscripcionDAO inscripcionDAO = new InscripcionDAO();
+            List<Inscripcion> lista=new ArrayList<>();
+            try {
+                lista=inscripcionDAO.obtenerInscripciones();
+                for (Inscripcion inscripcionl : lista) {
+
+                    System.out.println(inscripcion);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

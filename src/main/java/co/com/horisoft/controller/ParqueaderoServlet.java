@@ -69,8 +69,26 @@ public class ParqueaderoServlet extends HttpServlet {
             try {
                 parqueaderoDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            ParqueaderoDAO parqueaderoDAO = new ParqueaderoDAO();
+            List<Parqueadero> lista=new ArrayList<>();
+            try {
+                lista=parqueaderoDAO.obtenerParqueaderos();
+                for (Parqueadero parqueadero : lista) {
+
+                    System.out.println(parqueadero);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -102,7 +120,25 @@ public class ParqueaderoServlet extends HttpServlet {
                 parqueaderoDAO.guardar(parqueadero);
                 System.out.println("Registro guardado");
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            ParqueaderoDAO parqueaderoDAO = new ParqueaderoDAO();
+            List<Parqueadero> lista=new ArrayList<>();
+            try {
+                lista=parqueaderoDAO.obtenerParqueaderos();
+                for (Parqueadero parqueaderoG : lista) {
+
+                    System.out.println(parqueadero);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -126,7 +162,24 @@ public class ParqueaderoServlet extends HttpServlet {
             try {
                 parqueaderoDAO.editar(parqueadero);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            ParqueaderoDAO parqueaderoDAO = new ParqueaderoDAO();
+            List<Parqueadero> lista=new ArrayList<>();
+            try {
+                lista=parqueaderoDAO.obtenerParqueaderos();
+                for (Parqueadero parqueaderol : lista) {
+
+                    System.out.println(parqueadero);
+                }
+                request.setAttribute("lista", lista);
+                request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

@@ -65,8 +65,25 @@ public class SalonSocialServlet extends HttpServlet {
             try {
                 salonSocialDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            SalonSocialDAO salonSocialDAO = new SalonSocialDAO();
+            List<SalonSocial> lista=new ArrayList<>();
+            try {
+                lista=salonSocialDAO.obtenerReservasSalon();
+                for (SalonSocial salonSocial : lista) {
+
+                    System.out.println(salonSocial);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -97,9 +114,26 @@ public class SalonSocialServlet extends HttpServlet {
                 salonSocialDAO.guardar(salonSocial);
                 System.out.println("Registro guardado");
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-                requestDispacher.forward(request, response);
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            SalonSocialDAO salonSocialDAO = new SalonSocialDAO();
+            List<SalonSocial> lista=new ArrayList<>();
+            try {
+                lista=salonSocialDAO.obtenerReservasSalon();
+                for (SalonSocial salonSocialG : lista) {
+
+                    System.out.println(salonSocial);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
+                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
@@ -117,7 +151,24 @@ public class SalonSocialServlet extends HttpServlet {
             try {
                 salonSocialDAO.editar(salonSocial);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            SalonSocialDAO salonSocialDAO = new SalonSocialDAO();
+            List<SalonSocial> lista=new ArrayList<>();
+            try {
+                lista=salonSocialDAO.obtenerReservasSalon();
+                for (SalonSocial salonSociall : lista) {
+
+                    System.out.println(salonSocial);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

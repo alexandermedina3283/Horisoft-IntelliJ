@@ -63,7 +63,7 @@ public class ParqueaderoDAO {
 
         try {
 
-            sql = "select * from parqueadero_vehiculo";
+            sql = "select * from parqueadero_vehiculo order by numero_apartamento";
             statement = connection.prepareStatement(sql);
             resultSet = statement.executeQuery(sql);
             while (resultSet.next()) {

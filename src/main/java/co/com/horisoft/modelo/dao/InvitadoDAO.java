@@ -63,7 +63,7 @@ public class InvitadoDAO {
 
         try {
 
-            sql="select * from invitado_externo";
+            sql="select * from invitado_externo order by id_inscripcion";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {

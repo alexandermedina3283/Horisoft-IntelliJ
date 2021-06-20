@@ -66,8 +66,25 @@ public class InvitadoServlet extends HttpServlet {
             try {
                 invitadoDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            InvitadoDAO invitadoDAO = new InvitadoDAO();
+            List<Invitado> lista=new ArrayList<>();
+            try {
+                lista=invitadoDAO.obtenerInvitados();
+                for (Invitado invitado : lista) {
+
+                    System.out.println(invitado);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -95,9 +112,25 @@ public class InvitadoServlet extends HttpServlet {
                 invitadoDAO.guardar(invitado);
                 System.out.println("Registro guardado");
 
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-                requestDispacher.forward(request, response);
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            InvitadoDAO invitadoDAO = new InvitadoDAO();
+            List<Invitado> lista=new ArrayList<>();
+            try {
+                lista=invitadoDAO.obtenerInvitados();
+                for (Invitado invitadoG : lista) {
+
+                    System.out.println(invitado);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
+                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
@@ -115,7 +148,23 @@ public class InvitadoServlet extends HttpServlet {
             try {
                 invitadoDAO.editar(invitado);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+//            InvitadoDAO invitadoDAO = new InvitadoDAO();
+            List<Invitado> lista=new ArrayList<>();
+            try {
+                lista=invitadoDAO.obtenerInvitados();
+                for (Invitado invitadol : lista) {
+
+                    System.out.println(invitado);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

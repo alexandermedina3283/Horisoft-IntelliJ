@@ -65,8 +65,25 @@ public class ComentarioServlet extends HttpServlet {
             try {
                 comentarioDAO.eliminar(id);
                 System.out.println("Registro eliminado correctamente");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            ComentarioDAO comentarioDAO = new ComentarioDAO();
+            List<Comentario> lista=new ArrayList<>();
+            try {
+                lista=comentarioDAO.obtenerComentarios();
+                for (Comentario comentario : lista) {
+
+                    System.out.println(comentario);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
                 requestDispacher.forward(request, response);
+
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
@@ -94,9 +111,26 @@ public class ComentarioServlet extends HttpServlet {
 
                 comentarioDAO.guardar(comentario);
                 System.out.println("Registro guardado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-                requestDispacher.forward(request, response);
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
 
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            ComentarioDAO comentarioDAO = new ComentarioDAO();
+            List<Comentario> lista=new ArrayList<>();
+            try {
+                lista=comentarioDAO.obtenerComentarios();
+                for (Comentario comentarioG : lista) {
+
+                    System.out.println(comentario);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
+                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
@@ -113,7 +147,24 @@ public class ComentarioServlet extends HttpServlet {
             try {
                 comentarioDAO.editar(comentario);
                 System.out.println("Registro actualizado");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+//                requestDispacher.forward(request, response);
+
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+//            ComentarioDAO comentarioDAO = new ComentarioDAO();
+            List<Comentario> lista=new ArrayList<>();
+            try {
+                lista=comentarioDAO.obtenerComentarios();
+                for (Comentario comentariol : lista) {
+
+                    System.out.println(comentario);
+                }
+                request.setAttribute("lista", lista);
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
