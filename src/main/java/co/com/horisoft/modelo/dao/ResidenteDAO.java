@@ -84,6 +84,9 @@ public class ResidenteDAO {
                 residente.setCategoria(resultSet.getInt(11));
                 listaResidentes.add(residente);
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -127,6 +130,9 @@ public class ResidenteDAO {
 
 
             }
+            statement.close();
+            resultSet.close();
+            connection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();

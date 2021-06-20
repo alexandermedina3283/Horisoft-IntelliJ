@@ -5,6 +5,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
+<div class="d-flex justify-content-center flex-column align-items-start">
+
+    <div class="bg-light border rounded p-2 m-2 mt-3 w-50">
 
     <form action="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet" method="post">
         <c:set var="inscripcion" value="${inscripcion}"></c:set>
@@ -24,17 +27,17 @@
                 <option hidden value="${inscripcion.idInscripcion}">${servicioZona.obtenerServicios(inscripcion.idActividad).getNombreActividad()}</option>
                 <option value="3">Ajedrez</option>
                 <option value="4">Domino</option>
-                <option value="5">Futbolin</option>
+                <option value="5">Futbolín</option>
                 <option value="1">Gym</option>
-                <option value="12">Natacion</option>
-                <option value="7">Parques</option>
+                <option value="12">Natación</option>
+                <option value="7">Parqués</option>
                 <option value="6">Ping Pong</option>
-                <option value="8">Poker</option>
+                <option value="8">Póker</option>
                 <option value="9">Rana</option>
                 <option value="11">Sauna</option>
-                <option value="10">Reserva salon social</option>
+                <option value="10">Reserva salón social</option>
                 <option value="2">Zumba</option>
-                </select><br/>
+                </select><br>
             </div>
 
 
@@ -95,13 +98,16 @@
                        name="idResidente" id="idResidente"
                        value="${inscripcion.idResidente}" type="text"
                        placeholder="Número residente"
-                       required/> <br/>
+                       required/>
             </div><br>
-            <button type="submit" type="button" class="btn btn-outline-danger float-end mb-2">Enviar formulario</button>
+            <button type="submit" type="button" class="btn btn-outline-secondary float-end mb-2">Enviar formulario</button>
 
         </fieldset>
 
 
     </form>
+    </div>
+
+</div>
 
 <jsp:include page="/templates/parteInferior.jsp"/>
