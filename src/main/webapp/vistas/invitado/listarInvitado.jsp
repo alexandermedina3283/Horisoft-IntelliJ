@@ -7,15 +7,17 @@
 <a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado" role="button">Crear nuevo registro</a>
 
 <table class="table">
+    <thead>
     <tr>
-        <td>Invitado número</td>
-        <td>Nombre</td>
-        <td>Apellidos</td>
-        <td>Identificación</td>
-        <td>Número Inscripción</td>
-        <td></td>
-        <td></td>
+        <th scope="col">Invitado número</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellidos</th>
+        <th scope="col">Identificación</th>
+        <th scope="col">Número Inscripción</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
     </tr>
+    </thead>
 
     <c:forEach var="invitado" items="${lista}">
         <tr>
@@ -25,8 +27,8 @@
             <td><c:out value="${invitado.apellidoInvitado}"></c:out></td>
             <td><c:out value="${invitado.identificacionInvitado}"></c:out></td>
             <td><c:out value="${invitado.idInscripcion}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=eliminar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=eliminar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
         </tr>
     </c:forEach>
 

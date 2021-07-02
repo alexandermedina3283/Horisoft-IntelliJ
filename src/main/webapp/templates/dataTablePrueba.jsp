@@ -495,7 +495,7 @@
 <script src="datatableprueba/js/jquery-3.6.0.min.js"></script>
 <script src="datatableprueba/js/bootstrap.min.js"></script>
 <script src="datatableprueba/js/jquery.dataTables.min.js"></script>
-<script src="datatableprueba/js/script.js"></script>
+<script src="datatableprueba/js/scriptOriginal.js"></script>
 
 </body>
 </html>

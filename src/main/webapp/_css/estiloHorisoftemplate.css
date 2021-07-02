@@ -74,7 +74,8 @@ nav > a:hover{
     width: 95%;
     height: auto;
     max-height: none;
-    padding-bottom: 45  px;
+    padding-bottom: 15px;
+    padding-top: 20px;
 
 
 }/*termina estilo main*/

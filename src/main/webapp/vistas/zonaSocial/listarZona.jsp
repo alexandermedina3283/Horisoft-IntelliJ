@@ -6,20 +6,22 @@
 <a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=crearZonaSocial" role="button">Crear nuevo registro</a>
 
 <table class="table">
+    <thead>
     <tr>
-        <td>Código zona</td>
-        <td>Nombre zona</td>
-        <td></td>
-        <td></td>
+        <th>Código zona</th>
+        <th>Nombre zona</th>
+        <th></th>
+        <th></th>
     </tr>
+    </thead>
 
     <c:forEach var="zonaSocial" items="${lista}">
         <tr>
 
             <td><c:out value="${zonaSocial.idZona}"></c:out></td>
             <td><c:out value="${zonaSocial.nombreZona}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=eliminar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=editar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=eliminar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=editar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
         </tr>
     </c:forEach>
 

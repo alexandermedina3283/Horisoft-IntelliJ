@@ -7,13 +7,15 @@
 <a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=crearActividad" role="button">Crear nuevo registro</a>
 
 <table class="table">
+    <thead>
     <tr>
-        <td>Código servicio</td>
-        <td>Nombre servicio</td>
-        <td>Zona social</td>
-        <td></td>
-        <td></td>
+        <th>Código servicio</th>
+        <th>Nombre servicio</th>
+        <th>Zona social</th>
+        <th></th>
+        <th></th>
     </tr>
+    </thead>
 
     <c:forEach var="serviciosZona" items="${lista}">
         <tr>
@@ -21,8 +23,8 @@
             <td><c:out value="${serviciosZona.idActividad}"></c:out></td>
             <td><c:out value="${serviciosZona.nombreActividad}"></c:out></td>
             <td><c:out value="${zonasDAO.obtenerZonas(serviciosZona.idZona).getNombreZona()}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=eliminar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-trash-alt"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=editar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-edit"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=eliminar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=editar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
         </tr>
     </c:forEach>
 
