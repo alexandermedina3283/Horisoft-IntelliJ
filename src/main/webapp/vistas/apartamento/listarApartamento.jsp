@@ -16,8 +16,8 @@
         <th>Número apartamento</th>
         <th>Número torre</th>
         <th>Estado cartera</th>
-        <th>Acciones1</th>
-        <th>Acciones2</th>
+        <th></th>
+        <th></th>
     </tr>
     </thead>
 
@@ -29,8 +29,8 @@
         <th>Número apartamento</th>
         <th>Número torre</th>
         <th>Estado cartera</th>
-        <th>Acciones1</th>
-        <th>Acciones2</th>
+        <th></th>
+        <th></th>
     </tr>
     </tfoot>
 

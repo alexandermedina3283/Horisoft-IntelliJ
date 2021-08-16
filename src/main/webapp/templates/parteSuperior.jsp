@@ -1,12 +1,36 @@
-<%--
+<%@ page import="co.com.horisoft.modelo.beans.Usuario" %><%--
   Created by IntelliJ IDEA.
   User: RYZEN5
   Date: 20/04/2021
   Time: 4:10 p. m.
   To change this template use File | Settings | File Templates.
 --%>
+<%
+    response.setHeader("Pragma", "No-cache");
+    response.setHeader("Cache-control", "no-cache, no-store, must-revalidate");
+    response.setHeader("Expires", String.valueOf(120));
+%>
+
+
+
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="es">
+
+    <%
+    HttpSession miSesion = (HttpSession) request.getSession();
+    String nombre="";
+
+    if  (miSesion.getAttribute("datosUsuario") == null){
+        request.getRequestDispatcher("/Login.jsp").forward(request,response);
+
+    }else {
+        Usuario usuario = (Usuario) miSesion.getAttribute("datosUsuario");
+        nombre = usuario.getNombreUsuario();
+    }
+%>
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
@@ -20,6 +44,7 @@
     <link rel="stylesheet" href="<%=request.getContextPath()%>/templates/datatableprueba/css/bootstrap.min.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/templates/datatableprueba/css/jquery.dataTables.min.css">
 </head>
+
 <body class="estilobody">
 <header class="estiloheader">
     <!--inicia mi header-->
@@ -84,12 +109,18 @@
 
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-sign-out-alt"></i>Salir</a>
-                    </li>
+<%--                    <li class="nav-item">--%>
+<%--                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-sign-out-alt"></i>Salir</a>--%>
+<%--                    </li>--%>
                 </ul>
             </div>
         </div>
+        <div>
+            <form action="<%=request.getContextPath()%>/SesionesServlet" method="post">
+                <button type="submit" class="btn btn-warning mx-3 ">Salir</button>
+            </form>
+        </div>
+        <p class="text-center" >Bienvenido <%=nombre%></p>
     </nav>
 
 </header>

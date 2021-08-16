@@ -4,7 +4,7 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ApartamentoServlet?opcion=crearApartamento" role="button">Crear nuevo registro</a>
+<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet?opcion=crearUsuario" role="button">Crear nuevo registro</a>
 
 <table class="table">
     <thead>

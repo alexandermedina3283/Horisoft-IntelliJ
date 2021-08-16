@@ -1,4 +1,4 @@
-
+<%@ page import="co.com.horisoft.modelo.beans.Usuario" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
@@ -39,6 +39,5 @@
 </div>
 
 </div>
-
 
 <jsp:include page="/templates/parteInferior.jsp"/>

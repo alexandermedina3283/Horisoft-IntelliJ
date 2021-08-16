@@ -231,5 +231,46 @@ public class UsuarioServlet extends HttpServlet {
             }
 
         }
+
+        //nuevo metodo inicio sesion
+
+        else if(opcion.equals("validarInicio")) {
+
+            System.out.println("seleccionó Validar usuario");
+            String Clave = org.apache.commons.codec.digest.DigestUtils.sha256Hex(request.getParameter("contraUsuario"));
+            String NombreUsuario = request.getParameter("nombreUsuario");
+
+            UsuarioDAO usuarioDAO = new UsuarioDAO();
+
+            try {
+                //iniciamos usuario con el usuario que traiga el metodo de validación
+                Usuario usuario = usuarioDAO.validarUsuario(NombreUsuario, Clave);
+
+                if (usuario!=null){
+                    System.out.println("bienvenido al nuevo inicio de sesion");
+                    HttpSession miSesion = request.getSession(true);
+                    miSesion.setAttribute("datosUsuario", usuario);
+                    RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
+                    requestDispacher.forward(request, response);
+
+                }else{
+
+                    RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoDenegado.jsp");
+                    requestDispacher.forward(request, response);
+
+                }
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (ServletException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+
+        }
+
     }
 }
