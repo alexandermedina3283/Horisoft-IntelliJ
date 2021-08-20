@@ -24,6 +24,7 @@
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
+
 <%
     if(rol.equals("Administrador Conjunto")){
 %>
@@ -32,6 +33,8 @@
 <%}else{ %>
 
 <% } %>
+
+<p class="fs-5 fw-normal text-start">Listado de apartamentos</p>
 
 <table id="example" class="display" style="width: 99%">
     <thead>

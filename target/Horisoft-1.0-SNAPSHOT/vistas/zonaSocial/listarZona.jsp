@@ -5,6 +5,8 @@
 
 <a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=crearZonaSocial" role="button">Crear nuevo registro</a>
 
+<p class="fs-5 fw-normal text-start">Listado de zonas disponibles</p>
+
 <table class="table">
     <thead>
     <tr>

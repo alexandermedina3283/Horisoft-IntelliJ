@@ -29,6 +29,8 @@
 
 <% } %>
 
+<p class="fs-5 fw-normal text-start">Listado de residentes</p>
+
 <table class="table">
     <thead>
     <tr>

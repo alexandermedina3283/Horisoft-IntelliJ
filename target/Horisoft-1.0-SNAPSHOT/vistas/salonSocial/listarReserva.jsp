@@ -32,6 +32,8 @@
 
 <% } %>
 
+<p class="fs-5 fw-normal text-start">Listado de reservas salón social</p>
+
 <table class="table">
     <thead>
     <tr>

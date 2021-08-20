@@ -29,6 +29,8 @@
 
 <% } %>
 
+<p class="fs-5 fw-normal text-start">Listado de parqueaderos</p>
+
 <table class="table">
     <thead>
     <tr>
