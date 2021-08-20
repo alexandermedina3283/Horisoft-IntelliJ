@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
+
 <div class="d-flex justify-content-center flex-column align-items-start">
 
     <div class="bg-light border rounded p-2 m-2 mt-3 w-50">

@@ -1,3 +1,23 @@
+<%@ page import="co.com.horisoft.modelo.beans.Usuario" %>
+<!--variables de sesión-->
+<%
+    HttpSession miSesion = (HttpSession) request.getSession();
+    String nombre="";
+    String rol="";
+
+
+    if  (miSesion.getAttribute("datosUsuario") == null){
+        request.getRequestDispatcher("/Login.jsp").forward(request,response);
+
+    }else {
+        Usuario usuario = (Usuario) miSesion.getAttribute("datosUsuario");
+        nombre = usuario.getNombreUsuario();
+        rol=usuario.getRolUsuario();
+    }
+%>
+
+
+
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -27,8 +47,18 @@
             <td><c:out value="${comentario.descripcionComentario}"></c:out></td>
             <td><c:out value="${comentario.autorComentario}"></c:out></td>
             <td><c:out value="${comentario.idInscripcion}"></c:out></td>
+
+            <%
+                if(rol.equals("Administrador Conjunto")){
+            %>
+
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=eliminar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+
+            <%}else{ %>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ComentarioServlet?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+            <% } %>
+
         </tr>
     </c:forEach>
 

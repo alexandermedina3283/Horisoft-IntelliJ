@@ -1,3 +1,21 @@
+<%@ page import="co.com.horisoft.modelo.beans.Usuario" %>
+<!--variables de sesión-->
+<%
+    HttpSession miSesion = (HttpSession) request.getSession();
+    String nombre="";
+    String rol="";
+
+
+    if  (miSesion.getAttribute("datosUsuario") == null){
+        request.getRequestDispatcher("/Login.jsp").forward(request,response);
+
+    }else {
+        Usuario usuario = (Usuario) miSesion.getAttribute("datosUsuario");
+        nombre = usuario.getNombreUsuario();
+        rol=usuario.getRolUsuario();
+    }
+%>
+
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -35,8 +53,20 @@
             <td><c:out value="${inscripcion.estadoInscripcion}"></c:out></td>
             <td><c:out value="${inscripcion.idResidente}"></c:out></td>
             <td><c:out value="${ActividadDAO.obtenerServicios(inscripcion.idActividad).getNombreActividad()}"></c:out></td>
+
+            <%
+                if(rol.equals("Administrador Conjunto")){
+            %>
+
             <td><a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=eliminar&idInscripcion=<c:out value="${inscripcion.idInscripcion}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
             <td><a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=editar&idInscripcion=<c:out value="${inscripcion.idInscripcion}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+
+            <%}else{ %>
+
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=editar&idInscripcion=<c:out value="${inscripcion.idInscripcion}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+
+            <% } %>
+
         </tr>
     </c:forEach>
 

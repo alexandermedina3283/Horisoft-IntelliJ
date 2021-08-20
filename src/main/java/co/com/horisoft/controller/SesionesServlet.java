@@ -10,6 +10,14 @@ public class SesionesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        String opcion=request.getParameter("opcion");
+        if (opcion.equals("accesoNegado")) {
+            System.out.println("sitio no permitido");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoDenegado.jsp");
+            requestDispacher.forward(request, response);
+
+        }
+
     }
 
     @Override

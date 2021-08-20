@@ -1,3 +1,24 @@
+<%@ page import="co.com.horisoft.modelo.beans.Usuario" %>
+<!--variables de sesión-->
+<%
+    HttpSession miSesion = (HttpSession) request.getSession();
+    String nombre="";
+    String rol="";
+
+
+    if  (miSesion.getAttribute("datosUsuario") == null){
+        request.getRequestDispatcher("/Login.jsp").forward(request,response);
+
+    }else {
+        Usuario usuario = (Usuario) miSesion.getAttribute("datosUsuario");
+        nombre = usuario.getNombreUsuario();
+        rol=usuario.getRolUsuario();
+    }
+%>
+
+<%
+    if(rol.equals("Administrador Conjunto")){
+%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/parteSuperior.jsp"/>
@@ -50,3 +71,16 @@
 <script src="<%=request.getContextPath()%>/templates/datatableprueba/js/jquery-3.6.0.min.js"></script>
 <script src="<%=request.getContextPath()%>/templates/datatableprueba/js/script.js"></script>
 <jsp:include page="/templates/parteInferior.jsp"/>
+
+
+<%}else{ %>
+<jsp:include page="/templates/parteSuperior.jsp"/>
+    <div class="alert">
+        <div class="alert-danger">
+            <h5 class="text-center"> No tiene permisos para acceder a esta operación </h5>
+        </div>
+    </div>
+<jsp:include page="/templates/parteInferior.jsp"/>
+<% } %>
+
+

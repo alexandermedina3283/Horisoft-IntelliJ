@@ -5,21 +5,23 @@
   Time: 4:10 p. m.
   To change this template use File | Settings | File Templates.
 --%>
+
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html lang="es">
+
+<!--Manejo de cache navegador-->
 <%
     response.setHeader("Pragma", "No-cache");
     response.setHeader("Cache-control", "no-cache, no-store, must-revalidate");
     response.setHeader("Expires", String.valueOf(120));
 %>
 
-
-
-
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html lang="es">
-
+<!--variables de sesión-->
     <%
     HttpSession miSesion = (HttpSession) request.getSession();
     String nombre="";
+    String rol="";
+
 
     if  (miSesion.getAttribute("datosUsuario") == null){
         request.getRequestDispatcher("/Login.jsp").forward(request,response);
@@ -27,6 +29,7 @@
     }else {
         Usuario usuario = (Usuario) miSesion.getAttribute("datosUsuario");
         nombre = usuario.getNombreUsuario();
+        rol=usuario.getRolUsuario();
     }
 %>
 
@@ -65,6 +68,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="<%=request.getContextPath()%>/index.jsp"><i class="fas fa-home"></i>Inicio</a>
                     </li>
+
+                    <%
+                        if(rol.equals("Administrador Conjunto")){
+                    %>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Usuario
@@ -74,6 +81,22 @@
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/UsuarioServlet?opcion=listarUsuario">Listar</a></li>
                         </ul>
                     </li>
+                    <!--Restricciones para el Gestionador-->
+                    <%}else{ %>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Usuario
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Crear</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Listar</a></li>
+                        </ul>
+                    </li>
+
+                    <% } %>
+
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Mi Conjunto
@@ -96,6 +119,10 @@
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SalonSocialServlet?opcion=listarReservaSalon">Reserva salon social</a></li>
                         </ul>
                     </li>
+
+                    <%
+                        if(rol.equals("Administrador Conjunto")){
+                    %>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             Servicios y Zonas
@@ -112,6 +139,24 @@
 <%--                    <li class="nav-item">--%>
 <%--                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-sign-out-alt"></i>Salir</a>--%>
 <%--                    </li>--%>
+                    <%}else{ %>
+
+                    <!--Restricciones para el Gestionador-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Servicios y Zonas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Servicios</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Clasificación residentes</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Clasificación vehículos</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Zonas</a></li>
+
+                        </ul>
+                    </li>
+                    <% } %>
+
                 </ul>
             </div>
         </div>
@@ -120,7 +165,8 @@
                 <button type="submit" class="btn btn-warning mx-3 ">Salir</button>
             </form>
         </div>
-        <p class="text-center" >Bienvenido <%=nombre%></p>
+        <!--variable de sesión-->
+        <p class="text-center" >Hola <%=nombre%></p>
     </nav>
 
 </header>
