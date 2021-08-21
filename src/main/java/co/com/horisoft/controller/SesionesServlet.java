@@ -13,7 +13,7 @@ public class SesionesServlet extends HttpServlet {
         String opcion=request.getParameter("opcion");
         if (opcion.equals("accesoNegado")) {
             System.out.println("sitio no permitido");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoDenegado.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/contenidoBloqueado.jsp");
             requestDispacher.forward(request, response);
 
         }
@@ -26,7 +26,7 @@ public class SesionesServlet extends HttpServlet {
         HttpSession miSesion = request.getSession();
         miSesion.removeAttribute("datosUsuario");
         miSesion.invalidate();
-        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/Login.jsp");
+        RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/loginUsuario.jsp");
         requestDispacher.forward(request, response);
 
     }

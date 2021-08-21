@@ -77,7 +77,7 @@
 <jsp:include page="/templates/parteSuperior.jsp"/>
     <div class="alert">
         <div class="alert-danger">
-            <h5 class="text-center"> No tiene permisos para acceder a esta operación </h5>
+            <h5 class="text-center"> !Lo siento, No cuenta con permisos para acceder a esta operación¡ </h5>
         </div>
     </div>
 <jsp:include page="/templates/parteInferior.jsp"/>

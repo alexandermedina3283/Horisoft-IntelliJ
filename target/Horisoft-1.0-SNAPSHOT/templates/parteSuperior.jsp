@@ -162,11 +162,11 @@
         </div>
         <div>
             <form action="<%=request.getContextPath()%>/SesionesServlet" method="post">
-                <button type="submit" class="btn btn-warning mx-3 ">Salir</button>
+                <button type="submit" class="btn btn-link mx-3 "><i class="fas fa-sign-out-alt" style="color: black; font-size: large">Salir</i></button>
             </form>
         </div>
         <!--variable de sesión-->
-        <p class="text-center" >Hola <%=nombre%></p>
+        <p class="text-center mx-3">Hola <%=nombre%></p>
     </nav>
 
 </header>
