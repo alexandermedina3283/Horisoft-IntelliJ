@@ -6,7 +6,7 @@
 <div class="d-flex justify-content-center flex-column align-items-start">
 
     <div class="bg-light border rounded p-2 m-2 mt-3 w-50">
-    <form action="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet" method="post">
+    <form action="InvitadoServlet" method="post">
         <c:set var="invitado" value="${invitado}"></c:set>
         <input type="hidden" name="opcion" value="editar">
         <input type="hidden" name="idInvitado" value="${invitado.idInvitado}">

@@ -86,6 +86,7 @@ public class ResidenteServlet extends HttpServlet {
                     System.out.println(residente);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El residente se eliminó correctamente!");
                 request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);
@@ -139,6 +140,7 @@ public class ResidenteServlet extends HttpServlet {
                     System.out.println(residente);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El residente se creó correctamente!");
                 request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);
@@ -182,6 +184,7 @@ public class ResidenteServlet extends HttpServlet {
                     System.out.println(residente);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El residente se actualizó correctamente!");
                 request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
                 requestDispacher.forward(request, response);

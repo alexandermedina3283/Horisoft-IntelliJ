@@ -24,7 +24,16 @@
 
 <a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/InscripcionServlet?opcion=crearInscripcion" role="button">Crear nuevo registro</a>
 
-<p class="fs-5 fw-normal text-start">Listado de actividades programadas</p>
+<p class="fs-5 fw-normal text-start">Listado de actividades programadas</p><br>
+
+<div class="text-warning bg-dark text-center">
+    <%
+        if(request.getAttribute("mensaje")!=null){
+    %>
+    ${mensaje}
+    <%}
+    %>
+</div>
 
 <table class="table">
     <thead>

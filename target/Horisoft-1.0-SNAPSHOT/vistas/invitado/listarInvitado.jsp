@@ -22,9 +22,18 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=crearInvitado" role="button">Crear nuevo registro</a>
+<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="InvitadoServlet?opcion=crearInvitado" role="button">Crear nuevo registro</a>
 
-<p class="fs-5 fw-normal text-start">Listado de invitados a zona social</p>
+<p class="fs-5 fw-normal text-start">Listado de invitados a zona social</p><br>
+
+<div class="text-warning bg-dark text-center">
+    <%
+        if(request.getAttribute("mensaje")!=null){
+    %>
+    ${mensaje}
+    <%}
+    %>
+</div>
 
 <table class="table">
     <thead>
@@ -52,11 +61,11 @@
                 if(rol.equals("Administrador Conjunto")){
             %>
 
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=eliminar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+            <td><a href="InvitadoServlet?opcion=eliminar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
 
             <%}else{ %>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+            <td><a href="InvitadoServlet?opcion=editar&idInvitado=<c:out value="${invitado.idInvitado}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
             <% } %>
 
         </tr>

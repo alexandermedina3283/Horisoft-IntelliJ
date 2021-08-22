@@ -81,6 +81,7 @@ public class ComentarioServlet extends HttpServlet {
                     System.out.println(comentario);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El comentario se eliminó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
                 requestDispacher.forward(request, response);
 
@@ -129,6 +130,7 @@ public class ComentarioServlet extends HttpServlet {
                     System.out.println(comentario);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El comentario se registró correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
                 requestDispacher.forward(request, response);
 
@@ -164,6 +166,7 @@ public class ComentarioServlet extends HttpServlet {
                     System.out.println(comentario);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El comentario se actualizó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
                 requestDispacher.forward(request, response);
 

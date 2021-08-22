@@ -87,6 +87,7 @@ public class InscripcionServlet extends HttpServlet {
                     System.out.println(inscripcion);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡La inscripción se eliminó correctamente!");
                 request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
                 requestDispacher.forward(request, response);
@@ -139,6 +140,7 @@ public class InscripcionServlet extends HttpServlet {
                     System.out.println(inscripcion);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡Inscripción generada correctamente!");
                 request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
                 requestDispacher.forward(request, response);
@@ -179,6 +181,7 @@ public class InscripcionServlet extends HttpServlet {
                     System.out.println(inscripcion);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡La inscripción se actualizó correctamente!");
                 request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
                 requestDispacher.forward(request, response);

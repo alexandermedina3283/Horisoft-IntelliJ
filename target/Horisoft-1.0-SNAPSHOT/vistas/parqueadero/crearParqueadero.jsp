@@ -7,7 +7,7 @@
 <div class="d-flex justify-content-center flex-column align-items-start">
 
     <div class="bg-light border rounded p-2 m-2 mt-3 w-50">
-    <form action="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet" method="post">
+    <form action="ParqueaderoServlet" method="post">
         <input type="hidden" name="opcion" value="guardar">
         <fieldset>
 

@@ -82,6 +82,7 @@ public class UsuarioServlet extends HttpServlet {
                     System.out.println(usuario);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El usuario se eliminó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
                 requestDispacher.forward(request, response);
 
@@ -134,6 +135,7 @@ public class UsuarioServlet extends HttpServlet {
                     System.out.println(usuario);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El usuario se creó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
                 requestDispacher.forward(request, response);
 
@@ -172,6 +174,7 @@ public class UsuarioServlet extends HttpServlet {
                     System.out.println(usuario);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El usuario se actualizó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
                 requestDispacher.forward(request, response);
 

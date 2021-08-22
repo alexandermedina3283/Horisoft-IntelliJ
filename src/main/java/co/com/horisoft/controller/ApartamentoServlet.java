@@ -41,9 +41,6 @@ public class ApartamentoServlet extends HttpServlet {
                 response.setHeader("Cache-Control", "no-store");
                 out.print(cargarDataTable().toString());
                 out.flush();
-//                request.setAttribute("lista", lista);
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/apartamento/listarApartamento.jsp");
-//                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 e.printStackTrace();

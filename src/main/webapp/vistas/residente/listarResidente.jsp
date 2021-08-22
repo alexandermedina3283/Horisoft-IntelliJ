@@ -29,7 +29,16 @@
 
 <% } %>
 
-<p class="fs-5 fw-normal text-start">Listado de residentes</p>
+<p class="fs-5 fw-normal text-start">Listado de residentes</p><br>
+
+<div class="text-warning bg-dark text-center">
+    <%
+        if(request.getAttribute("mensaje")!=null){
+    %>
+    ${mensaje}
+    <%}
+    %>
+</div>
 
 <table class="table">
     <thead>

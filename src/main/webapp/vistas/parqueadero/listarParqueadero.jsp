@@ -23,13 +23,22 @@
 <%
     if(rol.equals("Administrador Conjunto")){
 %>
-<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=crearParqueadero" role="button">Crear nuevo registro</a>
+<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="ParqueaderoServlet?opcion=crearParqueadero" role="button">Crear nuevo registro</a>
 
 <%}else{ %>
 
 <% } %>
 
-<p class="fs-5 fw-normal text-start">Listado de parqueaderos</p>
+<p class="fs-5 fw-normal text-start">Listado de parqueaderos</p><br>
+
+<div class="text-warning bg-dark text-center">
+    <%
+        if(request.getAttribute("mensaje")!=null){
+    %>
+    ${mensaje}
+    <%}
+    %>
+</div>
 
 <table class="table">
     <thead>
@@ -64,8 +73,8 @@
             <%
                 if(rol.equals("Administrador Conjunto")){
             %>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=eliminar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ParqueaderoServlet?opcion=editar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+            <td><a href="ParqueaderoServlet?opcion=eliminar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="ParqueaderoServlet?opcion=editar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
             <%}else{ %>
 
             <% } %>

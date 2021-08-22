@@ -81,7 +81,6 @@
                 <label for="estadoInscripcion">Estado de la inscripción</label>
                 <input class="form-control"  list="estado" name="estadoInscripcion" id="estadoInscripcion" value="${inscripcion.estadoInscripcion}"
                        placeholder="Seleccione estado" required autofocus>
-
                 <datalist id="estado">
                     <option value="Programado"></option>
                     <option value="En proceso"></option>

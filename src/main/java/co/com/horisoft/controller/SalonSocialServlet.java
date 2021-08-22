@@ -81,6 +81,7 @@ public class SalonSocialServlet extends HttpServlet {
                     System.out.println(salonSocial);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡La reserva se eliminó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
                 requestDispacher.forward(request, response);
 
@@ -132,6 +133,7 @@ public class SalonSocialServlet extends HttpServlet {
                     System.out.println(salonSocial);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡Reserva de salón registrada correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
                 requestDispacher.forward(request, response);
 
@@ -168,6 +170,7 @@ public class SalonSocialServlet extends HttpServlet {
                     System.out.println(salonSocial);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡Reserva de salón actualizada correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
                 requestDispacher.forward(request, response);
 

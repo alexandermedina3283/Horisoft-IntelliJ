@@ -82,6 +82,7 @@ public class InvitadoServlet extends HttpServlet {
                     System.out.println(invitado);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El invitado se eliminó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
                 requestDispacher.forward(request, response);
 
@@ -129,6 +130,7 @@ public class InvitadoServlet extends HttpServlet {
                     System.out.println(invitado);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El invitado se registró correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
                 requestDispacher.forward(request, response);
 
@@ -164,6 +166,7 @@ public class InvitadoServlet extends HttpServlet {
                     System.out.println(invitado);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡El invitado se actualizó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
                 requestDispacher.forward(request, response);
 

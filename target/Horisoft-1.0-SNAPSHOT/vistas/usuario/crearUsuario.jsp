@@ -5,7 +5,7 @@
 <div class="d-flex justify-content-center flex-column align-items-start">
 
     <div class="bg-light border rounded p-2 m-2 mt-3 w-50">
-        <form action="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet" method="post">
+        <form action="UsuarioServlet" method="post">
             <input type="hidden" name="opcion" value="guardar">
             <fieldset>
 
@@ -41,7 +41,7 @@
                 <datalist id="rol_usuario">
                     <option value="Administrador Conjunto"></option>
                     <option value="Gestionador Zona"></option>
-                    <option value="Residente"></option>
+                    <!--<option value="Residente"></option>-->
                 </datalist>
                 </div><br>
 

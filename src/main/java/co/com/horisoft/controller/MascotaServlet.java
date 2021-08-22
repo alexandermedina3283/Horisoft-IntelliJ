@@ -81,6 +81,7 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡La mascota se eliminó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
                 requestDispacher.forward(request, response);
 
@@ -109,7 +110,6 @@ public class MascotaServlet extends HttpServlet {
             try {
                 mascotaDAO.guardar(mascota);
                 System.out.println("Registro guardado");
-
 //                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
 //                requestDispacher.forward(request, response);
 
@@ -118,6 +118,7 @@ public class MascotaServlet extends HttpServlet {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
 //            MascotaDAO mascotaDAO = new MascotaDAO();
             List<Mascota> lista=new ArrayList<>();
             try {
@@ -127,6 +128,7 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡La mascota se registró correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
                 requestDispacher.forward(request, response);
 
@@ -162,6 +164,7 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
+                request.setAttribute("mensaje", "¡La mascota se actualizó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
                 requestDispacher.forward(request, response);
 
