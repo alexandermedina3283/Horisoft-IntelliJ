@@ -41,5 +41,4 @@
 </div>
 
 
-
 <jsp:include page="/templates/parteInferior.jsp"/>

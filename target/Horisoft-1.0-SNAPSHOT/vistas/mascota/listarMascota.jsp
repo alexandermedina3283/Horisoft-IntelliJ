@@ -57,6 +57,7 @@
     </thead>
 
     <c:forEach var="mascota" items="${lista}">
+
         <tr>
 
             <td><c:out value="${mascota.idMascota}"></c:out></td>
@@ -68,6 +69,7 @@
             <%
                 if(rol.equals("Administrador Conjunto")){
             %>
+
             <td><a href="MascotaServlet?opcion=eliminar&idMascota=<c:out value="${mascota.idMascota}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
             <td><a href="MascotaServlet?opcion=editar&idMascota=<c:out value="${mascota.idMascota}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
 
@@ -75,11 +77,38 @@
 
             <% } %>
 
-
         </tr>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title text-danger" id="exampleModalLabel">¡Advertencia!</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>¿Esta seguro que desea eliminar los datos de forma permanente</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <a type="button" class="btn btn-danger" href="MascotaServlet?opcion=eliminar&idMascota=<c:out value="${mascota.idMascota}"></c:out>">Continuar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </c:forEach>
 
 </table>
 
+
 <jsp:include page="/templates/parteInferior.jsp"/>
+
+
+
+<%--<!-- Button trigger modal -->--%>
+<%--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">--%>
+<%--    Launch demo modal--%>
+<%--</button>--%>
 
