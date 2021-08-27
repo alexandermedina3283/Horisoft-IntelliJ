@@ -24,6 +24,8 @@
     <!-- Style -->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/_css/style.css">
 
+    <link rel="icon" href="<%=request.getContextPath()%>/_img/horisoft.ico" type="image/x-icon">
+
     <title>Inicio Horisoft</title>
 </head>
 <body>

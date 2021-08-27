@@ -46,6 +46,7 @@
     <!--datatable-->
     <link rel="stylesheet" href="<%=request.getContextPath()%>/templates/datatableprueba/css/bootstrap.min.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/templates/datatableprueba/css/jquery.dataTables.min.css">
+    <link rel="icon" href="<%=request.getContextPath()%>/_img/horisoft.ico" type="image/x-icon">
 </head>
 
 <body class="estilobody">

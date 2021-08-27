@@ -38,6 +38,8 @@
 
     <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
+    <link rel="icon" href="<%=request.getContextPath()%>/_img/horisoft.ico" type="image/x-icon">
+
 </head>
 
 <body>
