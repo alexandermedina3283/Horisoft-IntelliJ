@@ -4,7 +4,8 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=crearActividad" role="button">Crear nuevo registro</a>
+<!--<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=crearActividad" role="button">Crear nuevo registro</a>
+SE INHABILITA OPCION DE CREAR, SOLO DE DEJA LISTA PARA CONSULTA-->
 
 <p class="fs-5 fw-normal text-start">Listado de servicios disponibles</p>
 
@@ -14,8 +15,8 @@
         <th>Código servicio</th>
         <th>Nombre servicio</th>
         <th>Zona social</th>
-        <th></th>
-        <th></th>
+        <!--<th></th> //Se inhabilita edición y eliminación se deja solo consulta
+        <th></th>-->
     </tr>
     </thead>
 
@@ -25,8 +26,9 @@
             <td><c:out value="${serviciosZona.idActividad}"></c:out></td>
             <td><c:out value="${serviciosZona.nombreActividad}"></c:out></td>
             <td><c:out value="${zonasDAO.obtenerZonas(serviciosZona.idZona).getNombreZona()}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=eliminar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=editar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+
+            <!--<td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=eliminar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ServiciosZonaServlet?opcion=editar&idActividad=<c:out value="${serviciosZona.idActividad}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>-->
         </tr>
     </c:forEach>
 

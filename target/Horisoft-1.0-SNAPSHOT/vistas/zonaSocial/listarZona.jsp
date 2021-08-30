@@ -3,7 +3,8 @@
 
 <jsp:include page="/templates/parteSuperior.jsp"/>
 
-<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=crearZonaSocial" role="button">Crear nuevo registro</a>
+<!--<a type="button" class="btn btn-outline-secondary float-end mx-0 mb-1 mt-3 p-2" href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=crearZonaSocial" role="button">Crear nuevo registro</a>
+SE INHABILITA LA OPCION DE CREAR, SE DEJA SOLO LISTA DE CONSULTA-->
 
 <p class="fs-5 fw-normal text-start">Listado de zonas disponibles</p>
 
@@ -12,8 +13,8 @@
     <tr>
         <th>Código zona</th>
         <th>Nombre zona</th>
-        <th></th>
-        <th></th>
+        <!--<th></th> //Se inhabilita edición y eliminación de deja solo consulta
+        <th></th>-->
     </tr>
     </thead>
 
@@ -22,8 +23,8 @@
 
             <td><c:out value="${zonaSocial.idZona}"></c:out></td>
             <td><c:out value="${zonaSocial.nombreZona}"></c:out></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=eliminar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
-            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=editar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+            <!--<td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=eliminar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+            <td><a href="http://localhost:8080/Horisoft_war_exploded/ZonaSocialServlet?opcion=editar&idZona=<c:out value="${zonaSocial.idZona}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>-->
         </tr>
     </c:forEach>
 

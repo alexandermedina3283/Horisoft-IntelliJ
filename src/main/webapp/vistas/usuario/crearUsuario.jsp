@@ -12,7 +12,7 @@
                 <legend>Registro de nuevo usuario</legend>
 
                 <div class="form-group">
-                <label for="nombreUsuario">Nombre usuario :</label>
+                <label for="nombreUsuario">Usuario :</label>
                 <input class="form-control" type="text" name="nombreUsuario" id="nombreUsuario"
                        placeholder="Digite nombre usuario" autofocus required pattern=[a-zA-Z0-9]{2,40}> <br>
                 </div>

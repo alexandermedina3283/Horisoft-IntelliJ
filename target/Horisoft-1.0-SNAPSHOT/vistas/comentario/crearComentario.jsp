@@ -27,7 +27,7 @@
             </div>
 
             <div class="form-group">
-                <label for="idInscripcion">Numero inscripción</label>
+                <label for="idInscripcion">Número inscripción</label>
                 <input class="form-control" name="idInscripcion" id="idInscripcion" type="text"
                        placeholder="número de inscripcion" required pattern="[0-9]{1,4}"/> <br/>
             </div>

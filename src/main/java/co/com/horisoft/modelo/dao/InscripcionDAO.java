@@ -64,7 +64,7 @@ public class InscripcionDAO {
 
         try {
 
-            sql="select * from inscripcion where fecha_inicioActividad between curdate() and now() order by fecha_inscripcion desc";
+            sql="select * from inscripcion where fecha_inicioActividad between curdate() and now() or id_actividad ='10' and estado_inscripcion in ('Programado', 'Aprobado') order by fecha_inscripcion desc;";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {

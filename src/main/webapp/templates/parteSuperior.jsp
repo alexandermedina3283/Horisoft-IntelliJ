@@ -131,8 +131,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/ServiciosZonaServlet?opcion=listarServicios">Servicios</a></li>
-                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/CategoriaResidenteServlet?opcion=listarCategoriaResidente">Clasificación residentes</a></li>
+                            <!--<li><a class="dropdown-item" href="<%=request.getContextPath()%>/CategoriaResidenteServlet?opcion=listarCategoriaResidente">Clasificación residentes</a></li>
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/ClaseVehiculoServlet?opcion=listarClaseVehiculo">Clasificación vehículos</a></li>
+                            SE INHABILITA LA OPCION DE VISUALIZACIÓN EN MENU-->
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/ZonaSocialServlet?opcion=listarZonas">Zonas</a></li>
 
                         </ul>
