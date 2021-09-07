@@ -69,34 +69,22 @@ public class ResidenteServlet extends HttpServlet {
             ResidenteDAO residenteDAO = new ResidenteDAO();
             int id=Integer.parseInt(request.getParameter("idResidente"));
             try {
-                residenteDAO.eliminar(id);
-                System.out.println("Registro eliminado correctamente");
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-//            ResidenteDAO residenteDAO = new ResidenteDAO();
-            List<Residente> lista=new ArrayList<>();
-            try {
-                lista=residenteDAO.obtenerResidentes();
-                for (Residente residente : lista) {
 
-                    System.out.println(residente);
+                request.setAttribute("mensaje", "¡El residente no se eliminó, tiene registros asociados!");
+
+                if(residenteDAO.eliminar(id)){
+
+                    request.setAttribute("mensaje", "¡El residente se eliminó correctamente!");
                 }
-                request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡El residente se eliminó correctamente!");
-                request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
-                requestDispacher.forward(request, response);
+                System.out.println("Registro eliminado correctamente");
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
-
             }
 
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/ResidenteServlet?opcion=listarResidente");
+                requestDispacher.forward(request, response);
         }
     }
 

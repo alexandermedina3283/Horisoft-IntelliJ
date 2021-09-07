@@ -69,34 +69,21 @@ public class InscripcionServlet extends HttpServlet {
             InscripcionDAO inscripcionDAO = new InscripcionDAO();
             int id=Integer.parseInt(request.getParameter("idInscripcion"));
             try {
-                inscripcionDAO.eliminar(id);
-                System.out.println("Registro eliminado correctamente");
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+                request.setAttribute("mensaje", "¡La inscripción no se eliminó, tiene registros asociados!");
 
-//            InscripcionDAO inscripcionDAO = new InscripcionDAO();
-            List<Inscripcion> lista=new ArrayList<>();
-            try {
-                lista=inscripcionDAO.obtenerInscripciones();
-                for (Inscripcion inscripcion : lista) {
+                if(inscripcionDAO.eliminar(id)){
 
-                    System.out.println(inscripcion);
+                    request.setAttribute("mensaje", "¡La inscripción se eliminó correctamente!");
                 }
-                request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡La inscripción se eliminó correctamente!");
-                request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
-                requestDispacher.forward(request, response);
+                System.out.println("Registro eliminado correctamente");
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/InscripcionServlet?opcion=listarInscripcion");
+                requestDispacher.forward(request, response);
         }
 
     }

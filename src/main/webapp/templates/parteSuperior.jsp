@@ -1,4 +1,4 @@
-<%@ page import="co.com.horisoft.modelo.beans.Usuario" %><%--
+<%@ page import="co.com.horisoft.modelo.beans.Usuario"%><%--
   Created by IntelliJ IDEA.
   User: RYZEN5
   Date: 20/04/2021
@@ -151,8 +151,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Servicios</a></li>
-                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Clasificación residentes</a></li>
-                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Clasificación vehículos</a></li>
+                            <!--<li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Clasificación residentes</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Clasificación vehículos</a></li>-->
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/SesionesServlet?opcion=accesoNegado">Zonas</a></li>
 
                         </ul>

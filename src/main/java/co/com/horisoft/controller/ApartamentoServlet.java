@@ -123,6 +123,8 @@ public class ApartamentoServlet extends HttpServlet {
             apartamento.setEstadoCartera(request.getParameter("cartera"));
 
             try {
+
+
                 apartamentoDAO.guardar(apartamento);
                 System.out.println("Registro guardado");
 

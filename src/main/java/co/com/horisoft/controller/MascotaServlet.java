@@ -33,7 +33,7 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/pruebaPlantillaList.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

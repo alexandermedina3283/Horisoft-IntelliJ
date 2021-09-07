@@ -200,6 +200,7 @@ public class ResidenteDAO {
         } catch (SQLException e) {
             connection.rollback();
             e.printStackTrace();
+
         }
 
 
