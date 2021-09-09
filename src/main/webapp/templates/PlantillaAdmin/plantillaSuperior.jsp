@@ -117,7 +117,7 @@
                     <!-- User Menu-->
                     <li class="dropdown">
                         <a href="#!" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle drop icon-circle drop-image">
-                            <span><img class="img-circle " src="<%=request.getContextPath()%>/templates/PlantillaAdmin/assets/images/Avatar1Horisoft-05.png" style="width:40px;" alt="User Image"></span>
+                            <span><img class="img-circle " src="<%=request.getContextPath()%>/templates/PlantillaAdmin/assets/images/UserSilueta-05.jpg" style="width:40px;" alt="User Image"></span>
                             <span style="color: gray;">Administrador Conjunto<i class=" icofont icofont-simple-down"></i></span>
                         </a>
                         <ul class="dropdown-menu settings-menu">

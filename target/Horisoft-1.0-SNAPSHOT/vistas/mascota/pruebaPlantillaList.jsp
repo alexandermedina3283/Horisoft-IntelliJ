@@ -68,7 +68,7 @@
                             if(rol.equals("Administrador Conjunto")){
                         %>
 
-                        <a type="button" class="btn btn-warning waves-effect waves-light " data-toggle="tooltip" data-placement="top" title="" href="MascotaServlet?opcion=crearMascota" role="button">Crear nuevo registro</a>
+                        <a type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" href="MascotaServlet?opcion=crearMascota" role="button"><i class="ti-plus" style="color: white;" > </i> Crear registro</a>
 
                         <%}else{ %>
 

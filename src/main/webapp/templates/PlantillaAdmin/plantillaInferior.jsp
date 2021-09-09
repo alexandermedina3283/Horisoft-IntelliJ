@@ -10,11 +10,11 @@
 </div>
 <!-- Main content ends -->
 <!-- Container-fluid ends -->
-<div class="fixed-button">
+<!--<div class="fixed-button">
     <a href="#!" class="btn btn-md btn-primary">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i> Upgrade To Pro
     </a>
-</div>
+</div>-->
 </div>
 </div>
 

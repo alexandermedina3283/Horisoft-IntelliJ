@@ -14,13 +14,13 @@
             <div class="form-group">
             <label for="nombreResidente">Nombre</label> <input class="form-control"
                 name="nombreResidente" id="nombreResidente" type="text"
-                placeholder="ej. Juan " autofocus required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
+                placeholder="ej. Juan " autofocus required pattern="[A-ZÑa-zñ A-ZÑa-zñ]{2,40}"/> <br/>
             </div>
 
             <div class="form-group">
             <label for="apellidoResidente">Apellido</label> <input class="form-control"
                 name="apellidoResidente" id="apellidoResidente" type="text"
-                placeholder="ej. Rodriguez" required pattern="[A-Za-z A-Za-z]{2,40}"/> <br/>
+                placeholder="ej. Rodriguez" required pattern="[A-ZÑa-zñ A-ZÑa-zñ]{2,40}"/> <br/>
             </div>
 
             <div class="form-group">

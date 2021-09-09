@@ -63,7 +63,7 @@ public class ComentarioDAO {
 
         try {
 
-            sql="select * from comentario";
+            sql="select * from comentario order by id_inscripcion asc;";
             statement=connection.prepareStatement(sql);
             resultSet=statement.executeQuery(sql);
             while (resultSet.next()) {

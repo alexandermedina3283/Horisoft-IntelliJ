@@ -14,7 +14,7 @@
 
             <div class="form-group">
             <label for="nombreMascota">Nombre</label>
-            <input class="form-control" name="nombreMascota" id="nombreMascota" type="text" placeholder="Digite nombre mascota" autofocus pattern="[A-Za-z]{2,40}" required/> <br/>
+            <input class="form-control" name="nombreMascota" id="nombreMascota" type="text" placeholder="Digite nombre mascota" autofocus pattern="[A-ZÑa-zñ]{2,40}" required/> <br/>
             </div>
 
             <div class="form-group">
