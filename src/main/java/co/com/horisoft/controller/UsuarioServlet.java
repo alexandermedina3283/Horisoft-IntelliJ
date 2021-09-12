@@ -21,7 +21,7 @@ public class UsuarioServlet extends HttpServlet {
         String opcion=request.getParameter("opcion");
         if (opcion.equals("crearUsuario")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/crearUsuario.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/crearUsuarioTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarUsuario")) {
@@ -35,7 +35,7 @@ public class UsuarioServlet extends HttpServlet {
                     System.out.println(usuario);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -54,7 +54,7 @@ public class UsuarioServlet extends HttpServlet {
                 usuario=usuarioDAO.obtenerUsuarios(id);
                 System.out.println(usuario);
                 request.setAttribute("usuario", usuario);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/editarUsuario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/editarUsuarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -136,7 +136,7 @@ public class UsuarioServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El usuario se creó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -175,7 +175,7 @@ public class UsuarioServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El usuario se actualizó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

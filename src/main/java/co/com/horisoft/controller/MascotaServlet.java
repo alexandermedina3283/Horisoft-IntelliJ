@@ -19,7 +19,7 @@ public class MascotaServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearMascota")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/crearMascota.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/crearMascotaTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarMascota")) {
@@ -33,7 +33,7 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/pruebaPlantillaList.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -52,7 +52,7 @@ public class MascotaServlet extends HttpServlet {
                 mascota=mascotaDAO.obtenerMascotas(id);
                 System.out.println(mascota);
                 request.setAttribute("mascota", mascota);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/editarMascota.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/editarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -82,7 +82,7 @@ public class MascotaServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡La mascota se eliminó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -129,7 +129,7 @@ public class MascotaServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡La mascota se registró correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -165,7 +165,7 @@ public class MascotaServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡La mascota se actualizó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascota.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

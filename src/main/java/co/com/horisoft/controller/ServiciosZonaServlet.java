@@ -35,7 +35,7 @@ public class ServiciosZonaServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("zonasDAO",new ZonaSocialDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/listarActividad.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/serviciosZona/listarActividadTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

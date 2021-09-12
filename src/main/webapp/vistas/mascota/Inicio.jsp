@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: RYZEN5
-  Date: 6/09/2021
-  Time: 4:34 p. m.
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <jsp:include page="/templates/PlantillaAdmin/plantillaSuperior.jsp"/>
 
@@ -39,7 +33,7 @@
                 <h5 class="card-header-text">Recomendaciones para el uso responsable de Zonas Sociales</h5>
                 <p>Para mantener las condiciones seguras, no permita el ingreso de personas con síntomas asociados al COVID-19 en las zonas sociales del Conjunto.
                     Verifique que los procesos de limpieza y desinfección se realicen frecuentemente en las áreas de exposición durante las jornadas
-                    de servicio a residentes y permanezca atento al cumplimiento de aforo y tiempo máximo permitido de uso (1 hora).</p>
+                    de servicio a residentes y permanezca atento al cumplimiento de aforo y tiempo máximo permitido de uso.</p>
             </div>
             <div class="card-block">
                 <div class="row">
@@ -100,7 +94,7 @@
                                 Gimnasio
                             </div>
                             <div class="panel-body">
-                                <p>Uso de kit tapabocas, toalla y alcohol, deben limpiar y desinfectar las maquinas antes y después de su uso.</p><br>
+                                <p>Uso obligatorio de kit tapabocas, toalla y alcohol, deben limpiar y desinfectar las maquinas antes y después de su uso.</p><br>
                                 <a href="assets/images/light-box/l3.jpg" data-toggle="lightbox" data-title="A random title" data-footer="A custom footer text">
                                     <img src="<%=request.getContextPath()%>/templates/PlantillaAdmin/assets/images/gym_Mesa%20de%20trabajo%201.jpg" class="img-fluid" alt="">
                                 </a>
@@ -150,8 +144,8 @@
             </div>
     </section>
 
-                    </div>
-                </div>
+           </div>
+       </div>
   </div>
 
 

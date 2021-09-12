@@ -1,11 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: RYZEN5
-  Date: 2/09/2021
-  Time: 5:12 p. m.
-  To change this template use File | Settings | File Templates.
---%>
-
 <%@ page import="co.com.horisoft.modelo.beans.Usuario" %>
 <!--variables de sesión-->
 <%
@@ -32,16 +24,16 @@
 <div class="row">
     <div class="col-sm-12 p-0">
         <div class="main-header">
-            <h4>Mascotas</h4>
+            <h4>Comentarios Recibidos</h4>
             <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
                 <li class="breadcrumb-item">
-                    <a href="index.html">
+                    <a href="<%=request.getContextPath()%>/index.jsp">
                         <i class="icofont icofont-home"></i>
                     </a>
                 </li>
-                <li class="breadcrumb-item"><a href="#">Mi Conjunto</a>
+                <li class="breadcrumb-item"><a href="#">Zonas sociales</a>
                 </li>
-                <li class="breadcrumb-item"><a href="basic-table.html">Mascotas</a>
+                <li class="breadcrumb-item"><a href="<%=request.getContextPath()%>/ComentarioServlet?opcion=listarComentario">Comentarios</a>
                 </li>
             </ol>
         </div>
@@ -57,22 +49,14 @@
         <div class="card">
             <div class="card-header">
                 <h5 class="card-header-text">Listado general</h5>
-                <p>Animales de compañia registrados</p>
+                <p>Comentarios asociados al servicio de zonas sociales</p>
             </div>
             <div class="card-block">
                 <div class="row">
                     <div class="col-sm-12 table-responsive">
                         <!--inicia tabla-->
 
-                        <%
-                            if(rol.equals("Administrador Conjunto")){
-                        %>
-
-                        <a type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" href="MascotaServlet?opcion=crearMascota" role="button"><i class="ti-plus" style="color: white;" > </i> Crear registro</a>
-
-                        <%}else{ %>
-
-                        <% } %>
+                        <a type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" href="ComentarioServlet?opcion=crearComentario" role="button" style="float: right"><i class="ti-plus" style="color: white;" > </i> Crear registro</a>
 
                         <div class="text-warning bg-dark text-center">
                             <%
@@ -86,41 +70,40 @@
                         <table class="table">
                             <thead>
                             <tr>
-                                <th scope="col">Número mascota</th>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Clase</th>
-                                <th scope="col">Apartamento</th>
-                                <th scope="col">Torre</th>
+                                <th>Número comentario</th>
+                                <th>Fecha</th>
+                                <th>Descripción</th>
+                                <th>Autor</th>
+                                <th>Número inscripción</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                             </thead>
 
-                            <c:forEach var="mascota" items="${lista}">
-
+                            <c:forEach var="comentario" items="${lista}">
                                 <tr>
 
-                                    <td><c:out value="${mascota.idMascota}"></c:out></td>
-                                    <td><c:out value="${mascota.nombre}"></c:out></td>
-                                    <td><c:out value="${mascota.clase}"></c:out></td>
-                                    <td><c:out value="${mascota.apartamento}"></c:out></td>
-                                    <td><c:out value="${mascota.torre}"></c:out></td>
+                                    <td><c:out value="${comentario.idComentario}"></c:out></td>
+                                    <td><c:out value="${comentario.fechaComentario}"></c:out></td>
+                                    <td><c:out value="${comentario.descripcionComentario}"></c:out></td>
+                                    <td><c:out value="${comentario.autorComentario}"></c:out></td>
+                                    <td><c:out value="${comentario.idInscripcion}"></c:out></td>
 
                                     <%
                                         if(rol.equals("Administrador Conjunto")){
                                     %>
 
-                                    <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${mascota.idMascota}"></c:out>"> <i class="far fa-trash-alt" style="color: black;"></i></a></td>
-                                    <td><a href="MascotaServlet?opcion=editar&idMascota=<c:out value="${mascota.idMascota}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+                                    <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+                                    <td><a href="ComentarioServlet?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
 
                                     <%}else{ %>
-
+                                    <td><a href="ComentarioServlet?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
                                     <% } %>
 
                                 </tr>
 
                                 <!-- Modal -->
-                                <div class="modal fade" id="modal<c:out value="${mascota.idMascota}"></c:out>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="modal<c:out value="${comentario.idComentario}"></c:out>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -128,16 +111,17 @@
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
-                                                <p class="fs-6">¿Esta seguro que desea eliminar los datos de la mascota número <c:out value="${mascota.idMascota}"></c:out> de forma permanente?</p>
+                                                <p class="fs-6">¿Esta seguro que desea eliminar los datos del comentario número <c:out value="${comentario.idComentario}"></c:out> de forma permanente?</p>
                                                 <p class="text text-center">Esta operación es irreversible</p>
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
-                                                <a type="button" class="btn btn-danger" href="MascotaServlet?opcion=eliminar&idMascota=<c:out value="${mascota.idMascota}"></c:out>">Continuar</a>
+                                                <a type="button" class="btn btn-danger" href="ComentarioServlet?opcion=eliminar&idComentario=<c:out value="${comentario.idComentario}"></c:out>">Continuar</a>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+
 
                             </c:forEach>
 
@@ -150,4 +134,4 @@
         </div>
         <!-- Basic Table ends -->
 
-<jsp:include page="/templates/PlantillaAdmin/plantillaInferior.jsp"/>
+        <jsp:include page="/templates/PlantillaAdmin/plantillaInferior.jsp"/>

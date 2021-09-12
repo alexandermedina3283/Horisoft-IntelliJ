@@ -33,7 +33,7 @@ public class ZonaSocialServlet extends HttpServlet {
                     System.out.println(zonaSocial);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/zonaSocial/listarZona.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/zonaSocial/listarZonaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

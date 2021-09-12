@@ -22,7 +22,7 @@ public class ResidenteServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearResidente")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/crearResidente.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/crearResidenteTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarResidente")) {
@@ -37,7 +37,7 @@ public class ResidenteServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidenteTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -57,7 +57,7 @@ public class ResidenteServlet extends HttpServlet {
                 System.out.println(residente);
                 request.setAttribute("residente", residente);
                 request.setAttribute("categoriaRes", new CategoriaResidenteDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/editarResidente.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/editarResidenteTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -131,7 +131,7 @@ public class ResidenteServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El residente se creó correctamente!");
                 request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidenteTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -175,7 +175,7 @@ public class ResidenteServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El residente se actualizó correctamente!");
                 request.setAttribute("categoriaDAO", new CategoriaResidenteDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidente.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/residente/listarResidenteTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

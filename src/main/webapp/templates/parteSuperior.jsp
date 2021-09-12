@@ -103,7 +103,7 @@
                             Mi Conjunto
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/vistas/apartamento/listarApartamento.jsp">Apartamentos</a></li>
+                            <li><a class="dropdown-item" href="<%=request.getContextPath()%>/ApartmentServlet?opcion=listarApartamento">Apartamentos</a></li>
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/ResidenteServlet?opcion=listarResidente">Residentes</a></li>
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/MascotaServlet?opcion=listarMascota">Mascotas</a></li>
                             <li><a class="dropdown-item" href="<%=request.getContextPath()%>/ParqueaderoServlet?opcion=listarParqueadero">Parqueaderos</a></li>

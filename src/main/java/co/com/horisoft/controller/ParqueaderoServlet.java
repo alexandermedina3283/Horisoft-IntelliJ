@@ -20,7 +20,7 @@ public class ParqueaderoServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearParqueadero")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/crearParqueadero.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/crearParqueaderoTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarParqueadero")) {
@@ -35,7 +35,7 @@ public class ParqueaderoServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueaderoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -55,7 +55,7 @@ public class ParqueaderoServlet extends HttpServlet {
                 System.out.println(parqueadero);
                 request.setAttribute("parqueadero", parqueadero);
                 request.setAttribute("tipoVehiculo", new ClaseVehiculoDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/editarParqueadero.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/editarParqueaderoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -140,7 +140,7 @@ public class ParqueaderoServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El parqueadero se creó correctamente!");
                 request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueaderoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -182,7 +182,7 @@ public class ParqueaderoServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El parqueadero se actualizó correctamente!");
                 request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueaderoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

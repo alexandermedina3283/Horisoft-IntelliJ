@@ -22,7 +22,7 @@ public class InscripcionServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearInscripcion")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/crearInscripcion.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/crearInscripcionTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarInscripcion")) {
@@ -37,7 +37,7 @@ public class InscripcionServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripcionesTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -57,7 +57,7 @@ public class InscripcionServlet extends HttpServlet {
                 System.out.println(inscripcion);
                 request.setAttribute("inscripcion", inscripcion);
                 request.setAttribute("servicioZona", new ServiciosZonaDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/editarInscripcion.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/editarInscripcionTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -129,7 +129,7 @@ public class InscripcionServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡Inscripción generada correctamente!");
                 request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripcionesTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -170,7 +170,7 @@ public class InscripcionServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡La inscripción se actualizó correctamente!");
                 request.setAttribute("ActividadDAO", new ServiciosZonaDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripciones.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/inscripcion/listarInscripcionesTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

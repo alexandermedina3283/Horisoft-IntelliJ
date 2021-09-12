@@ -18,7 +18,7 @@ public class SalonSocialServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearReservaSalon")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/crearReserva.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/crearReservaTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarReservaSalon")) {
@@ -32,7 +32,7 @@ public class SalonSocialServlet extends HttpServlet {
                     System.out.println(salonSocial);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReservaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -51,7 +51,7 @@ public class SalonSocialServlet extends HttpServlet {
                 salonSocial=salonSocialDAO.obtenerResevasSalon(id);
                 System.out.println(salonSocial);
                 request.setAttribute("salonSocial", salonSocial);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/editarReserva.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/editarReservaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -134,7 +134,7 @@ public class SalonSocialServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡Reserva de salón registrada correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReservaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -171,7 +171,7 @@ public class SalonSocialServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡Reserva de salón actualizada correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReservaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

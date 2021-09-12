@@ -8,13 +8,13 @@
             <h4>Mascotas</h4>
             <ol class="breadcrumb breadcrumb-title breadcrumb-arrow">
                 <li class="breadcrumb-item">
-                    <a href="index.html">
+                    <a href="<%=request.getContextPath()%>/index.jsp">
                         <i class="icofont icofont-home"></i>
                     </a>
                 </li>
                 <li class="breadcrumb-item"><a href="#">Mi Conjunto</a>
                 </li>
-                <li class="breadcrumb-item"><a href="basic-table.html">Mascotas</a>
+                <li class="breadcrumb-item"><a href="<%=request.getContextPath()%>/MascotaServlet?opcion=listarMascota">Mascotas</a>
                 </li>
             </ol>
         </div>
@@ -22,7 +22,7 @@
 </div>
 <!-- Header end -->
 
-<!-- Tables start -->
+
 <!-- Row start -->
 <div class="row">
     <div class="col-sm-12">
@@ -37,7 +37,7 @@
                     <div class="col-sm-12 table-responsive">
                         <!--inicia formulario-->
 
-                                <form action="MascotaServlet" method="post">
+                                <form action="<%=request.getContextPath()%>/MascotaServlet" method="post">
 
                                     <input type="hidden" name="opcion" value="guardar">
 
@@ -61,14 +61,10 @@
                                             <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Ingrese número de torre" required pattern="[A-Z0-9]{1}"/>
                                         </div><br>
 
-                                    <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="">Enviar formulario
+                                    <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right">Enviar formulario
                                     </button>
 
-
-
                                 </form>
-
-
 
                         <!--finaliza formulario-->
                     </div>

@@ -19,7 +19,7 @@ public class InvitadoServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearInvitado")) {
             System.out.println("seleccionó crear");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/crearInvitado.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/crearInvitadoTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarInvitado")) {
@@ -33,7 +33,7 @@ public class InvitadoServlet extends HttpServlet {
                     System.out.println(invitado);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitadoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -52,7 +52,7 @@ public class InvitadoServlet extends HttpServlet {
                 invitado=invitadoDAO.obtenerInvitados(id);
                 System.out.println(invitado);
                 request.setAttribute("invitado", invitado);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/editarInvitado.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/editarInvitadoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -131,7 +131,7 @@ public class InvitadoServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El invitado se registró correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitadoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -167,7 +167,7 @@ public class InvitadoServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El invitado se actualizó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitadoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

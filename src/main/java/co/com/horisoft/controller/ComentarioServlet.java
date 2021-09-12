@@ -18,7 +18,7 @@ public class ComentarioServlet extends HttpServlet {
         String opcion = request.getParameter("opcion");
         if (opcion.equals("crearComentario")) {
             System.out.println("seleccionó crear comentario");
-            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/crearComentario.jsp");
+            RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/crearComentarioTemp.jsp");
             requestDispacher.forward(request, response);
 
         }else if(opcion.equals("listarComentario")) {
@@ -32,7 +32,7 @@ public class ComentarioServlet extends HttpServlet {
                     System.out.println(comentario);
                 }
                 request.setAttribute("lista", lista);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -51,7 +51,7 @@ public class ComentarioServlet extends HttpServlet {
                 comentario=comentarioDAO.obtenerComentarios(id);
                 System.out.println(comentario);
                 request.setAttribute("comentario", comentario);
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/editarComentario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/editarComentarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -82,7 +82,7 @@ public class ComentarioServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El comentario se eliminó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -131,7 +131,7 @@ public class ComentarioServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El comentario se registró correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
@@ -167,7 +167,7 @@ public class ComentarioServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El comentario se actualizó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/comentario/listarComentarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
