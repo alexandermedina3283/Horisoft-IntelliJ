@@ -66,11 +66,11 @@
 
                         <% } %>
 
-                        <div class="text-warning bg-dark text-center">
+                        <div class="text-warning text-center">
                             <%
                                 if(request.getAttribute("mensaje")!=null){
                             %>
-                            ${mensaje}
+                            <strong style="color: #F57C00">${mensaje}</strong>
                             <%}
                             %>
                         </div>
@@ -100,8 +100,8 @@
                                     <%
                                         if(rol.equals("Administrador Conjunto")){
                                     %>
-                                    <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${salonSocial.idInscripcion}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
-                                    <td><a href="http://localhost:8080/Horisoft_war_exploded/SalonSocialServlet?opcion=editar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+                                    <td><a href="SalonSocialServlet?opcion=eliminar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+                                    <td><a href="SalonSocialServlet?opcion=editar&idInscripcion=<c:out value="${salonSocial.idInscripcion}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
 
                                     <%}else{ %>
 

@@ -83,7 +83,7 @@ public class InvitadoServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El invitado se eliminó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitado.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/invitado/listarInvitadoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

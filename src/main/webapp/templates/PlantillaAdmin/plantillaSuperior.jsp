@@ -140,12 +140,20 @@
                         <i class="icon-home"></i><span> Inicio</span>
                     </a>
                 </li>
+
+                <%
+                    if(rol.equals("Administrador Conjunto")){
+                %>
                 <li class="nav-level">--- Control de acceso</li>
                 <li class="treeview">
                     <a class="waves-effect waves-dark" href="<%=request.getContextPath()%>/UsuarioServlet?opcion=listarUsuario">
                         <i class="icon-user"></i><span> Usuarios</span>
                     </a>
                 </li>
+                <%}else{ %>
+                <% } %>
+
+
                 <li class="nav-level">--- Información general</li>
                 <li class="treeview"><a class="waves-effect waves-dark" href="#!"><i class="icon-pencil"></i><span>Mi Conjunto</span><i class="icon-arrow-down"></i></a>
                     <ul class="treeview-menu">

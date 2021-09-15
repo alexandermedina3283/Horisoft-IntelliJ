@@ -58,11 +58,11 @@
 
                         <a type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" href="ComentarioServlet?opcion=crearComentario" role="button" style="float: right"><i class="ti-plus" style="color: white;" > </i> Crear registro</a>
 
-                        <div class="text-warning bg-dark text-center">
+                        <div class="text-warning text-center">
                             <%
                                 if(request.getAttribute("mensaje")!=null){
                             %>
-                            ${mensaje}
+                            <strong style="color: #F57C00">${mensaje}</strong>
                             <%}
                             %>
                         </div>
@@ -93,7 +93,7 @@
                                         if(rol.equals("Administrador Conjunto")){
                                     %>
 
-                                    <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+                                    <td><a href="ComentarioServlet?opcion=eliminar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
                                     <td><a href="ComentarioServlet?opcion=editar&idComentario=<c:out value="${comentario.idComentario}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
 
                                     <%}else{ %>

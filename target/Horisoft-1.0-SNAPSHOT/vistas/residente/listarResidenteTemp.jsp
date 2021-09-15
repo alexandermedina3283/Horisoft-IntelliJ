@@ -66,11 +66,11 @@
 
                         <% } %>
 
-                        <div class="text-warning bg-dark text-center">
+                        <div class="text-warning text-center">
                             <%
                                 if(request.getAttribute("mensaje")!=null){
                             %>
-                            ${mensaje}
+                            <strong style="color: #F57C00">${mensaje}</strong>
                             <%}
                             %>
                         </div>
@@ -110,8 +110,8 @@
                                     <%
                                         if(rol.equals("Administrador Conjunto")){
                                     %>
-                                    <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
-                                    <td><a href="http://localhost:8080/Horisoft_war_exploded/ResidenteServlet?opcion=editar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
+                                    <td><a href="ResidenteServlet?opcion=eliminar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+                                    <td><a href="ResidenteServlet?opcion=editar&idResidente=<c:out value="${residente.idResidente}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
                                     <%}else{ %>
 
                                     <% } %>

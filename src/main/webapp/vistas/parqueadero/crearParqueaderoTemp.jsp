@@ -37,71 +37,93 @@
                     <div class="col-sm-12 table-responsive">
                         <!--inicia formulario-->
 
-                        <form action="<%=request.getContextPath()%>/ParqueaderoServlet" method="post">
+                        <form class="row" action="<%=request.getContextPath()%>/ParqueaderoServlet" method="post">
                             <input type="hidden" name="opcion" value="guardar">
 
-                                <div class="form-group">
-                                    <label for="idParqueadero">Número parqueadero</label>
-                                    <input class="form-control" name="idParqueadero" id="idParqueadero" type="text" placeholder="Digite número parqueadero" autofocus required pattern="[A-Za-z0-9]{1,6}"/>
+                            <div class="col-lg-6">
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="idParqueadero">Número parqueadero</label>
+                                        <input class="form-control" name="idParqueadero" id="idParqueadero" type="text" placeholder="Digite número parqueadero" autofocus required pattern="[A-Za-z0-9]{1,6}"/>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="zonasparqueo">Ubicación</label>
-                                    <input class="form-control" list="zonasparqueo" name="ubicacionParqueadero" placeholder="Sitio parqueo" required>
-                                    <datalist id="zonasparqueo">
-                                        <option value="Sotano">
-                                        <option value="Piso 1">
-                                        <option value="Piso 2">
-                                        <option value="Piso 3">
-                                        <option value="Azotea">
-                                    </datalist>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="numApartamento">Apartamento</label>
+                                        <input class="form-control" name="numApartamento" id="numApartamento" type="text" placeholder="Ingrese número del apartamento" pattern="[0-9]{3,5}" required/>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="placaVehiculo">Placa</label>
-                                    <input class="form-control" name="placaVehiculo" id="placaVehiculo" type="text" placeholder="Placa vehiculo" required pattern="[A-Z0-9]{6}"/>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="claseVehiculo">Clase vehículo</label>
+                                        <select class="form-control" name="claseVehiculo" id="claseVehiculo">
+                                            <option hidden selected>Seleccione una opción</option>
+                                            <option value="1">Automovil</option>
+                                            <option value="3">Camioneta</option>
+                                            <option value="2">Motocicleta</option>
+                                            <option value="4">Taxi</option>
+                                            <option value="5">Vans</option>
+                                        </select>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="modeloVehiculo">Modelo</label>
-                                    <input class="form-control" name="modeloVehiculo" id="modeloVehiculo" type="text" placeholder="año" required pattern="[0-9]{4}"/>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="modeloVehiculo">Modelo</label>
+                                        <input class="form-control" name="modeloVehiculo" id="modeloVehiculo" type="text" placeholder="año" required pattern="[0-9]{4}"/>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="colorVehiculo">Color</label>
-                                    <input class="form-control" name="colorVehiculo" id="colorVehiculo" type="text" placeholder="ej.Plata" required pattern="[a-zA-Z]{2,15}"/>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="placaVehiculo">Placa</label>
+                                        <input class="form-control" name="placaVehiculo" id="placaVehiculo" type="text" placeholder="Placa vehiculo" required pattern="[A-Z0-9]{6}"/>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="marcaVehiculo">Marca</label>
-                                    <input class="form-control" name="marcaVehiculo" id="marcaVehiculo" type="text" placeholder="ej.Nissan" required pattern="[a-zA-Z]{2,20}"/>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="zonasparqueo">Ubicación</label>
+                                        <input class="form-control" list="zonasparqueo" name="ubicacionParqueadero" placeholder="Sitio parqueo" required>
+                                        <datalist id="zonasparqueo">
+                                            <option value="Sotano">
+                                            <option value="Piso 1">
+                                            <option value="Piso 2">
+                                            <option value="Piso 3">
+                                            <option value="Azotea">
+                                        </datalist>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="numApartamento">Apartamento</label>
-                                    <input class="form-control" name="numApartamento" id="numApartamento" type="text" placeholder="Ingrese número del apartamento" pattern="[0-9]{3,5}" required/>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="numTorre">Torre</label>
+                                        <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Ingrese número de torre" required pattern="[A-Z0-9]{1}"/>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="numTorre">Torre</label>
-                                    <input class="form-control" name="numTorre" id="numTorre" type="text" placeholder="Ingrese número de torre" required pattern="[A-Z0-9]{1}"/>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="marcaVehiculo">Marca</label>
+                                        <input class="form-control" name="marcaVehiculo" id="marcaVehiculo" type="text" placeholder="ej.Nissan" required pattern="[a-zA-Z]{2,20}"/>
+                                    </div>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="claseVehiculo">Clase vehículo</label>
-                                    <select class="form-control" name="claseVehiculo" id="claseVehiculo">
-                                        <option hidden selected>Seleccione una opción</option>
-                                        <option value="1">Automovil</option>
-                                        <option value="3">Camioneta</option>
-                                        <option value="2">Motocicleta</option>
-                                        <option value="4">Taxi</option>
-                                        <option value="5">Vans</option>
-                                    </select>
+                                <div class="form-group row">
+                                    <div class="col-md-10">
+                                        <label for="colorVehiculo">Color</label>
+                                        <input class="form-control" name="colorVehiculo" id="colorVehiculo" type="text" placeholder="ej.Plata" required pattern="[a-zA-Z]{2,15}"/>
+                                    </div>
                                 </div>
+                                <div class="form-group row">
+                                    <div class="col-md-10"><br>
+                                        <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right">Enviar formulario
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
 
-                            <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right">Enviar formulario
-                            </button>
                         </form>
+
+
+
+
 
                         <!--finaliza formulario-->
                     </div>

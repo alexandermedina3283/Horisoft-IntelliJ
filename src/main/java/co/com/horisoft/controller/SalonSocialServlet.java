@@ -82,7 +82,7 @@ public class SalonSocialServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡La reserva se eliminó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReserva.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/salonSocial/listarReservaTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

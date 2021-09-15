@@ -83,7 +83,7 @@ public class UsuarioServlet extends HttpServlet {
                 }
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El usuario se eliminó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuario.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

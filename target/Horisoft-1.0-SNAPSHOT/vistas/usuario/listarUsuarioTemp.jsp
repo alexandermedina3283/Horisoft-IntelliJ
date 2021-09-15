@@ -38,11 +38,11 @@
 
                         <a type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" href="UsuarioServlet?opcion=crearUsuario" role="button" style="float: right"><i class="ti-plus" style="color: white;" > </i> Crear registro</a>
 
-                        <div class="text-warning bg-dark text-center">
+                        <div class="text-warning text-center">
                             <%
                                 if(request.getAttribute("mensaje")!=null){
                             %>
-                            ${mensaje}
+                            <strong style="color: #F57C00">${mensaje}</strong>
                             <%}
                             %>
                         </div>
@@ -67,7 +67,7 @@
                                     <td><c:out value="${usuario.nombreUsuario}"></c:out></td>
                                     <td><c:out value="${usuario.estadoUsuario}"></c:out></td>
                                     <td><c:out value="${usuario.rolUsuario}"></c:out></td>
-                                    <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+                                    <td><a href="UsuarioServlet?opcion=eliminar&idUsuario=<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
                                     <td><a href="UsuarioServlet?opcion=editar&idUsuario=<c:out value="${usuario.idUsuario}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
                                 </tr>
 

@@ -355,8 +355,8 @@
                     <p>Diligencie el formulario y uno de nuestros ejecutivos se comunicará para ampliar la información sobre nuestro sistema de gestión de zonas sociales y administración de información de residentes Horisoft.
                         <br><br>
                     <p>Llámenos:</p>
-                    <p>+57 (1) 6636834 </p>
-                    <p>+57 311 2193210 </p>
+                    <p>+57 (601) 6636839 </p>
+                    <p>+57 320 2115906 </p>
                 </div>
             </div>
         </div>

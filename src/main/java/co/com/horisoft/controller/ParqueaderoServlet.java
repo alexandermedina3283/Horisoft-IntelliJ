@@ -87,7 +87,7 @@ public class ParqueaderoServlet extends HttpServlet {
                 request.setAttribute("lista", lista);
                 request.setAttribute("mensaje", "¡El parqueadero se eliminó correctamente!");
                 request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueadero.jsp");
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueaderoTemp.jsp");
                 requestDispacher.forward(request, response);
 
             } catch (SQLException e) {

@@ -67,11 +67,11 @@
 
                         <% } %>
 
-                        <div class="text-warning bg-dark text-center">
+                        <div class="text-warning text-center">
                             <%
                                 if(request.getAttribute("mensaje")!=null){
                             %>
-                            ${mensaje}
+                            <strong style="color: #F57C00">${mensaje}</strong>
                             <%}
                             %>
                         </div>
