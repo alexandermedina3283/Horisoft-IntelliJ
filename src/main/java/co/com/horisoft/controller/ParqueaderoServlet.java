@@ -118,18 +118,23 @@ public class ParqueaderoServlet extends HttpServlet {
             parqueadero.setClaseVehiculo(Integer.parseInt(request.getParameter("claseVehiculo")));
 
             try {
-                parqueaderoDAO.guardar(parqueadero);
+
+                request.setAttribute("mensaje", "¡El parquedero que desea registrar ya existe!");
+
+                if(parqueaderoDAO.guardar(parqueadero)){
+
+                    request.setAttribute("mensaje", "¡El parqueadero se creó correctamente!");
+                }
+
                 System.out.println("Registro guardado");
 
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
-//            ParqueaderoDAO parqueaderoDAO = new ParqueaderoDAO();
+
             List<Parqueadero> lista=new ArrayList<>();
             try {
                 lista=parqueaderoDAO.obtenerParqueaderos();
@@ -138,7 +143,7 @@ public class ParqueaderoServlet extends HttpServlet {
                     System.out.println(parqueadero);
                 }
                 request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡El parqueadero se creó correctamente!");
+
                 request.setAttribute("claseVehiculoDAO", new ClaseVehiculoDAO());
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/parqueadero/listarParqueaderoTemp.jsp");
                 requestDispacher.forward(request, response);

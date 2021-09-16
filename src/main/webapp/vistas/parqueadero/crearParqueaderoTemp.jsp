@@ -67,15 +67,13 @@
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-md-10">
+                                    <div class="col-md-5">
                                         <label for="modeloVehiculo">Modelo</label>
-                                        <input class="form-control" name="modeloVehiculo" id="modeloVehiculo" type="text" placeholder="año" required pattern="[0-9]{4}"/>
+                                        <input class="form-control" name="modeloVehiculo" id="modeloVehiculo" type="text" placeholder="Año" required pattern="[0-9]{4}"/>
                                     </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-md-10">
+                                    <div class="col-md-5">
                                         <label for="placaVehiculo">Placa</label>
-                                        <input class="form-control" name="placaVehiculo" id="placaVehiculo" type="text" placeholder="Placa vehiculo" required pattern="[A-Z0-9]{6}"/>
+                                        <input class="form-control" name="placaVehiculo" id="placaVehiculo" type="text" placeholder="Placa vehiculo" required pattern="[A-Z0-9]{2,6}"/>
                                     </div>
                                 </div>
                             </div>
@@ -108,12 +106,12 @@
                                 <div class="form-group row">
                                     <div class="col-md-10">
                                         <label for="colorVehiculo">Color</label>
-                                        <input class="form-control" name="colorVehiculo" id="colorVehiculo" type="text" placeholder="ej.Plata" required pattern="[a-zA-Z]{2,15}"/>
+                                        <input class="form-control" name="colorVehiculo" id="colorVehiculo" type="text" placeholder="ej.Plata"/>
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-md-10"><br>
-                                        <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right">Enviar formulario
+                                        <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right"><i class="ti-save" style="color: white;" > </i> Guardar
                                         </button>
                                     </div>
                                 </div>

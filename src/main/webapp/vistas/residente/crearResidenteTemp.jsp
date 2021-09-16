@@ -117,7 +117,7 @@
                                 </div><br>
                                 <div class="form-group row">
                                     <div class="col-md-10">
-                                        <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right">Enviar formulario
+                                        <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right"><i class="ti-save" style="color: white;" > </i> Guardar
                                         </button>
                                     </div>
                                 </div>

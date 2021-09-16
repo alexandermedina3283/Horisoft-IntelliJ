@@ -65,31 +65,22 @@ public class UsuarioServlet extends HttpServlet {
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             int id=Integer.parseInt(request.getParameter("idUsuario"));
             try {
-                usuarioDAO.eliminar(id);
-                System.out.println("Registro eliminado correctamente");
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
-            } catch (SQLException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
-//            UsuarioDAO usuarioDAO = new UsuarioDAO();
-            List<Usuario> lista=new ArrayList<>();
-            try {
-                lista=usuarioDAO.obtenerUsuarios();
-                for (Usuario usuario : lista) {
+                request.setAttribute("mensaje", "¡El usuario no se eliminó, tiene registros asociados!");
 
-                    System.out.println(usuario);
+                if(usuarioDAO.eliminar(id)){
+
+                    request.setAttribute("mensaje", "¡El usuario se eliminó correctamente!");
                 }
-                request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡El usuario se eliminó correctamente!");
-                RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuarioTemp.jsp");
-                requestDispacher.forward(request, response);
+
+                System.out.println("Registro eliminado correctamente");
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
+                RequestDispatcher requestDispacher = request.getRequestDispatcher("/UsuarioServlet?opcion=listarUsuario");
+                requestDispacher.forward(request, response);
 
         }
 
@@ -102,40 +93,38 @@ public class UsuarioServlet extends HttpServlet {
         String opcion=request.getParameter("opcion");
         if (opcion.equals("guardar")) {
 
-
             UsuarioDAO usuarioDAO = new UsuarioDAO();
             Usuario usuario = new Usuario();
             String sha256clave = org.apache.commons.codec.digest.DigestUtils.sha256Hex(request.getParameter("contraUsuario"));
             usuario.setNombreUsuario(request.getParameter("nombreUsuario"));
-            usuario.setContrasena (sha256clave);
+            usuario.setContrasena(sha256clave);
             usuario.setEstadoUsuario(request.getParameter("estadoUsuario"));
             usuario.setRolUsuario(request.getParameter("rolUsuario"));
 
-
             try {
-                usuarioDAO.guardar(usuario);
+                request.setAttribute("mensaje", "¡El usuario no se creó correctamente!");
+
+                if (usuarioDAO.guardar(usuario)) {
+
+                    request.setAttribute("mensaje", "¡El usuario se creó correctamente!");
+
+                }
+
                 System.out.println("Registro guardado");
-                System.out.println(sha256clave);
-
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
-
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
-//            UsuarioDAO usuarioDAO = new UsuarioDAO();
             List<Usuario> lista=new ArrayList<>();
             try {
                 lista=usuarioDAO.obtenerUsuarios();
-                for (Usuario usuarioG : lista) {
+                for (Usuario usuariol : lista) {
 
                     System.out.println(usuario);
                 }
                 request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡El usuario se creó correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/listarUsuarioTemp.jsp");
                 requestDispacher.forward(request, response);
 
@@ -143,7 +132,6 @@ public class UsuarioServlet extends HttpServlet {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-
 
 
         }else if(opcion.equals("editar")) {

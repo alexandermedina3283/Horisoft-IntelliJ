@@ -99,7 +99,14 @@ public class ApartmentServlet extends HttpServlet {
 
             try {
 
-                apartamentoDAO.guardar(apartamento);
+                request.setAttribute("mensaje", "¡El apartamento que desea registrar ya existe!");
+
+                if(apartamentoDAO.guardar(apartamento)){
+
+                    request.setAttribute("mensaje", "¡El apartamento se creó correctamente!");
+
+                }
+
                 System.out.println("Registro guardado");
 
 
@@ -115,7 +122,7 @@ public class ApartmentServlet extends HttpServlet {
                     System.out.println(apartamento);
                 }
                 request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡El apartamento se creó correctamente!");
+
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/apartamento/listarApartamentoTemp.jsp");
                 requestDispacher.forward(request, response);
 

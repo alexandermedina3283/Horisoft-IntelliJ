@@ -180,7 +180,6 @@
                                 <!--Inicia sección tabla-->
 
 
-
                                 <!--Template parte inferior-->
                             </div>
                         </div>
