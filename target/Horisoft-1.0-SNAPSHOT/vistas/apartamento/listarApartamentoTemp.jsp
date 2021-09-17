@@ -57,6 +57,17 @@
                     <div class="col-sm-12 table-responsive">
                         <!--inicia tabla-->
 
+                        <!--Alerta mensaje resultado operación-->
+                        <%
+                            if(request.getAttribute("mensaje")!=null){
+                        %>
+                        <div class="alert alert-dark" role="alert" style="color: #F57C00; background: #E5E5E5; text-align: center">
+                            <strong>${mensaje}</strong>
+                        </div>
+                        <%}
+                        %>
+
+                        <!--Restricción acceso de acuerdo al rol-->
                         <%
                             if(rol.equals("Administrador Conjunto")){
                         %>
@@ -67,14 +78,8 @@
 
                         <% } %>
 
-                        <div class="text-warning text-center">
-                            <%
-                                if(request.getAttribute("mensaje")!=null){
-                            %>
-                            <strong style="color: #F57C00">${mensaje}</strong>
-                            <%}
-                            %>
-                        </div>
+
+
 
                         <table class="table">
                             <thead>

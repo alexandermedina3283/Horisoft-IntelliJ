@@ -56,16 +56,18 @@
                     <div class="col-sm-12 table-responsive">
                         <!--inicia tabla-->
 
+                        <!--Alerta mensaje resultado operación-->
+                        <%
+                            if(request.getAttribute("mensaje")!=null){
+                        %>
+                        <div class="alert alert-dark" role="alert" style="color: #F57C00; background: #E5E5E5; text-align: center">
+                            <strong>${mensaje}</strong>
+                        </div>
+                        <%}
+                        %>
+
                         <a type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" href="InscripcionServlet?opcion=crearInscripcion" role="button" style="float: right"><i class="ti-plus" style="color: white;" > </i> Crear registro</a>
 
-                        <div class="text-warning text-center">
-                            <%
-                                if(request.getAttribute("mensaje")!=null){
-                            %>
-                            <strong style="color: #F57C00">${mensaje}</strong>
-                            <%}
-                            %>
-                        </div>
 
                         <table class="table">
                             <thead>

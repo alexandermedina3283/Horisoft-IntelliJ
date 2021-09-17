@@ -179,6 +179,9 @@
                             <div class="md-card-block">
                                 <!--Inicia sección tabla-->
 
+                                <div class="card-block button-list notifications">
+                                    <a href="#!" class="btn btn-info waves-effect" data-type="inverse" data-from="top" data-align="center" data-icon="fa fa-comments">Top Center</a>
+                                </div>
 
                                 <!--Template parte inferior-->
                             </div>

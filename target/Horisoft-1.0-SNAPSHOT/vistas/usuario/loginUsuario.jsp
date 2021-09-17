@@ -46,6 +46,7 @@
                         </div>
                         <form action="http://localhost:8080/Horisoft_war_exploded/UsuarioServlet" method="post">
                             <input type="hidden" name="opcion" value="validarInicio">
+
                             <div class="form-group first">
                                 <label for="nombreUsuario">Usuario</label>
                                 <input type="text" class="form-control" placeholder="Ingrese su usuario" id="nombreUsuario" name="nombreUsuario" autofocus required pattern=[a-zA-Z0-9]{2,40}>
@@ -54,6 +55,15 @@
                                 <label for="contraUsuario">Contraseña</label>
                                 <input type="password" class="form-control" placeholder="Ingrese su contraseña" id="contraUsuario" name="contraUsuario" required>
                             </div>
+
+                            <%
+                                if(request.getAttribute("mensaje")!=null){
+                            %>
+                            <div class="alert alert-danger" role="alert">
+                                <strong>¡Usuario o contraseña incorrectos! </strong> ${mensaje}
+                            </div>
+                            <%}
+                            %>
 
                             <div class="d-sm-flex mb-5 align-items-center">
                                 <label class="control control--checkbox mb-3 mb-sm-0"><span class="caption">Recordarme</span>

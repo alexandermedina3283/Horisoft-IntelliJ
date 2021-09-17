@@ -246,7 +246,8 @@ public class UsuarioServlet extends HttpServlet {
 
                 }else{
 
-                    RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/accesoDenegado.jsp");
+                    request.setAttribute("mensaje", "valide sus credenciales con el Administrador del Conjunto");
+                    RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/usuario/loginUsuario.jsp");
                     requestDispacher.forward(request, response);
 
                 }
