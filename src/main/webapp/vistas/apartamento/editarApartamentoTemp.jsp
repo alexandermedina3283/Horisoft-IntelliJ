@@ -63,7 +63,7 @@
                                         <option value="Al dia">
                                         <option value="En mora">
                                     </datalist>
-                                </div>
+                                </div><br>
 
                             <button type="submit" type="button" class="btn btn-warning waves-effect waves-light" data-toggle="tooltip" data-placement="top" title="" style="float: right"><i class="ti-save" style="color: white;" > </i> Guardar
                             </button>

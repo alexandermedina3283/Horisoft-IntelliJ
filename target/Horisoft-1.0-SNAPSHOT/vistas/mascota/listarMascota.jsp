@@ -70,6 +70,7 @@
                 if(rol.equals("Administrador Conjunto")){
             %>
 
+
             <td><a type="button" data-bs-toggle="modal" data-bs-target="#modal<c:out value="${mascota.idMascota}"></c:out>"> <i class="far fa-trash-alt" style="color: black;"></i></a></td>
             <td><a href="MascotaServlet?opcion=editar&idMascota=<c:out value="${mascota.idMascota}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
 

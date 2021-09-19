@@ -112,32 +112,32 @@
                   <%
                     if(rol.equals("Administrador Conjunto")){
                   %>
-                  <td><a href="ParqueaderoServlet?opcion=eliminar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
+                  <td><a type="button" data-toggle="modal" data-target="#myModal<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-trash-alt" style="color: black;"></i></a></td>
                   <td><a href="ParqueaderoServlet?opcion=editar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>"><i class="far fa-edit" style="color: black;"></i></a></td>
                   <%}else{ %>
 
                   <% } %>
                 </tr>
 
-                <!-- Modal -->
-                <div class="modal fade" id="modal<c:out value="${parqueadero.idParqueadero}"></c:out>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
+                <!-- start modal content -->
+                <div id="myModal<c:out value="${parqueadero.idParqueadero}"></c:out>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title text-danger" id="exampleModalLabel"><strong>¡Advertencia!</strong></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h5 class="modal-title" id="myModalLabel" style="color: #fb5959">¡Advertencia!</h5>
                       </div>
                       <div class="modal-body">
-                        <p class="fs-6">¿Esta seguro que desea eliminar los datos del parqueadero número <c:out value="${parqueadero.idParqueadero}"></c:out> de forma permanente?</p>
-                        <p class="text text-center">Esta operación es irreversible</p>
+                        <p>¿Esta seguro que desea eliminar los datos del parqueadero número <c:out value="${parqueadero.idParqueadero}"></c:out> de forma permanente?</p>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Cancelar</button>
-                        <a type="button" class="btn btn-danger" href="ParqueaderoServlet?opcion=eliminar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>">Continuar</a>
+                        <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">Cancelar</button>
+                        <a type="button" class="btn btn-warning waves-effect waves-light" href="ParqueaderoServlet?opcion=eliminar&idParqueadero=<c:out value="${parqueadero.idParqueadero}"></c:out>">Continuar</a>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </div><!-- /.modal-content -->
+                  </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
+                <!-- end modal content -->
 
               </c:forEach>
 

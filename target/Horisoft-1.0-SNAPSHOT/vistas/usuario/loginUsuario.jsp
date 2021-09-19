@@ -70,7 +70,7 @@
                                     <input type="checkbox" checked="checked"/>
                                     <div class="control__indicator"></div>
                                 </label>
-                                <span class="ml-auto"><a href="<%=request.getContextPath()%>/vistas/usuario/accesoDenegado.jsp" class="forgot-pass">¿Olvidó su contraseña?</a></span>
+<%--                                <span class="ml-auto"><a href="#" class="forgot-pass">¿Olvidó su contraseña?</a></span>--%>
                             </div>
 
                             <input type="submit" value="Iniciar sesión" class="btn btn-block btn-primary">

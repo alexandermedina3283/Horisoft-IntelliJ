@@ -108,18 +108,21 @@ public class MascotaServlet extends HttpServlet {
             mascota.setTorre(request.getParameter("numTorre"));
 
             try {
-                mascotaDAO.guardar(mascota);
-                System.out.println("Registro guardado");
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
 
+                request.setAttribute("mensaje", "¡Operación no exitosa, verifique los datos ingresados!");
+
+                if(mascotaDAO.guardar(mascota)){
+
+                    request.setAttribute("mensaje", "¡La mascota se registró correctamente!");
+                }
+
+                System.out.println("Registro guardado");
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
 
-//            MascotaDAO mascotaDAO = new MascotaDAO();
             List<Mascota> lista=new ArrayList<>();
             try {
                 lista=mascotaDAO.obtenerMascotas();
@@ -128,7 +131,6 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡La mascota se registró correctamente!");
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
@@ -146,16 +148,22 @@ public class MascotaServlet extends HttpServlet {
             mascota.setApartamento(Integer.parseInt(request.getParameter("numApartamento")));
             mascota.setTorre(request.getParameter("numTorre"));
             try {
-                mascotaDAO.editar(mascota);
+
+                request.setAttribute("mensaje", "¡Operación no exitosa, verifique los datos ingresados!");
+
+                if( mascotaDAO.editar(mascota)){
+
+                    request.setAttribute("mensaje", "¡La mascota se actualizó correctamente!");
+                }
+
                 System.out.println("Registro actualizado");
-//                RequestDispatcher requestDispacher = request.getRequestDispatcher("/index.jsp");
-//                requestDispacher.forward(request, response);
+
 
             } catch (SQLException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
             }
-//            MascotaDAO mascotaDAO = new MascotaDAO();
+
             List<Mascota> lista=new ArrayList<>();
             try {
                 lista=mascotaDAO.obtenerMascotas();
@@ -164,7 +172,7 @@ public class MascotaServlet extends HttpServlet {
                     System.out.println(mascota);
                 }
                 request.setAttribute("lista", lista);
-                request.setAttribute("mensaje", "¡La mascota se actualizó correctamente!");
+
                 RequestDispatcher requestDispacher = request.getRequestDispatcher("/vistas/mascota/listarMascotaTemp.jsp");
                 requestDispacher.forward(request, response);
 
